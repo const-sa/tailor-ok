@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="AddNew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 51</value>
+  </data>
+  <data name="AddNew.Text" xml:space="preserve">
+    <value>Add New</value>
+  </data>
+  <data name="Save.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 51</value>
+  </data>
+  <data name="Save.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Delete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 51</value>
+  </data>
+  <data name="Delete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Print.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 51</value>
+  </data>
+  <data name="Print.Text" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="btnRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 51</value>
+  </data>
+  <data name="btnRefresh.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="bindingNavigator10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="bindingNavigator10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1260, 54</value>
+  </data>
+  <data name="BranchgridControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 358</value>
+  </data>
+  <data name="colID15.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colNotes14.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="colNotes14.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="colUserID6.Caption" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="colUserID6.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="colEnterTime7.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colEnterTime7.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="colBranchName.Caption" xml:space="preserve">
+    <value>Branch Name</value>
+  </data>
+  <data name="colBranchName.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="colBranchTelephone.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colBranchTelephone.VisibleIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="colBranchAddress.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colBranchAddress.VisibleIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="BranchgridControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1260, 269</value>
+  </data>
+  <data name="IDTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1090, 113</value>
+  </data>
+  <data name="IDTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 26</value>
+  </data>
+  <data name="BranchNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>784, 113</value>
+  </data>
+  <data name="BranchNameTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 26</value>
+  </data>
+  <data name="CompanyNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1090, 143</value>
+  </data>
+  <data name="CompanyNameTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 26</value>
+  </data>
+  <data name="BranchAddressTextEdit1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>406, 113</value>
+  </data>
+  <data name="BranchAddressTextEdit1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 26</value>
+  </data>
+  <data name="WasherOwnerNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>784, 143</value>
+  </data>
+  <data name="WasherOwnerNameTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 26</value>
+  </data>
+  <data name="EmailTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>406, 173</value>
+  </data>
+  <data name="EmailTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 26</value>
+  </data>
+  <data name="TaxNumberTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>406, 143</value>
+  </data>
+  <data name="TaxNumberTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 26</value>
+  </data>
+  <data name="textEdit46.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 283</value>
+  </data>
+  <data name="textEdit46.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1080, 24</value>
+  </data>
+  <data name="BranchTelephoneTextEdit1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1090, 173</value>
+  </data>
+  <data name="BranchTelephoneTextEdit1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 26</value>
+  </data>
+  <data name="MobileTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>784, 173</value>
+  </data>
+  <data name="MobileTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 26</value>
+  </data>
+  <data name="WasherLogoPictureEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 113</value>
+  </data>
+  <data name="WasherLogoPictureEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 116</value>
+  </data>
+  <data name="textEditVat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 311</value>
+  </data>
+  <data name="textEditVat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>669, 26</value>
+  </data>
+  <data name="checkEditEnableVat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1005, 311</value>
+  </data>
+  <data name="checkEditEnable2Invoic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1230, 311</value>
+  </data>
+  <data name="TheTaxRecTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1090, 203</value>
+  </data>
+  <data name="TheTaxRecTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 26</value>
+  </data>
+  <data name="TheTradeRecTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>790, 203</value>
+  </data>
+  <data name="TheRoomTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>428, 203</value>
+  </data>
+  <data name="TheRoomTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 26</value>
+  </data>
+  <data name="layoutControlItem5.Text" xml:space="preserve">
+    <value>PrintTwoCopiesOfSalesBill</value>
+  </data>
+  <data name="layoutControlItem4.Text" xml:space="preserve">
+    <value>Enable Value added tax</value>
+  </data>
+  <data name="layoutControlItem3.Text" xml:space="preserve">
+    <value>Value added tax</value>
+  </data>
+  <data name="layoutControlItem2.Text" xml:space="preserve">
+    <value>Sales invoice notes:</value>
+  </data>
+  <data name="layoutControlGroup2.Text" xml:space="preserve">
+    <value>Report settings</value>
+  </data>
+  <data name="ItemForCompanyName.Text" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="ItemForBranchTelephone1.Text" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="ItemForMobile.Text" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="layoutControlItem1.Text" xml:space="preserve">
+    <value>Branch No</value>
+  </data>
+  <data name="ItemForBranchName.Text" xml:space="preserve">
+    <value>Branch Name</value>
+  </data>
+  <data name="ItemForBranchAddress1.Text" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="ItemForEmail.Text" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="ItemForWasherOwnerName.Text" xml:space="preserve">
+    <value>Owner Name</value>
+  </data>
+  <data name="ItemForPostNumber.Text" xml:space="preserve">
+    <value>Tax Number</value>
+  </data>
+  <data name="ItemForTheTaxRec.Text" xml:space="preserve">
+    <value>Tax Number</value>
+  </data>
+  <data name="ItemForTheTradeRec.Text" xml:space="preserve">
+    <value>Commercial register</value>
+  </data>
+  <data name="ItemForTheRoom.Text" xml:space="preserve">
+    <value>chamber of commerce</value>
+  </data>
+  <data name="layoutControlGroup1.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="XtraFormBranch.IconOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Branches</value>
+  </data>
+</root>

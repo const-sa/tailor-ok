@@ -1,0 +1,2035 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;gcInvoice.Name" xml:space="preserve">
+    <value>gcInvoice</value>
+  </data>
+  <assembly alias="DevExpress.Data.v22.2" name="DevExpress.Data.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="gcInvoice.EmbeddedNavigator.AllowHtmlTextInToolTip" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;ItemForUserID3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="repositoryItemLookUpEdit5.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="UserIDTextEdit.Properties.Columns4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colTotalFinal.Caption" xml:space="preserve">
+    <value>صافي المبلغ</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="coltblCustomers.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns9" xml:space="preserve">
+    <value>InvoValue</value>
+  </data>
+  <data name="colDiscount.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v22.2">
+    <value>Sum</value>
+  </data>
+  <data name="&gt;&gt;InvoID1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem6.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="colBranchName.Width" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="colTotalFinal.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="colMonyPay.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;coltblCustomers.Name" xml:space="preserve">
+    <value>coltblCustomers</value>
+  </data>
+  <data name="&gt;&gt;dtime_End.Name" xml:space="preserve">
+    <value>dtime_End</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns18" xml:space="preserve">
+    <value>BuyDate</value>
+  </data>
+  <data name="repositoryItemLookUpEdit4.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;btnExportPDF.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="BranchIDLookupedite111.Properties.Columns11" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite1.Name" xml:space="preserve">
+    <value>BranchIDLookupedite1</value>
+  </data>
+  <data name="colMonyPay.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colThePay.Width" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="colTotalFinal.Summary2" xml:space="preserve">
+    <value>{0:0.##}</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns23" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;viewInvoiceBindingSource.Name" xml:space="preserve">
+    <value>viewInvoiceBindingSource</value>
+  </data>
+  <data name="&gt;&gt;colDiscount.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="InvoID1.Properties.Columns1" xml:space="preserve">
+    <value>رقم الفاتورة</value>
+  </data>
+  <data name="colThePay1.VisibleIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem1.Name" xml:space="preserve">
+    <value>emptySpaceItem1</value>
+  </data>
+  <data name="&gt;&gt;InvoID1.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;UserIDTextEdit.Name" xml:space="preserve">
+    <value>UserIDTextEdit</value>
+  </data>
+  <data name="layoutControlItem3.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem2</value>
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite111.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="InvoID1.Properties.Columns8" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="colTotalFinal.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="UserIDTextEdit.Properties.Columns1" xml:space="preserve">
+    <value>المدخل</value>
+  </data>
+  <data name="colDiscount.Caption" xml:space="preserve">
+    <value>الخصم</value>
+  </data>
+  <data name="gcInvoice.EmbeddedNavigator.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite111.Name" xml:space="preserve">
+    <value>BranchIDLookupedite111</value>
+  </data>
+  <data name="&gt;&gt;coltblUsers.Name" xml:space="preserve">
+    <value>coltblUsers</value>
+  </data>
+  <data name="SupID2.Properties.Columns11" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="BranchIDLookupedite.Properties.Columns3" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;colDiscount.Name" xml:space="preserve">
+    <value>colDiscount</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns17" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;tblSupplierBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="SupID1.Properties.Columns2" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;gcInvoice.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="&gt;&gt;tblBrancheBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SupID2.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="SupID2.Properties.Columns14" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SupID1.Properties.Columns17" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="BranchIDLookupedite12.Properties.Columns12" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="SupID1.Properties.Columns7" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite11.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="InvoID1.Properties.Columns14" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gcInvoice.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="InvoID2.Properties.Columns18" xml:space="preserve">
+    <value>BuyDate</value>
+  </data>
+  <data name="&gt;&gt;dtime_Start.Name" xml:space="preserve">
+    <value>dtime_Start</value>
+  </data>
+  <data name="InvoID2.Properties.Columns7" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="coltblCustomers.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="InvoID2.Properties.Columns17" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="InvoID1.Properties.Columns23" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="repositoryItemLookUpEdit6.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="layoutControlItem3.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="colDiscount.Summary2" xml:space="preserve">
+    <value>{0:0.##}</value>
+  </data>
+  <data name="colSellDate.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit3.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit3</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v22.2" name="DevExpress.Utils.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="dtime_Start.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite12.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="btnClose.Text" xml:space="preserve">
+    <value>اغلاق</value>
+  </data>
+  <data name="UserIDTextEdit.Properties.Columns2" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="InvoID2.Properties.Columns3" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite12.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite111.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="InvoID2.Properties.Columns19" xml:space="preserve">
+    <value>تاريخ الفاتورة</value>
+  </data>
+  <data name="&gt;&gt;Root.Name" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="SupID1.Properties.Columns8" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>تقارير الفواتير</value>
+  </data>
+  <data name="dtime_Start.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="BranchIDLookupedite111.Properties.Columns3" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;ItemForUserID.Name" xml:space="preserve">
+    <value>ItemForUserID</value>
+  </data>
+  <data name="SupID1.Properties.Columns5" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colTotalFattInvoice.Summary2" xml:space="preserve">
+    <value>{0:0.##}</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns16" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns26" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="colID.Width" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="btnPrint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>929, 150</value>
+  </data>
+  <data name="colTotalFattInvoice.Summary1" xml:space="preserve">
+    <value>TotalFattInvoice</value>
+  </data>
+  <data name="BranchIDLookupedite12.Properties.Columns15" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;ItemForUserID5.Name" xml:space="preserve">
+    <value>ItemForUserID5</value>
+  </data>
+  <data name="colID.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup10.Name" xml:space="preserve">
+    <value>layoutControlGroup10</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Name" xml:space="preserve">
+    <value>labelControl1</value>
+  </data>
+  <data name="colBranchName.Caption" xml:space="preserve">
+    <value>الفرع</value>
+  </data>
+  <data name="InvoID1.Properties.Columns5" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit5.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit5</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="btnExportExcel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 36</value>
+  </data>
+  <data name="&gt;&gt;ItemForUserID4.Name" xml:space="preserve">
+    <value>ItemForUserID4</value>
+  </data>
+  <data name="InvoID2.Properties.Columns5" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnExportPDF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 36</value>
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite11.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="InvoID2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="repositoryItemLookUpEdit2.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;InvoID2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="InvoID2.Properties.Columns25" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="InvoID1.Properties.Columns21" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="BranchIDLookupedite.Properties.Columns" xml:space="preserve">
+    <value>BranchName</value>
+  </data>
+  <data name="InvoID1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="SupID1.Properties.Columns4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BranchIDLookupedite.Properties.Columns7" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 9</value>
+  </data>
+  <data name="&gt;&gt;dtime_End.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gcInvoice.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="BranchIDLookupedite111.Properties.Columns4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;btnClose.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="BranchIDLookupedite.Properties.Columns5" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns11" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns21" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;SupID1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup6.Name" xml:space="preserve">
+    <value>layoutControlGroup6</value>
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnExportPDF.Name" xml:space="preserve">
+    <value>btnExportPDF</value>
+  </data>
+  <data name="&gt;&gt;dtime_End.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="BranchIDLookupedite11.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;InvoID2.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="UserIDTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 22</value>
+  </data>
+  <data name="&gt;&gt;SupID2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="layoutControlItem2.Text" xml:space="preserve">
+    <value>الى تاريخ:</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>96, 96</value>
+  </data>
+  <data name="gcInvoice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1280, 441</value>
+  </data>
+  <data name="&gt;&gt;ItemForUserID5.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1280, 36</value>
+  </data>
+  <data name="&gt;&gt;tblUsersBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SupID2.Properties.Columns5" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dtime_End.Location" type="System.Drawing.Point, System.Drawing">
+    <value>658, 103</value>
+  </data>
+  <data name="UserIDTextEdit.Properties.Columns8" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="SupID2.Properties.Columns4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvoID1.Properties.Columns" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="colBranchName.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>187, 150</value>
+  </data>
+  <data name="btnExportPDF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>743, 150</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;tblBrancheBindingSource.Name" xml:space="preserve">
+    <value>tblBrancheBindingSource</value>
+  </data>
+  <data name="colBranchName.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BranchIDLookupedite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 22</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;layoutControlGroup10.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="dataLayoutControl1.Text" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.XtraForm, DevExpress.Utils.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="InvoID1.Properties.Columns16" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="SupID2.Properties.Columns2" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="colThePay.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="InvoID2.Properties.Columns10" xml:space="preserve">
+    <value>مبلغ الفاتورة</value>
+  </data>
+  <data name="dataLayoutControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="BranchIDLookupedite12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 22</value>
+  </data>
+  <data name="ItemForUserID1.CustomizationFormText" xml:space="preserve">
+    <value>مدخل الفاتورة:</value>
+  </data>
+  <data name="btnRefreash.Text" xml:space="preserve">
+    <value>تحديث البيانات</value>
+  </data>
+  <data name="SupID1.Properties.Columns9" xml:space="preserve">
+    <value>SupName</value>
+  </data>
+  <data name="BranchIDLookupedite111.Properties.Columns12" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="InvoID1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;colID.Name" xml:space="preserve">
+    <value>colID</value>
+  </data>
+  <data name="SupID1.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="repositoryItemLookUpEdit3.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns5" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BranchIDLookupedite111.Properties.Columns9" xml:space="preserve">
+    <value>SupName</value>
+  </data>
+  <data name="&gt;&gt;SupID2.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="layoutControlGroup5.Text" xml:space="preserve">
+    <value>قائمة الفواتير حسب الخيارات </value>
+  </data>
+  <data name="InvoID1.Properties.Columns2" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="SupID2.Properties.Columns13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;SupID1.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="InvoID1.Properties.Columns15" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="UserIDTextEdit.Properties.Columns5" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dtime_Start.Location" type="System.Drawing.Point, System.Drawing">
+    <value>968, 103</value>
+  </data>
+  <data name="BranchIDLookupedite12.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;colID.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colIsDelivery.Name" xml:space="preserve">
+    <value>colIsDelivery</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem2.Name" xml:space="preserve">
+    <value>emptySpaceItem2</value>
+  </data>
+  <data name="colSellDate.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BranchIDLookupedite12.Properties.Columns13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;layoutControlItem4.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns6" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="btnExportPDF.Text" xml:space="preserve">
+    <value>حفظ الى PDF</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Name" xml:space="preserve">
+    <value>layoutControlItem5</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns14" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ItemForUserID3.Name" xml:space="preserve">
+    <value>ItemForUserID3</value>
+  </data>
+  <data name="SupID2.Properties.Columns17" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;SupID1.Name" xml:space="preserve">
+    <value>SupID1</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Name" xml:space="preserve">
+    <value>layoutControlItem3</value>
+  </data>
+  <data name="coltblCustomers.Caption" xml:space="preserve">
+    <value>اسم المورد</value>
+  </data>
+  <data name="labelControl1.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt, style=Bold</value>
+  </data>
+  <data name="SupID1.Properties.Columns15" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;colTheQuantity.Name" xml:space="preserve">
+    <value>colTheQuantity</value>
+  </data>
+  <data name="SupID2.Properties.Columns7" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="InvoID1.Properties.Columns24" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;ItemForUserID2.Name" xml:space="preserve">
+    <value>ItemForUserID2</value>
+  </data>
+  <data name="colMonyRemin.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem2.Name" xml:space="preserve">
+    <value>layoutControlItem2</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns7" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="InvoID1.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserIDTextEdit.Properties.Columns6" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Near</value>
+  </data>
+  <data name="BranchIDLookupedite111.Properties.Columns" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="btnPrint.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="colIsDelivery.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SupID1.Properties.Columns16" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="colTheQuantity.Width" type="System.Int32, mscorlib">
+    <value>84</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem8.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="SupID2.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SupID1.Properties.Columns1" xml:space="preserve">
+    <value>رقم المورد</value>
+  </data>
+  <data name="coltblUsers.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;btnExportExcel.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colThePay.Name" xml:space="preserve">
+    <value>colThePay</value>
+  </data>
+  <data name="ItemForUserID5.Text" xml:space="preserve">
+    <value>الى المورد رقم:</value>
+  </data>
+  <data name="BranchIDLookupedite12.Properties.Columns11" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="repositoryItemLookUpEdit2.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="InvoID2.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;btnRefreash.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="BranchIDLookupedite111.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 22</value>
+  </data>
+  <data name="repositoryItemLookUpEdit4.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="BranchIDLookupedite111.Properties.Columns16" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="colTotalFattInvoice.Caption" xml:space="preserve">
+    <value>الضريبة</value>
+  </data>
+  <data name="colTotalFinal.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v22.2">
+    <value>Sum</value>
+  </data>
+  <data name="layoutControlItem3.Text" xml:space="preserve">
+    <value>من تاريخ:</value>
+  </data>
+  <data name="colTotalFattInvoice.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Name" xml:space="preserve">
+    <value>btnClose</value>
+  </data>
+  <data name="InvoID2.Properties.Columns23" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;SupID2.Name" xml:space="preserve">
+    <value>SupID2</value>
+  </data>
+  <data name="&gt;&gt;dtime_Start.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="UserIDTextEdit.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BranchIDLookupedite.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns1" xml:space="preserve">
+    <value>رقم الفاتورة</value>
+  </data>
+  <data name="BranchIDLookupedite111.Properties.Columns13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="repositoryItemLookUpEdit1.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;btnExportExcel.Name" xml:space="preserve">
+    <value>btnExportExcel</value>
+  </data>
+  <data name="UserIDTextEdit.Properties.Columns3" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="gcInvoice.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SupID2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 63</value>
+  </data>
+  <data name="&gt;&gt;InvoID1.Name" xml:space="preserve">
+    <value>InvoID1</value>
+  </data>
+  <data name="&gt;&gt;btnRefreash.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="&gt;&gt;colTotalFattInvoice.Name" xml:space="preserve">
+    <value>colTotalFattInvoice</value>
+  </data>
+  <data name="InvoID1.Properties.Columns18" xml:space="preserve">
+    <value>BuyDate</value>
+  </data>
+  <data name="&gt;&gt;dataLayoutControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tblBuyInvoiceBindingSource.Name" xml:space="preserve">
+    <value>tblBuyInvoiceBindingSource</value>
+  </data>
+  <data name="gcInvoice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 218</value>
+  </data>
+  <data name="gcInvoice.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
+  <data name="&gt;&gt;colBranchName.Name" xml:space="preserve">
+    <value>colBranchName</value>
+  </data>
+  <data name="&gt;&gt;colThePay.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="SupID2.Properties.Columns" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="BranchIDLookupedite11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 22</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup5.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite12.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="BranchIDLookupedite12.Properties.Columns14" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns22" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvoID2.Properties.Columns2" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="BranchIDLookupedite111.Properties.Columns8" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="SupID1.Properties.Columns10" xml:space="preserve">
+    <value>اسم المورد</value>
+  </data>
+  <data name="&gt;&gt;btnExportPDF.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns8" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;tblBuyInvoiceBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="colTheQuantity.VisibleIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="coltblUsers.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;dtime_End.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;UserIDTextEdit.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="colSellDate.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="InvoID2.Properties.Columns20" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;colIsDelivery.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ItemForUserID.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup4.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns3" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="InvoID1.Properties.Columns19" xml:space="preserve">
+    <value>تاريخ الفاتورة</value>
+  </data>
+  <data name="InvoID2.Properties.Columns1" xml:space="preserve">
+    <value>رقم الفاتورة</value>
+  </data>
+  <data name="dtime_End.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="SupID2.Properties.Columns10" xml:space="preserve">
+    <value>اسم المورد</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="dtime_Start.Properties.CalendarTimeProperties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;tblUsersBindingSource.Name" xml:space="preserve">
+    <value>tblUsersBindingSource</value>
+  </data>
+  <data name="InvoID1.Properties.Columns20" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;colTotalFinal.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="BranchIDLookupedite111.Properties.Columns5" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colTotalFattInvoice.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="BranchIDLookupedite.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="repositoryItemLookUpEdit5.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="colDiscount.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="colMonyPay.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v22.2">
+    <value>Sum</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns20" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="BranchIDLookupedite11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>658, 63</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="BranchIDLookupedite.Properties.Columns2" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="BranchIDLookupedite12.Properties.Columns17" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns6" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns7" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns1" xml:space="preserve">
+    <value>رقم الفاتورة</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns2" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns3" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="SupID2.Properties.Columns1" xml:space="preserve">
+    <value>رقم المورد</value>
+  </data>
+  <data name="InvoID1.Properties.Columns26" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;dataLayoutControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnRefreash.Location" type="System.Drawing.Point, System.Drawing">
+    <value>372, 150</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns9" xml:space="preserve">
+    <value>InvoValue</value>
+  </data>
+  <data name="SupID2.Properties.Columns15" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="SupID1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="InvoID2.Properties.Columns9" xml:space="preserve">
+    <value>InvoValue</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnExportExcel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>558, 150</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup7.Name" xml:space="preserve">
+    <value>layoutControlGroup7</value>
+  </data>
+  <data name="InvoID2.Properties.Columns11" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="SupID1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="BranchIDLookupedite111.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;colMonyRemin.Name" xml:space="preserve">
+    <value>colMonyRemin</value>
+  </data>
+  <data name="btnExportExcel.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;colThePay1.Name" xml:space="preserve">
+    <value>colThePay1</value>
+  </data>
+  <data name="UserIDTextEdit.Properties.Columns" xml:space="preserve">
+    <value>UserName</value>
+  </data>
+  <data name="BranchIDLookupedite.Properties.Columns8" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="btnPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 36</value>
+  </data>
+  <data name="BranchIDLookupedite1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnExportExcel.Text" xml:space="preserve">
+    <value>حفظ الى ملف اكسل</value>
+  </data>
+  <data name="SupID1.Properties.Columns13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colMonyRemin.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;btnExportExcel.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="InvoID1.Properties.Columns7" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="BranchIDLookupedite111.Properties.Columns10" xml:space="preserve">
+    <value>اسم المورد</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="InvoID2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>658, 63</value>
+  </data>
+  <data name="btnRefreash.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 36</value>
+  </data>
+  <data name="BranchIDLookupedite111.Properties.Columns2" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="labelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="InvoID2.Properties.Columns" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="colMonyRemin.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v22.2">
+    <value>Sum</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns23" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="InvoID1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>968, 63</value>
+  </data>
+  <data name="SupID2.Properties.Columns3" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="InvoID1.Properties.Columns22" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colTheQuantity.Caption" xml:space="preserve">
+    <value>العدد</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gcInvoice.EmbeddedNavigator.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="colThePay1.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="InvoID2.Properties.Columns22" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;dataLayoutControl1.Name" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="colTotalFinal.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BranchIDLookupedite12.Properties.Columns" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="BranchIDLookupedite111.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SupID2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="InvoID1.Properties.Columns11" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;InvoID2.Name" xml:space="preserve">
+    <value>InvoID2</value>
+  </data>
+  <data name="UserIDTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 103</value>
+  </data>
+  <data name="colSellDate.Caption" xml:space="preserve">
+    <value>تاريخ الفاتورة</value>
+  </data>
+  <data name="dataLayoutControl1.Appearance.Control.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt, style=Bold</value>
+  </data>
+  <data name="InvoID2.Properties.Columns26" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="coltblUsers.Caption" xml:space="preserve">
+    <value>المدخل</value>
+  </data>
+  <data name="colThePay1.Caption" xml:space="preserve">
+    <value>الدفع</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="SupID1.Properties.Columns" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="&gt;&gt;dtime_Start.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="InvoID2.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="repositoryItemLookUpEdit6.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="BranchIDLookupedite.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 103</value>
+  </data>
+  <data name="ItemForUserID1.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;coltblCustomers.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="colMonyRemin.Summary1" xml:space="preserve">
+    <value>MonyRemin</value>
+  </data>
+  <data name="dtime_Start.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 22</value>
+  </data>
+  <data name="colMonyRemin.Summary2" xml:space="preserve">
+    <value>{0:0.##}</value>
+  </data>
+  <data name="&gt;&gt;dtime_Start.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="SupID2.Properties.Columns6" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="BranchIDLookupedite.Properties.Columns6" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Near</value>
+  </data>
+  <data name="&gt;&gt;colThePay1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns19" xml:space="preserve">
+    <value>تاريخ الفاتورة</value>
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite.Name" xml:space="preserve">
+    <value>BranchIDLookupedite</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>XtraFormReportsInvBuy</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="btnExportPDF.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;ItemForUserID1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="dtime_Start.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="BranchIDLookupedite.Properties.Columns1" xml:space="preserve">
+    <value>الفرع</value>
+  </data>
+  <data name="InvoID2.Properties.Columns24" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="colMonyPay.Summary1" xml:space="preserve">
+    <value>MonyPay</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup7.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="InvoID1.Properties.Columns13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;SupID1.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;colSellDate.Name" xml:space="preserve">
+    <value>colSellDate</value>
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite111.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="labelControl1.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAYdEVYdFRpdGxlAEluc2VydENvbHVtbkJyZWFrO+MBFkcAAAfoSURBVFhHrZdrUJTXHcZJ1Gg0
+        yaRtmqYxvaT3+5fO9Es/tDP90E5n0iaKSkCEgIgigkg1M+10NFG5iwI1JTHTppnGaCJJFEHxAipokFvk
+        vlwF9sZtd7ksyy4LPn3+533f5bL4rWfmN+/CC+d5nnP+57IhAEIWtEfzS3rKCy71QlGqkV/ag7wScrEH
+        Jy5240RxN44XdyH3QheOXejEsfOdyCHZn3Ug61MTsj4x4cg5k3T8NFkj/e7/T3NI6r+aQpJP3QtJLGxQ
+        ukp7gYFHyAoR/n+0v58x4e3L3dL5Ouk3IqsqxCD+ZN1DDazMZ2Jpcw+EB4rZAMDsHODnS4MZ4uMLH18o
+        /Bp//aANlS1DSD1Ve4v9LjIQm1fzUAOrOAWirwyI4GIT8wZ8OgsNeHUDXvL6+y0Yn5rBzeYhpLxTVyH9
+        GwaicquV4LIG8kq6FxmY5Qdh+dQLxCk6LcxopL7XrPpxTPpQ3jSIpMJaMbFSZ4WuF2TgMSkwadRQBgxB
+        QTPAlHwqYb+OYYDCHt8cpsjed++pfuR3trFplH1hx878O5XUkMJ8UrSUJv+GT9UeJauluqWpYddFDQMa
+        YoAsGG6VfImB3YVfqH7c/Dw27UffsAcltTZkF7WK4DfJU2TlUgNrZFlJM8T/eakLb5GTpV34R2knCko0
+        8i92IK+4Ax4KeyTlgQOw7d8PKxm3DuKdD2uwP+caUjKvIDm9DBHZtxGWWYUt6ZXYkfe5iD5DVi018Lis
+        Z2la8jmMTvgUIxNexfC4xhCxExGX1CI6ZrVrWPiZ9Le0o7WmDk2376KusRXV9Y24VV2PyIP/FdFnyWNL
+        DayVzUSaGmrOs0rMtJI4v9jE1CacuGDCcZJ7vh1TNCBDbvlLKsyp+zCwT0hBXwrZm4z7yUnoTdqjpmHM
+        42eYGaS8fVdEnyOLDEhlrsvkLhYwwAIbltRj80jywfFp2F3TsBG3MjAbSO4y2+E02zQGbHD02zDKpzIw
+        JQZ8SC6sFtGvkyADT2QUtSsDWpXPBSXOPd+GY59p5HzSporMTQMDKvFeJk5m4iT07ElET2IiunYnoDNh
+        l0rvooFhGtjzlqqB58nqpQaeTPu4TTMgy4vphph6UMfO5SSpbS4PrM5phds7h0nvLNMyuaCSWzHaT5h8
+        RJ59ViXuIIM0kHjyjoiuJ8EGjnzUqgzI8vLSgKRWiT+VxK3IJllFLcgkGeeaaWBWGZB57laJdzNxAjp2
+        7YJpZzxM8TvQtmMHnO4ZOIidQRIKqkT0BbLIgOxQT715tiVgQNb1fGotsdUp6TUsRMQniIOpHZJWR5IP
+        M/nQfSsG71swSnHB5vJiZ54y8A2yZqmBpw99qG2hXs6tLC+VmGiJNdI/bkb6R01IIxPTsxgnXZznjp1M
+        HR+PdtIaF4eW7bFojo1BU8xrGBEDkzTg8CLuxC0R/RYJMvClf1/pxgPugiIuxaVSOwSm1jGPejBA5CnF
+        NeaZxQjTDvdZmFhg8l4LBom9ZwD2XrMyMOL2wcxRiz2uDHybBBn4cvqZZvj9fiUuyDxnMHGaIKnPNuHo
+        2UYcOdOIw2fu6Qb8nOc4tG7frqWOYeroaNyLikLDtm1oiNyKYaYf1g3E5NwU0RfJIgOryFdeOliB98o6
+        eZR61fxKkRmFJnMtwy2JDWGpbhePXUk+yKSS1sAmT46ArXsAQ6x+YYAjGJ1dIaLfJY8vNfDMH/52HVEF
+        DSgsboVr0sM59mOSosZcG8JjFHVxWJ1uv6rwxhgmVqklcSTqmbo2IgI14eG4GxbGzcun6BvxYFtm+WID
+        ugkx8NXfHbiC188N4JWMGhQUNcFJEy7PjBIdN8SJJHfK2pbiIvZeba5tPQZacgsxEzvF7WM+3OepGJlx
+        XQS/v5yBZ3+z7zL2ne1H5Klu/PbANZQ3mNXNZj65Ls7kDmIsL0lctzUCteGvoubVMFQz9eebN+P2pk2o
+        Cg1V4rIH9A55EJF+TQR/QNYa4uoyQr7266QSJJ/uw+/fuIOs0/VwjE+p4VapiUpNRpX4vAGVmMmtfEpq
+        S3c/zF39GOjUsNGAjQZ6htwIT1MGfkiCDDz3q4RivJRWjcwP6jHsnGBSX0B8PrkmajDCa5eWeAvubN6k
+        pd64EZUbXsHNl19GxZ//pBvwoYsGwo5eEdEfkSADz/8y/jxyTtcFxKXCnQYUW05cDhijymWvtwsy5/q8
+        S3Ird0Cry4cO+xS2HFYGfkLWLTSwmqxPzq+C2+1m8Ym4VuEiaqCE+U6EA+J6hQsLhTVxnxK3ODU6bJPY
+        9OZlEf0pCTLwQm5RI+Z4FxDxIGFDnKIiLCwSDQh7tdQLxM067TY3Qt9QBn5Ggg3s4kklTZKLoIPTIBip
+        AwYoJgzqSRX8Wc01h1qG26KGfVozwDPAzC293TqJ0EPLG5AaWB+fV6kM2OXWwxSB01CdB9NqK5XdrJ/n
+        gNx0ZV0LsryE7sEpRSfpYFqTfRImPtutxDKJNrLh4CUR/TEJFKE0tRVHp1+qjONhEZt7E7HHbnDfvoHX
+        sm8gOqsCUVnlaheTjWRr+nW1niPSriL86FVV2WGHr6oC23y4jPNchlDOtQy3sJGiGw6VKvE/pp6+Sy05
+        jrX7gG5C3YqJXJfl5XeIbJff05GdSzYPQdawLCNBkghS1VJYggyv8HOdXyxA/lb6ly8nKxYakCYmZCSk
+        HuRrtRgyWPsQ5Nvvw3hiGeR/pH/ewEIe+R+IyO1gpQGNcAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnPrint.Text" xml:space="preserve">
+    <value>طباعة</value>
+  </data>
+  <data name="UserIDTextEdit.Properties.Columns7" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="SupID1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 63</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns25" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Name" xml:space="preserve">
+    <value>btnPrint</value>
+  </data>
+  <data name="colID.Caption" xml:space="preserve">
+    <value>رقم الفاتورة</value>
+  </data>
+  <data name="InvoID2.Properties.Columns8" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="BranchIDLookupedite111.Properties.Columns17" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="BranchIDLookupedite111.Properties.Columns14" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnRefreash.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="BranchIDLookupedite111.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;coltblUsers.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gcInvoice.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup6.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns5" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;viewInvoiceBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BranchIDLookupedite12.Properties.Columns9" xml:space="preserve">
+    <value>SupName</value>
+  </data>
+  <data name="&gt;&gt;colTotalFattInvoice.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="InvoID1.Properties.Columns4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;colMonyPay.Name" xml:space="preserve">
+    <value>colMonyPay</value>
+  </data>
+  <data name="&gt;&gt;colMonyRemin.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Name" xml:space="preserve">
+    <value>gridView1</value>
+  </data>
+  <data name="colThePay.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="BranchIDLookupedite12.Properties.Columns1" xml:space="preserve">
+    <value>رقم المورد</value>
+  </data>
+  <data name="BranchIDLookupedite12.Properties.Columns3" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="BranchIDLookupedite12.Properties.Columns2" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="BranchIDLookupedite12.Properties.Columns5" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BranchIDLookupedite12.Properties.Columns4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BranchIDLookupedite12.Properties.Columns7" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="BranchIDLookupedite12.Properties.Columns6" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="colTotalFinal.Summary1" xml:space="preserve">
+    <value>TotalFinal</value>
+  </data>
+  <data name="InvoID1.Properties.Columns17" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="BranchIDLookupedite12.Properties.Columns10" xml:space="preserve">
+    <value>اسم المورد</value>
+  </data>
+  <data name="&gt;&gt;colTheQuantity.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns2" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="coltblCustomers.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="InvoID2.Properties.Columns16" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;tblSupplierBindingSource.Name" xml:space="preserve">
+    <value>tblSupplierBindingSource</value>
+  </data>
+  <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="colTotalFinal.Width" type="System.Int32, mscorlib">
+    <value>84</value>
+  </data>
+  <data name="colID.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SupID2.Properties.Columns8" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;ItemForUserID4.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="btnClose.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;Root.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="coltblUsers.VisibleIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup1.Name" xml:space="preserve">
+    <value>layoutControlGroup1</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v22.2" name="DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="labelControl1.AutoSizeMode" type="DevExpress.XtraEditors.LabelAutoSizeMode, DevExpress.XtraEditors.v22.2">
+    <value>Vertical</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit6.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit6</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns10" xml:space="preserve">
+    <value>مبلغ الفاتورة</value>
+  </data>
+  <data name="colMonyPay.VisibleIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="colDiscount.Summary1" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit1.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit1</value>
+  </data>
+  <data name="InvoID2.Properties.Columns21" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="BranchIDLookupedite111.Properties.Columns1" xml:space="preserve">
+    <value>رقم المورد</value>
+  </data>
+  <data name="&gt;&gt;ItemForUserID1.Name" xml:space="preserve">
+    <value>ItemForUserID1</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem4.Name" xml:space="preserve">
+    <value>layoutControlItem4</value>
+  </data>
+  <data name="ItemForUserID2.Text" xml:space="preserve">
+    <value>من فاتورة رقم:</value>
+  </data>
+  <data name="&gt;&gt;btnRefreash.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="InvoID1.Properties.Columns6" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="repositoryItemLookUpEdit3.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns24" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="InvoID2.Properties.Columns13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite12.Name" xml:space="preserve">
+    <value>BranchIDLookupedite12</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;UserIDTextEdit.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="BranchIDLookupedite12.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="dtime_End.Properties.CalendarTimeProperties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="gridView1.Appearance.Row.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="BranchIDLookupedite12.Properties.Columns8" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="gridView1.Appearance.HeaderPanel.BackColor2" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gcInvoice.EmbeddedNavigator.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;xtraSaveFileDialog1.Name" xml:space="preserve">
+    <value>xtraSaveFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="colID.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v22.2">
+    <value>Count</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;btnExportExcel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;InvoID1.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gcInvoice.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v22.2">
+    <value>None</value>
+  </data>
+  <data name="SupID2.Properties.Columns16" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="colID.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="BranchIDLookupedite1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>968, 63</value>
+  </data>
+  <data name="InvoID2.Properties.Columns12" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;dataLayoutControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraDataLayout.DataLayoutControl, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="colMonyRemin.Caption" xml:space="preserve">
+    <value>الاجمالي بعد الخصم</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit4.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit4</value>
+  </data>
+  <data name="coltblUsers.Width" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="UserIDTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;colSellDate.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem9.Name" xml:space="preserve">
+    <value>layoutControlItem9</value>
+  </data>
+  <data name="BranchIDLookupedite.Properties.Columns4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;gcInvoice.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="InvoID1.Properties.Columns12" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="SupID1.Properties.Columns12" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="colIsDelivery.VisibleIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem1.Name" xml:space="preserve">
+    <value>layoutControlItem1</value>
+  </data>
+  <data name="gcInvoice.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt</value>
+  </data>
+  <data name="SupID1.Properties.Columns6" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;colMonyPay.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="colThePay.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="colMonyRemin.VisibleIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns19" xml:space="preserve">
+    <value>تاريخ الفاتورة</value>
+  </data>
+  <data name="BranchIDLookupedite.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite11.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit6.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="BranchIDLookupedite12.Properties.Columns16" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="colTheQuantity.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="ItemForUserID3.Text" xml:space="preserve">
+    <value>الى فاتورة رقم:</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns22" xml:space="preserve">
+    <value />
+  </data>
+  <data name="layoutControlGroup2.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt, style=Bold</value>
+  </data>
+  <data name="SupID1.Properties.Columns11" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite1.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="gcInvoice.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Name" xml:space="preserve">
+    <value>layoutControlItem7</value>
+  </data>
+  <data name="&gt;&gt;btnRefreash.Name" xml:space="preserve">
+    <value>btnRefreash</value>
+  </data>
+  <data name="repositoryItemLookUpEdit6.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataLayoutControl1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns15" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem9.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="repositoryItemLookUpEdit3.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;btnPrint.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="dataLayoutControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1298, 668</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup5.Name" xml:space="preserve">
+    <value>layoutControlGroup5</value>
+  </data>
+  <data name="InvoID1.Properties.Columns9" xml:space="preserve">
+    <value>InvoValue</value>
+  </data>
+  <data name="BranchIDLookupedite111.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 63</value>
+  </data>
+  <data name="InvoID2.Properties.Columns15" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem6.Name" xml:space="preserve">
+    <value>layoutControlItem6</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1298, 668</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem8.Name" xml:space="preserve">
+    <value>layoutControlItem8</value>
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="layoutControlGroup2.AppearanceItemCaption.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Bold</value>
+  </data>
+  <data name="BranchIDLookupedite12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 63</value>
+  </data>
+  <data name="SupID1.Properties.Columns14" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite1.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="SupID2.Properties.Columns9" xml:space="preserve">
+    <value>SupName</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="repositoryItemLookUpEdit5.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SupID2.Properties.Columns12" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="colIsDelivery.Width" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="colIsDelivery.Caption" xml:space="preserve">
+    <value>تاريخ الادخال</value>
+  </data>
+  <data name="InvoID1.Properties.Columns10" xml:space="preserve">
+    <value>مبلغ الفاتورة</value>
+  </data>
+  <data name="BranchIDLookupedite111.Properties.Columns7" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns21" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="SupID1.Properties.Columns3" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="colMonyRemin.Width" type="System.Int32, mscorlib">
+    <value>84</value>
+  </data>
+  <data name="InvoID2.Properties.Columns6" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns18" xml:space="preserve">
+    <value>BuyDate</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns12" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="gcInvoice.EmbeddedNavigator.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns17" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns14" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dataLayoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns12" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns10" xml:space="preserve">
+    <value>مبلغ الفاتورة</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns11" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="dtime_End.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="BranchIDLookupedite12.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="InvoID2.Properties.Columns14" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dtime_End.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="colDiscount.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="&gt;&gt;xtraSaveFileDialog1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.XtraSaveFileDialog, DevExpress.XtraDialogs.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BranchIDLookupedite11.Name" xml:space="preserve">
+    <value>BranchIDLookupedite11</value>
+  </data>
+  <data name="colTotalFattInvoice.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v22.2">
+    <value>Sum</value>
+  </data>
+  <data name="SupID2.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="dataLayoutControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup4.Name" xml:space="preserve">
+    <value>layoutControlGroup4</value>
+  </data>
+  <data name="InvoID2.Properties.Columns4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ItemForUserID.Text" xml:space="preserve">
+    <value>مدخل الفاتورة:</value>
+  </data>
+  <data name="&gt;&gt;colBranchName.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="colSellDate.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="UserIDTextEdit.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns15" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns26" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns24" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;colTotalFinal.Name" xml:space="preserve">
+    <value>colTotalFinal</value>
+  </data>
+  <data name="gcInvoice.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
+  </data>
+  <data name="coltblCustomers.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns20" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="gcInvoice.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 36</value>
+  </data>
+  <data name="&gt;&gt;btnExportPDF.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="repositoryItemLookUpEdit4.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="BranchIDLookupedite1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 22</value>
+  </data>
+  <data name="colMonyPay.Summary2" xml:space="preserve">
+    <value>{0:0.##}</value>
+  </data>
+  <data name="&gt;&gt;ItemForUserID2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup3.Name" xml:space="preserve">
+    <value>layoutControlGroup3</value>
+  </data>
+  <data name="colBranchName.VisibleIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="colTheQuantity.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colIsDelivery.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="InvoID1.Properties.Columns25" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="colMonyPay.Width" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="&gt;&gt;UserIDTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="colThePay.Caption" xml:space="preserve">
+    <value>الدفع</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gcInvoice.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="BranchIDLookupedite11.Properties.Columns25" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="dtime_End.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 22</value>
+  </data>
+  <data name="InvoID1.Properties.Columns3" type="DevExpress.Utils.FormatType, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <data name="ItemForUserID4.Text" xml:space="preserve">
+    <value>من المورد رقم:</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit2.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit5.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns8" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="colThePay1.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;InvoID2.Parent" xml:space="preserve">
+    <value>dataLayoutControl1</value>
+  </data>
+  <data name="colMonyPay.Caption" xml:space="preserve">
+    <value>المبلغ</value>
+  </data>
+  <data name="BranchIDLookupedite111.Properties.Columns6" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="BranchIDLookupedite111.Properties.Columns15" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="ItemForUserID1.Text" xml:space="preserve">
+    <value>الفرع:</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup2.Name" xml:space="preserve">
+    <value>layoutControlGroup2</value>
+  </data>
+  <data name="BranchIDLookupedite1.Properties.Columns16" type="DevExpress.Data.ColumnSortOrder, DevExpress.Data.v22.2">
+    <value>None</value>
+  </data>
+  <metadata name="tblSupplierBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="xtraSaveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>192, 17</value>
+  </metadata>
+  <metadata name="tblBuyInvoiceBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>732, 17</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>ar</value>
+  </metadata>
+  <metadata name="tblBrancheBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>543, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="tblUsersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="viewInvoiceBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>350, 17</value>
+  </metadata>
+</root>

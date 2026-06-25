@@ -1,0 +1,562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 245</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="labelControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>425, 32</value>
+  </data>
+  <data name="textEdit30.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 97</value>
+  </data>
+  <data name="textEdit30.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="textEdit30.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 22</value>
+  </data>
+  <data name="DataMainForWasherSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 46</value>
+  </data>
+  <data name="DataMainForWasherSave.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="DataMainForWasher_print.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 46</value>
+  </data>
+  <data name="DataMainForWasher_print.Text" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="Refrash.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 46</value>
+  </data>
+  <data name="Refrash.Text" xml:space="preserve">
+    <value>Refrash</value>
+  </data>
+  <data name="bindingNavigator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>965, 49</value>
+  </data>
+  <data name="WasherOwnerNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>335, 117</value>
+  </data>
+  <data name="WasherOwnerNameTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="WasherOwnerNameTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 22</value>
+  </data>
+  <data name="CompanyNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>760, 117</value>
+  </data>
+  <data name="CompanyNameTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="CompanyNameTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 22</value>
+  </data>
+  <data name="BranchAddressTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>760, 169</value>
+  </data>
+  <data name="BranchAddressTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="BranchAddressTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 22</value>
+  </data>
+  <data name="EmailTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>335, 169</value>
+  </data>
+  <data name="EmailTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="EmailTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 22</value>
+  </data>
+  <data name="BranchTelephoneTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>760, 143</value>
+  </data>
+  <data name="BranchTelephoneTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="BranchTelephoneTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 22</value>
+  </data>
+  <data name="MobileTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>335, 143</value>
+  </data>
+  <data name="MobileTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="MobileTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 22</value>
+  </data>
+  <data name="WasherLogoPictureEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 91</value>
+  </data>
+  <data name="WasherLogoPictureEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="WasherLogoPictureEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 100</value>
+  </data>
+  <data name="TaxNumberTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>807, 314</value>
+  </data>
+  <data name="TaxNumberTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="TaxNumberTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 22</value>
+  </data>
+  <data name="textEditVat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>807, 340</value>
+  </data>
+  <data name="textEditVat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="textEditVat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 22</value>
+  </data>
+  <data name="checkEditEnableVat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>807, 366</value>
+  </data>
+  <data name="checkEditEnableVat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="checkEditEnableVat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 20</value>
+  </data>
+  <data name="checkEditEnable2Invoic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>807, 390</value>
+  </data>
+  <data name="checkEditEnable2Invoic.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <assembly alias="DevExpress.Data.v22.2" name="DevExpress.Data.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="checkEditEnable2Invoic.Properties.GlyphAlignment" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Far</value>
+  </data>
+  <data name="checkEditEnable2Invoic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 20</value>
+  </data>
+  <data name="IDTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>760, 91</value>
+  </data>
+  <data name="IDTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="IDTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 22</value>
+  </data>
+  <data name="BranchNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>335, 91</value>
+  </data>
+  <data name="BranchNameTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="BranchNameTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 22</value>
+  </data>
+  <data name="TheTaxRecTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>760, 195</value>
+  </data>
+  <data name="TheTaxRecTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="TheTaxRecTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 22</value>
+  </data>
+  <data name="TheTradeRecTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>335, 195</value>
+  </data>
+  <data name="TheTradeRecTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="TheTradeRecTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 22</value>
+  </data>
+  <data name="TheRoomTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 195</value>
+  </data>
+  <data name="TheRoomTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="TheRoomTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 22</value>
+  </data>
+  <data name="SmsUserNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>443, 472</value>
+  </data>
+  <data name="SmsUserNameTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 22</value>
+  </data>
+  <data name="SmsPasswordTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>443, 498</value>
+  </data>
+  <data name="SmsPasswordTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 22</value>
+  </data>
+  <data name="SmsSenderNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>443, 524</value>
+  </data>
+  <data name="SmsSenderNameTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 20</value>
+  </data>
+  <data name="teECRport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>807, 527</value>
+  </data>
+  <data name="teECRport.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="teECRport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 22</value>
+  </data>
+  <data name="radioGroupMashinType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>807, 487</value>
+  </data>
+  <data name="radioGroupMashinType.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="radioGroupMashinType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 36</value>
+  </data>
+  <data name="tsDefaultSendToECR.Location" type="System.Drawing.Point, System.Drawing">
+    <value>807, 459</value>
+  </data>
+  <data name="tsDefaultSendToECR.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="tsDefaultSendToECR.Properties.OffText" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="tsDefaultSendToECR.Properties.OnText" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="tsDefaultSendToECR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 24</value>
+  </data>
+  <data name="textEdit46.Location" type="System.Drawing.Point, System.Drawing">
+    <value>178, 221</value>
+  </data>
+  <data name="textEdit46.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="textEdit46.Size" type="System.Drawing.Size, System.Drawing">
+    <value>794, 20</value>
+  </data>
+  <data name="SMS_instance_idTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>117, 472</value>
+  </data>
+  <data name="SMS_instance_idTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="SMS_instance_idTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 22</value>
+  </data>
+  <data name="SendMessOnSaveCheckEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>320, 307</value>
+  </data>
+  <data name="SendMessOnSaveCheckEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="SendMessOnSaveCheckEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="SMS_access_tokenTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>117, 498</value>
+  </data>
+  <data name="SMS_access_tokenTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="SMS_access_tokenTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 22</value>
+  </data>
+  <data name="SendMessOnPreparationCheckEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>151, 307</value>
+  </data>
+  <data name="SendMessOnPreparationCheckEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="SendMessOnPreparationCheckEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="WelcomeMessageMemoEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 350</value>
+  </data>
+  <data name="WelcomeMessageMemoEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="WelcomeMessageMemoEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 85</value>
+  </data>
+  <data name="RequestReceiptMessageMemoEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 350</value>
+  </data>
+  <data name="RequestReceiptMessageMemoEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="RequestReceiptMessageMemoEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 85</value>
+  </data>
+  <data name="MessageTypeRadioGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>431, 307</value>
+  </data>
+  <data name="MessageTypeRadioGroup.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="MessageTypeRadioGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 20</value>
+  </data>
+  <data name="DataMainForWashergraidControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="DataMainForWashergraidControl.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="layoutControlItem6.Text" xml:space="preserve">
+    <value>Branch number:</value>
+  </data>
+  <data name="ItemForBranchName.Text" xml:space="preserve">
+    <value>Branch name:</value>
+  </data>
+  <data name="layoutControlItem3.Text" xml:space="preserve">
+    <value>Enable Value added tax</value>
+  </data>
+  <data name="ItemForPostNumber.Text" xml:space="preserve">
+    <value>Tax Number</value>
+  </data>
+  <data name="layoutControlItem1.Text" xml:space="preserve">
+    <value>Value added tax</value>
+  </data>
+  <data name="layoutControlItem5.Text" xml:space="preserve">
+    <value>PrintTwoCopiesOfSalesBill</value>
+  </data>
+  <data name="layoutControlGroup1.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="ItemForBranchTelephone.Text" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="ItemForMobile.Text" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="ItemForEmail.Text" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="ItemForBranchAddress.Text" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="ItemForCompanyName.Text" xml:space="preserve">
+    <value>Laundry Name</value>
+  </data>
+  <data name="ItemForWasherOwnerName.Text" xml:space="preserve">
+    <value>Owner Name</value>
+  </data>
+  <data name="ItemForTheRoom.Text" xml:space="preserve">
+    <value>chamber of commerce:</value>
+  </data>
+  <data name="ItemForTheTradeRec.Text" xml:space="preserve">
+    <value>trade number:</value>
+  </data>
+  <data name="ItemForTheTaxRec.Text" xml:space="preserve">
+    <value>Tax register:</value>
+  </data>
+  <data name="layoutControlItem2.Text" xml:space="preserve">
+    <value>Sales invoice notes:</value>
+  </data>
+  <data name="layoutControlGroup4.Text" xml:space="preserve">
+    <value>WhatsApp message settings</value>
+  </data>
+  <data name="ItemForSmsSenderName.Text" xml:space="preserve">
+    <value>Sender name:</value>
+  </data>
+  <data name="ItemForSmsPassword.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="ItemForSmsUserName.Text" xml:space="preserve">
+    <value>User Name:</value>
+  </data>
+  <data name="layoutControlGroup3.Text" xml:space="preserve">
+    <value>SMS message settings</value>
+  </data>
+  <data name="ItemForWelcomeMessage.Text" xml:space="preserve">
+    <value>Welcome Message</value>
+  </data>
+  <data name="ItemForRequestReceiptMessage.Text" xml:space="preserve">
+    <value>Request Receipt Message</value>
+  </data>
+  <data name="ItemForMessageType.Text" xml:space="preserve">
+    <value>Message Type</value>
+  </data>
+  <data name="ItemForSendMessOnSave.Text" xml:space="preserve">
+    <value>Send Welcome Message</value>
+  </data>
+  <data name="ItemForSendMessOnPreparation.Text" xml:space="preserve">
+    <value>Send request receipt:</value>
+  </data>
+  <data name="layoutControlGroup2.Text" xml:space="preserve">
+    <value>Messaging settings</value>
+  </data>
+  <data name="layoutControlItem21.Text" xml:space="preserve">
+    <value>Port Number</value>
+  </data>
+  <data name="layoutControlItem7.Text" xml:space="preserve">
+    <value>Type of POS machine</value>
+  </data>
+  <data name="layoutControlItem23.Text" xml:space="preserve">
+    <value>Send to POS</value>
+  </data>
+  <data name="layoutControlGroup42.Text" xml:space="preserve">
+    <value>Automated teller machine</value>
+  </data>
+  <data name="DataMainWash_layoutControlGroup60.Text" xml:space="preserve">
+    <value>Company Information</value>
+  </data>
+  <data name="DataMainForWashergraidControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>989, 578</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 16</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>989, 578</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Company Information</value>
+  </data>
+</root>

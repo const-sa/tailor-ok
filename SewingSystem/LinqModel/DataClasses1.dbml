@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SewingSystem2" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=SewingSystem2;Integrated Security=True" SettingsObjectName="SewingSystem.Properties.Settings" SettingsPropertyName="DBT_SHConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblAccForCusAndSup" Member="tblAccForCusAndSups">
+    <Type Name="tblAccForCusAndSup">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DocID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Credit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Debit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DocType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="EnterTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BranchID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TypeCusOrSup" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IDCusOrSup" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DocDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblClasse" Member="tblClasses">
+    <Type Name="tblClasse">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClassNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ClassName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ClassColor" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BuyPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TheQuantityM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="QuantityRemin" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EnterTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BranchID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCustomer" Member="tblCustomers">
+    <Type Name="tblCustomer">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CusNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CustomerName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Mobil" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Mobil2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="EnterTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BranchID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblDefaultSize" Member="tblDefaultSizes">
+    <Type Name="tblDefaultSize">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CusNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GomashType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="tall" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="shoulder" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hands" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="neck" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="middle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="breast" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="kom" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="kapak" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TheBase" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="F1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="EnterTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BranchID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="TheName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="F2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="F3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="F4" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="J1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="J2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="J3" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="J4" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="K1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="K2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="K3" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="K4" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Q1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Q2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Q3" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Q4" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="S1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="S2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="S3" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ModelNum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TadrezNum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AzrarNum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Q5" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Q6" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Q7" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Q8" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Q9" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Q10" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="J5" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="J6" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="J7" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="K5" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblFactorie" Member="tblFactories">
+    <Type Name="tblFactorie">
+      <Column Name="ID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TheNameAr" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TheNameEn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="EnterTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BranchID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblNote" Member="tblNotes">
+    <Type Name="tblNote">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NoteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TheType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TheQuantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Maden" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Dayne" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="EnterTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BranchID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CusNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InvoNumber" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="HowPrint" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="TaxMaden" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TaxDayne" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Total" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblPermission" Member="tblPermissions">
+    <Type Name="tblPermission">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserGroupID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="ObjectName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PermissionName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TheValues" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BranchID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EnterTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="tblPermission_tblPermission" Member="tblPermissions" ThisKey="ID" OtherKey="ParentID" Type="tblPermission" />
+      <Association Name="tblPermission_tblPermission" Member="tblPermission1" ThisKey="ParentID" OtherKey="ID" Type="tblPermission" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSanadSarf" Member="tblSanadSarfs">
+    <Type Name="tblSanadSarf">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CusOrSupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SanadID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TheDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TheDetails" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TheAmount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EnterTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="BranchID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SarfType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BandID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblTailor" Member="tblTailors">
+    <Type Name="tblTailor">
+      <Column Name="ID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TtailorName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Mobil" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Mobil2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="EnterTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BranchID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblUser" Member="tblUsers">
+    <Type Name="tblUser">
+      <Column Name="ID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserGroupID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="UserState" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserPassword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TheLogo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="UserID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="EnterTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BranchID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblUserGroup" Member="tblUserGroups">
+    <Type Name="tblUserGroup">
+      <Column Name="ID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserGroupName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="EnterTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BranchID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblBuyInvoice" Member="tblBuyInvoices">
+    <Type Name="tblBuyInvoice">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CusNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InvoNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TheDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Bayan" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="TheQuantity" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InvoValue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalAftDis" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TheTax" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TheSafy" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EnterTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="BranchID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="ThePay" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MonyPay" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MonyRemin" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblBuyInvoiceDetaile" Member="tblBuyInvoiceDetailes">
+    <Type Name="tblBuyInvoiceDetaile">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TheQuantity" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SaleTax" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Total" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EnterTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="BranchID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="UnitID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClassNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSellInvoice" Member="tblSellInvoices">
+    <Type Name="tblSellInvoice">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TheName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SellDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ThePay" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TheQuantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuanRemin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cash" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Network" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Chik" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Meater" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Visa" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MonyPay" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MonyOrpon" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MonyRemin" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalMony" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalAfterDiscount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalFattInvoice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalFinal" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IsExitComash" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelivery" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DeliveryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ExitComash" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="EnterTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BranchID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CusNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HowPrint" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SizeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalMaden" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalDayn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TaxMaden" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TaxDayn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalAll" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TaxAll" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="QuantityM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TailorID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="FactoreID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="ClassNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InvoNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSellInvoiceDetaile" Member="tblSellInvoiceDetailes">
+    <Type Name="tblSellInvoiceDetaile">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClassNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EnterTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="BranchID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="GomashLength" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NumClothes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InvoNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblPayment" Member="tblPayments">
+    <Type Name="tblPayment">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InvoNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PayDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TheAmount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cash" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Network" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Chik" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Meater" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Visa" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MonyPay" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MonyRemin" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="QuanRemin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuanDelivery" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EnterTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="BranchID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CusNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblBranche" Member="tblBranches">
+    <Type Name="tblBranche">
+      <Column Name="ID" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BranchName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="BranchAddress" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="BranchTelephone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BranchNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TaxNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="LogoImage" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="OwnerName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="TaxRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UseTax" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PrintTowBill" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TheTaxRec" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="TheTradeRec" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="TheRoom" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EnterTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SmsUserName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SmsPassword" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SmsSenderName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SendToECR" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EcrPort" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NetworkPaymentType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="instance_id" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="access_token" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SendMessOnSave" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SendMessOnPreparation" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="WelcomeMessage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RequestReceiptMessage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MessageType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSupplier" Member="tblSuppliers">
+    <Type Name="tblSupplier">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SupNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SupName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="HomePhone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WorkPhone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="EnterTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BranchID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

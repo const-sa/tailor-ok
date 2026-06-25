@@ -1,0 +1,1414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9820859F-2BA5-4424-8355-D81567507F23}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SewingSystem</RootNamespace>
+    <AssemblyName>SewingSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>SewingSystem.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="BCrypt.Net, Version=0.1.4141.31969, Culture=neutral, PublicKeyToken=f3bc8f8c31beeb49, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net.0.1.0\lib\net35\BCrypt.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.104.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.104.2\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML.Parser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1d5f7376574c51ec, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.Parser.1.2.0\lib\netstandard2.0\ClosedXML.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="CSHARPDLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CSHARPDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v22.2" />
+    <Reference Include="DevExpress.Charts.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Dashboard.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v22.2.Win, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v22.2" />
+    <Reference Include="DevExpress.Drawing.v22.2" />
+    <Reference Include="DevExpress.Data.v22.2" />
+    <Reference Include="DevExpress.DataAccess.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v22.2.UI, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dialogs.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Export, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.SpellChecker.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.TreeMap.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v22.2" />
+    <Reference Include="DevExpress.Sparkline.v22.2.Core" />
+    <Reference Include="DevExpress.Utils.v22.2.UI, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.2.UI, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v22.2.Wizard, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDialogs.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v22.2" />
+    <Reference Include="DevExpress.Printing.v22.2.Core" />
+    <Reference Include="DevExpress.XtraGauges.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v22.2.Presets, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v22.2.Win, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraMap.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v22.2.Extensions, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v22.2.Core.Desktop, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v22.2.Extensions, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpellChecker.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v22.2.UI, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DocumentFormat.OpenXml, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.3.1.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.Framework.3.1.1\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="ECRPaymentsAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ECRPaymentsAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.25.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.25.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.3.5\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Liphsoft.Crypto.Argon2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Liphsoft.Crypto.Argon2.1.0.5\lib\net35\x86\Liphsoft.Crypto.Argon2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="RBush, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RBush.4.0.0\lib\net47\RBush.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.4.4.1\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SqlClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.3.0\lib\net451\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.7.0.2\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TableDependency.SqlClient, Version=8.5.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SqlTableDependency.8.5.8\lib\net451\TableDependency.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="ZstdSharp, Version=0.7.1.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZstdSharp.Port.0.7.1\lib\net461\ZstdSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing">
+      <HintPath>..\..\نظام المغاسل\اخر نسخه لبرنامج المغاسل بعد تجهيز الQR\WashSystem - Copy\packages\ZXing.Net.0.16.6\lib\net20\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\ClsEncryption.cs" />
+    <Compile Include="Classes\ClsHardDriveSerial.cs" />
+    <Compile Include="Classes\ClsXtraMssgBox.cs" />
+    <Compile Include="Classes\DatabaseHelper.cs" />
+    <Compile Include="Classes\FileFolderHelper.cs" />
+    <Compile Include="Classes\Master.cs" />
+    <Compile Include="Classes\MyAppearance.cs" />
+    <Compile Include="Classes\MyFunaction.cs" />
+    <Compile Include="Classes\Session.cs" />
+    <Compile Include="Classes\TLVCls.cs" />
+    <Compile Include="Classes\WhatsappMessage.cs" />
+    <Compile Include="DAL\Class1.cs" />
+    <Compile Include="DAL\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Setting.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ComponentFlyoutDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\ComponentFlyoutDialog.Designer.cs">
+      <DependentUpon>ComponentFlyoutDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMaster.Designer.cs">
+      <DependentUpon>FormMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTrailActivation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTrailActivation.Designer.cs">
+      <DependentUpon>FormTrailActivation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormActive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormActive.Designer.cs">
+      <DependentUpon>XtraFormActive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormBackupSett.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormBackupSett.Designer.cs">
+      <DependentUpon>XtraFormBackupSett.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormBranch.Designer.cs">
+      <DependentUpon>XtraFormBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormBuyInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormBuyInvoice.Designer.cs">
+      <DependentUpon>XtraFormBuyInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormConnectionDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormConnectionDB.Designer.cs">
+      <DependentUpon>XtraFormConnectionDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormCustomers.Designer.cs">
+      <DependentUpon>XtraFormCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormDefaultSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormDefaultSize.Designer.cs">
+      <DependentUpon>XtraFormDefaultSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormClass.Designer.cs">
+      <DependentUpon>XtraFormClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormCreditNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormCreditNote.Designer.cs">
+      <DependentUpon>XtraFormCreditNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormExplanations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormExplanations.Designer.cs">
+      <DependentUpon>XtraFormExplanations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormFactories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormFactories.Designer.cs">
+      <DependentUpon>XtraFormFactories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormDefultSize2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormDefultSize2.Designer.cs">
+      <DependentUpon>XtraFormDefultSize2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormMain.Designer.cs">
+      <DependentUpon>XtraFormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormSanadGapth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormSanadGapth.Designer.cs">
+      <DependentUpon>XtraFormSanadGapth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormSanadSarf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormSanadSarf.Designer.cs">
+      <DependentUpon>XtraFormSanadSarf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormSMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormSMS.Designer.cs">
+      <DependentUpon>XtraFormSMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormSuppliers.Designer.cs">
+      <DependentUpon>XtraFormSuppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormTailors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormTailors.Designer.cs">
+      <DependentUpon>XtraFormTailors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormUpdateDelivry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormUpdateDelivry.Designer.cs">
+      <DependentUpon>XtraFormUpdateDelivry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormGomashType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormGomashType.Designer.cs">
+      <DependentUpon>XtraFormGomashType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormLogin.Designer.cs">
+      <DependentUpon>XtraFormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormPermissionUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormPermissionUser.Designer.cs">
+      <DependentUpon>XtraFormPermissionUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormDelivry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormDelivry.Designer.cs">
+      <DependentUpon>XtraFormDelivry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormUsers.Designer.cs">
+      <DependentUpon>XtraFormUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFormCompanyData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormCompanyData.Designer.cs">
+      <DependentUpon>XtraFormCompanyData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraForm_Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraForm_Customers.Designer.cs">
+      <DependentUpon>XtraForm_Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LinqModel\DataClasses1.designer.cs">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Report\GridReportP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\GridReportP.Designer.cs">
+      <DependentUpon>GridReportP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportHeader.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportHeader.Designer.cs">
+      <DependentUpon>ReportHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportHeaderWidth.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportHeaderWidth.Designer.cs">
+      <DependentUpon>ReportHeaderWidth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraFormExpenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\XtraFormExpenses.Designer.cs">
+      <DependentUpon>XtraFormExpenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraFormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\XtraFormReport.Designer.cs">
+      <DependentUpon>XtraFormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraFormReportDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\XtraFormReportDay.Designer.cs">
+      <DependentUpon>XtraFormReportDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraFormReportGapth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\XtraFormReportGapth.Designer.cs">
+      <DependentUpon>XtraFormReportGapth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraFormReportsByDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\XtraFormReportsByDate.Designer.cs">
+      <DependentUpon>XtraFormReportsByDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportClasses.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportClasses.Designer.cs">
+      <DependentUpon>XtraReportClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportExpenses.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportExpenses.Designer.cs">
+      <DependentUpon>XtraReportExpenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportGapth.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportGapth.Designer.cs">
+      <DependentUpon>XtraReportGapth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportInvoiceBuy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportInvoiceBuy.Designer.cs">
+      <DependentUpon>XtraReportInvoiceBuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportCustomer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportCustomer.Designer.cs">
+      <DependentUpon>XtraReportCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportInvoice.Designer.cs">
+      <DependentUpon>XtraReportInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportInvoiceGenaral.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportInvoiceGenaral.Designer.cs">
+      <DependentUpon>XtraReportInvoiceGenaral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportDebit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportDebit.Designer.cs">
+      <DependentUpon>XtraReportDebit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportPayAajel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportPayAajel.Designer.cs">
+      <DependentUpon>XtraReportPayAajel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportSize.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportSize.Designer.cs">
+      <DependentUpon>XtraReportSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportSize2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportSize2.Designer.cs">
+      <DependentUpon>XtraReportSize2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UC_Branch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UC_Branch.Designer.cs">
+      <DependentUpon>UC_Branch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UC_Class.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UC_Class.Designer.cs">
+      <DependentUpon>UC_Class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UC_Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UC_Customer.Designer.cs">
+      <DependentUpon>UC_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UC_Factore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UC_Factore.Designer.cs">
+      <DependentUpon>UC_Factore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UC_Master2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UC_Master2.Designer.cs">
+      <DependentUpon>UC_Master2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UC_Tailor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UC_Tailor.Designer.cs">
+      <DependentUpon>UC_Tailor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UC_User.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UC_User.Designer.cs">
+      <DependentUpon>UC_User.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\ComponentFlyoutDialog.resx">
+      <DependentUpon>ComponentFlyoutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMaster.en.resx">
+      <DependentUpon>FormMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMaster.resx">
+      <DependentUpon>FormMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTrailActivation.resx">
+      <DependentUpon>FormTrailActivation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormActive.resx">
+      <DependentUpon>XtraFormActive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormBackupSett.resx">
+      <DependentUpon>XtraFormBackupSett.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormBranch.ar.resx">
+      <DependentUpon>XtraFormBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormBranch.en.resx">
+      <DependentUpon>XtraFormBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormBranch.resx">
+      <DependentUpon>XtraFormBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormBuyInvoice.ar.resx">
+      <DependentUpon>XtraFormBuyInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormBuyInvoice.en.resx">
+      <DependentUpon>XtraFormBuyInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormBuyInvoice.resx">
+      <DependentUpon>XtraFormBuyInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormConnectionDB.resx">
+      <DependentUpon>XtraFormConnectionDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormCreditNote.en.resx">
+      <DependentUpon>XtraFormCreditNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormCustomers.ar.resx">
+      <DependentUpon>XtraFormCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormCustomers.en.resx">
+      <DependentUpon>XtraFormCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormCustomers.resx">
+      <DependentUpon>XtraFormCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormDefaultSize.ar.resx">
+      <DependentUpon>XtraFormDefaultSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormDefaultSize.resx">
+      <DependentUpon>XtraFormDefaultSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormClass.ar.resx">
+      <DependentUpon>XtraFormClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormClass.resx">
+      <DependentUpon>XtraFormClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormCreditNote.ar.resx">
+      <DependentUpon>XtraFormCreditNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormCreditNote.resx">
+      <DependentUpon>XtraFormCreditNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormDefultSize2.en.resx">
+      <DependentUpon>XtraFormDefultSize2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormDelivry.en.resx">
+      <DependentUpon>XtraFormDelivry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormExplanations.resx">
+      <DependentUpon>XtraFormExplanations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormFactories.ar.resx">
+      <DependentUpon>XtraFormFactories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormFactories.en.resx">
+      <DependentUpon>XtraFormFactories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormFactories.resx">
+      <DependentUpon>XtraFormFactories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormDefultSize2.ar.resx">
+      <DependentUpon>XtraFormDefultSize2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormDefultSize2.resx">
+      <DependentUpon>XtraFormDefultSize2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormGomashType.en.resx">
+      <DependentUpon>XtraFormGomashType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormMain.ar.resx">
+      <DependentUpon>XtraFormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormMain.en.resx">
+      <DependentUpon>XtraFormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormMain.resx">
+      <DependentUpon>XtraFormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormSanadGapth.ar.resx">
+      <DependentUpon>XtraFormSanadGapth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormSanadGapth.en.resx">
+      <DependentUpon>XtraFormSanadGapth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormSanadGapth.resx">
+      <DependentUpon>XtraFormSanadGapth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormSanadSarf.ar.resx">
+      <DependentUpon>XtraFormSanadSarf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormSanadSarf.en.resx">
+      <DependentUpon>XtraFormSanadSarf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormSanadSarf.resx">
+      <DependentUpon>XtraFormSanadSarf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormSMS.en.resx">
+      <DependentUpon>XtraFormSMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormSMS.resx">
+      <DependentUpon>XtraFormSMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormSuppliers.resx">
+      <DependentUpon>XtraFormSuppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormTailors.ar.resx">
+      <DependentUpon>XtraFormTailors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormTailors.en.resx">
+      <DependentUpon>XtraFormTailors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormTailors.resx">
+      <DependentUpon>XtraFormTailors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormUpdateDelivry.ar.resx">
+      <DependentUpon>XtraFormUpdateDelivry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormUpdateDelivry.en.resx">
+      <DependentUpon>XtraFormUpdateDelivry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormUpdateDelivry.resx">
+      <DependentUpon>XtraFormUpdateDelivry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormGomashType.ar.resx">
+      <DependentUpon>XtraFormGomashType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormGomashType.resx">
+      <DependentUpon>XtraFormGomashType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormLogin.ar.resx">
+      <DependentUpon>XtraFormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormLogin.resx">
+      <DependentUpon>XtraFormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormPermissionUser.ar.resx">
+      <DependentUpon>XtraFormPermissionUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormPermissionUser.en.resx">
+      <DependentUpon>XtraFormPermissionUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormPermissionUser.resx">
+      <DependentUpon>XtraFormPermissionUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormDelivry.ar.resx">
+      <DependentUpon>XtraFormDelivry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormDelivry.resx">
+      <DependentUpon>XtraFormDelivry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormUsers.ar.resx">
+      <DependentUpon>XtraFormUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormUsers.en.resx">
+      <DependentUpon>XtraFormUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormUsers.resx">
+      <DependentUpon>XtraFormUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormCompanyData.ar.resx">
+      <DependentUpon>XtraFormCompanyData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormCompanyData.en.resx">
+      <DependentUpon>XtraFormCompanyData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFormCompanyData.resx">
+      <DependentUpon>XtraFormCompanyData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraForm_Customers.resx">
+      <DependentUpon>XtraForm_Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report\GridReportP.resx">
+      <DependentUpon>GridReportP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportHeader.resx">
+      <DependentUpon>ReportHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportHeaderWidth.resx">
+      <DependentUpon>ReportHeaderWidth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraFormExpenses.ar.resx">
+      <DependentUpon>XtraFormExpenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraFormExpenses.en.resx">
+      <DependentUpon>XtraFormExpenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraFormExpenses.resx">
+      <DependentUpon>XtraFormExpenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraFormReport.ar.resx">
+      <DependentUpon>XtraFormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraFormReport.en.resx">
+      <DependentUpon>XtraFormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraFormReport.resx">
+      <DependentUpon>XtraFormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraFormReportDay.ar.resx">
+      <DependentUpon>XtraFormReportDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraFormReportDay.en.resx">
+      <DependentUpon>XtraFormReportDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraFormReportDay.resx">
+      <DependentUpon>XtraFormReportDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraFormReportGapth.ar.resx">
+      <DependentUpon>XtraFormReportGapth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraFormReportGapth.en.resx">
+      <DependentUpon>XtraFormReportGapth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraFormReportGapth.resx">
+      <DependentUpon>XtraFormReportGapth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraFormReportsByDate.ar.resx">
+      <DependentUpon>XtraFormReportsByDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraFormReportsByDate.en.resx">
+      <DependentUpon>XtraFormReportsByDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraFormReportsByDate.resx">
+      <DependentUpon>XtraFormReportsByDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportClasses.resx">
+      <DependentUpon>XtraReportClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportExpenses.resx">
+      <DependentUpon>XtraReportExpenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportGapth.resx">
+      <DependentUpon>XtraReportGapth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportInvoiceBuy.resx">
+      <DependentUpon>XtraReportInvoiceBuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportCustomer.resx">
+      <DependentUpon>XtraReportCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportInvoice.resx">
+      <DependentUpon>XtraReportInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportInvoiceGenaral.resx">
+      <DependentUpon>XtraReportInvoiceGenaral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportDebit.resx">
+      <DependentUpon>XtraReportDebit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportPayAajel.resx">
+      <DependentUpon>XtraReportPayAajel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportSize.resx">
+      <DependentUpon>XtraReportSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportSize2.resx">
+      <DependentUpon>XtraReportSize2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UC_Branch.resx">
+      <DependentUpon>UC_Branch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UC_Class.ar.resx">
+      <DependentUpon>UC_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UC_Class.en.resx">
+      <DependentUpon>UC_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UC_Class.resx">
+      <DependentUpon>UC_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UC_Customer.resx">
+      <DependentUpon>UC_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UC_Factore.resx">
+      <DependentUpon>UC_Factore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UC_Master2.en.resx">
+      <DependentUpon>UC_Master2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UC_Master2.resx">
+      <DependentUpon>UC_Master2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UC_Tailor.resx">
+      <DependentUpon>UC_Tailor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UC_User.resx">
+      <DependentUpon>UC_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EntityDeploy Include="DAL\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DAL\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="LinqModel\DataClasses1.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+    </None>
+    <None Include="LinqModel\DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblAccForCusAndSup.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblBranche.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblBuyInvoice.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblBuyInvoiceDetaile.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblClasse.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblClassesGroup.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblCustomer.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblCustomerGroup.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblDefaultSize.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblFactorie.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblFrontPacket.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblJabzur.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblkbak.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblNote.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblPayment.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblPermission.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblQallab.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblSanadSarf.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblSanadSup.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblSellInvoice.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblSellInvoiceDetaile.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblSidePacket.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblSupplier.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblTailor.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblUser.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.tblUserGroup.datasource" />
+    <None Include="Properties\DataSources\SewingSystem.LinqModel.View_Invoice.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_security_permission.svg" />
+    <None Include="Resources\bo_security_permission1.svg" />
+    <None Include="Resources\custom-tailoring-846x564.jpg" />
+    <None Include="Resources\185.jpg" />
+    <None Include="Resources\delete_16x16.png" />
+    <None Include="Resources\database_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editconnection.bmp" />
+    <None Include="Resources\small_2x_sale.png" />
+    <None Include="Resources\small_2x_christmas_sale.jpg" />
+    <None Include="Resources\showtestreport_32x32.png" />
+    <None Include="Resources\showtestreport_16x16.png" />
+    <None Include="Resources\sectionbreakslist_oddpage_32x323.png" />
+    <None Include="Resources\sectionbreakslist_oddpage_32x322.png" />
+    <None Include="Resources\sectionbreakslist_oddpage_32x321.png" />
+    <None Include="Resources\sectionbreakslist_oddpage_32x32.png" />
+    <None Include="Resources\sectionbreakslist_oddpage_16x162.png" />
+    <None Include="Resources\sectionbreakslist_oddpage_16x161.png" />
+    <None Include="Resources\sectionbreakslist_oddpage_16x16.png" />
+    <None Include="Resources\savepagesetup_32x321.png" />
+    <None Include="Resources\savepagesetup_32x32.png" />
+    <None Include="Resources\save_16x16.png" />
+    <None Include="Resources\reportlayoutpivottable_32x32.png" />
+    <None Include="Resources\reportlayoutpivottable_16x16.png" />
+    <None Include="Resources\report2_32x32.png" />
+    <None Include="Resources\report2_16x16.png" />
+    <None Include="Resources\repeatallitemlabelspivottable_32x32.png" />
+    <None Include="Resources\repeatallitemlabelspivottable_16x16.png" />
+    <None Include="Resources\removesheetrows_16x16.png" />
+    <None Include="Resources\refresh_32x321.png" />
+    <None Include="Resources\refresh_32x32.png" />
+    <None Include="Resources\refresh_16x16.png" />
+    <None Include="Resources\recurrence_32x32.png" />
+    <None Include="Resources\recurrence_16x16.png" />
+    <None Include="Resources\publicfix_32x32.png" />
+    <None Include="Resources\publicfix_16x16.png" />
+    <None Include="Resources\printer_32x32.png" />
+    <None Include="Resources\print_16x16.png" />
+    <None Include="Resources\prev_16x16.png" />
+    <None Include="Resources\open_32x32.png" />
+    <None Include="Resources\next_16x16.png" />
+    <None Include="Resources\last_16x16.png" />
+    <None Include="Resources\first_16x16.png" />
+    <None Include="Resources\exporttoxlsx_32x32.png" />
+    <None Include="Resources\exporttopdf_32x32.png" />
+    <None Include="Resources\defaultprinternetwork_32x322.png" />
+    <None Include="Resources\defaultprinternetwork_32x321.png" />
+    <None Include="Resources\defaultprinternetwork_32x32.png" />
+    <None Include="Resources\defaultprinter_32x32.png" />
+    <None Include="Resources\defaultprinter_16x161.png" />
+    <None Include="Resources\defaultprinter_16x16.png" />
+    <None Include="Resources\contact_32x32.png" />
+    <None Include="Resources\contact_16x16.png" />
+    <None Include="Resources\closeheaderandfooter_32x32.png" />
+    <None Include="Resources\cleartablestyle_32x325.png" />
+    <None Include="Resources\cleartablestyle_32x324.png" />
+    <None Include="Resources\cleartablestyle_32x323.png" />
+    <None Include="Resources\cleartablestyle_32x322.png" />
+    <None Include="Resources\cleartablestyle_32x321.png" />
+    <None Include="Resources\cleartablestyle_32x32.png" />
+    <None Include="Resources\cleartablestyle_16x163.png" />
+    <None Include="Resources\cleartablestyle_16x162.png" />
+    <None Include="Resources\cleartablestyle_16x161.png" />
+    <None Include="Resources\cleartablestyle_16x16.png" />
+    <None Include="Resources\chartyaxissettings_32x32.png" />
+    <None Include="Resources\chartyaxissettings_16x16.png" />
+    <None Include="Resources\cancel_32x324.png" />
+    <None Include="Resources\cancel_32x323.png" />
+    <None Include="Resources\cancel_32x322.png" />
+    <None Include="Resources\cancel_32x321.png" />
+    <None Include="Resources\cancel_32x32.png" />
+    <None Include="Resources\cancel_16x16.png" />
+    <None Include="Resources\bouser_32x323.png" />
+    <None Include="Resources\bouser_32x322.png" />
+    <None Include="Resources\bouser_32x321.png" />
+    <None Include="Resources\bouser_32x32.png" />
+    <None Include="Resources\bouser_16x162.png" />
+    <None Include="Resources\bouser_16x161.png" />
+    <None Include="Resources\bouser_16x16.png" />
+    <None Include="Resources\bosale_32x321.png" />
+    <None Include="Resources\bosale_32x32.png" />
+    <None Include="Resources\bosale_16x16.png" />
+    <None Include="Resources\bopermission_32x321.png" />
+    <None Include="Resources\bopermission_32x32.png" />
+    <None Include="Resources\bopermission_16x16.png" />
+    <None Include="Resources\bocountry_32x32.png" />
+    <None Include="Resources\bg_pcf_popularise2.png" />
+    <None Include="Resources\bg_pcf_popularise1.png" />
+    <None Include="Resources\bg_pcf_popularise.png" />
+    <None Include="Resources\apply_32x325.png" />
+    <None Include="Resources\apply_32x324.png" />
+    <None Include="Resources\apply_32x323.png" />
+    <None Include="Resources\apply_32x322.png" />
+    <None Include="Resources\apply_32x321.png" />
+    <None Include="Resources\apply_32x32.png" />
+    <None Include="Resources\apply_16x161.png" />
+    <None Include="Resources\apply_16x16.png" />
+    <None Include="Resources\agendaview_32x32.png" />
+    <None Include="Resources\addchartpane_16x16.png" />
+    <None Include="Resources\add_32x321.png" />
+    <None Include="Resources\add_32x32.png" />
+    <None Include="Resources\add_16x161.png" />
+    <None Include="Resources\add_16x16.png" />
+    <None Include="Resources\٢٠١٨-٠٣-٠٦-١٧-٥٥-٤٧-91575321.jpeg" />
+    <None Include="Resources\add_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveandnew_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collar-2.5-inch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\placket-plain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuff-two-buttons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qatari.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pocket-angled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_32x326.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x325.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\private.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buynow.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\products.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_product_group.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment2.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_quote.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_quote1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clip_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bocustomer_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boresume_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clip.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\size.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editcontact_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveandclose_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collar-2-buttons-square.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collar-band.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collar-square.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\القلاب - خياطة.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\الجبزور - خياطة.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\الكبك - خياطة.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1_03.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1_04.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1_05.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1_06.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1_16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1_18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1_20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1_14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1_10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1_23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1_25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1_27.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1_12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1_30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1_32.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1_34.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1_181.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Q1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Q2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Q3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Q4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Q5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Q6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Q7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Q8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Q9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Q10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DAL\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="logo.ico" />
+    <Content Include="logo2.ico" />
+    <Content Include="LOGO3.ico" />
+    <None Include="Resources\user_16x16.png" />
+    <None Include="Resources\user_32x32.png" />
+    <None Include="Resources\knowledgebasearticle_16x16.png" />
+    <None Include="Resources\knowledgebasearticle_32x32.png" />
+    <None Include="Resources\usergroup_16x16.png" />
+    <None Include="Resources\usergroup_32x32.png" />
+    <None Include="Resources\clip_16x16.png" />
+    <None Include="Resources\clip_32x321.png" />
+    <None Include="Resources\warning_16x16.png" />
+    <None Include="Resources\warning_32x32.png" />
+    <None Include="Resources\buy_16x16.png" />
+    <None Include="Resources\buy_32x32.png" />
+    <None Include="Resources\currency_16x16.png" />
+    <None Include="Resources\currency_32x32.png" />
+    <None Include="Resources\database_32x322.png" />
+    <None Include="Resources\saveall_32x32.png" />
+    <None Include="Resources\database_16x16.png" />
+    <None Include="Resources\database_32x321.png" />
+    <None Include="Resources\customer_16x16.png" />
+    <None Include="Resources\customer_32x32.png" />
+    <None Include="Resources\45.jpg" />
+    <None Include="Resources\33.jpg" />
+    <None Include="Resources\24.jpg" />
+    <None Include="Resources\23.jpg" />
+    <None Include="Resources\22.jpg" />
+    <None Include="Resources\13.jpg" />
+    <None Include="Resources\555.jpg" />
+    <None Include="Resources\77.jpg" />
+    <None Include="Resources\201.jpg" />
+    <None Include="Resources\211.jpg" />
+    <None Include="Resources\20.jpg" />
+    <None Include="Resources\21.jpg" />
+    <None Include="Resources\18.jpg" />
+    <None Include="Resources\17.jpg" />
+    <None Include="Resources\15.jpg" />
+    <None Include="Resources\14.jpg" />
+    <None Include="Resources\5.jpg" />
+    <None Include="Resources\7.jpg" />
+    <None Include="Resources\1.jpg" />
+    <None Include="Resources\3.jpg" />
+    <None Include="Resources\6.jpg" />
+    <None Include="Resources\2.jpg" />
+    <None Include="Resources\8.jpg" />
+    <None Include="Resources\4.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Liphsoft.Crypto.Argon2.1.0.5\build\Liphsoft.Crypto.Argon2.targets" Condition="Exists('..\packages\Liphsoft.Crypto.Argon2.1.0.5\build\Liphsoft.Crypto.Argon2.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Liphsoft.Crypto.Argon2.1.0.5\build\Liphsoft.Crypto.Argon2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Liphsoft.Crypto.Argon2.1.0.5\build\Liphsoft.Crypto.Argon2.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

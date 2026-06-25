@@ -1,0 +1,1551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="TheTradeRecTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 26</value>
+  </data>
+  <data name="ItemForBranchAddress1.CustomizationFormText" xml:space="preserve">
+    <value>العنوان:</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="checkEditEnableVat.Properties.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Save.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="toolStripButton91.RightToLeftAutoMirrorImage" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;colMobile.Name" xml:space="preserve">
+    <value>colMobile</value>
+  </data>
+  <data name="ItemForEmail.Text" xml:space="preserve">
+    <value>الإيميل:</value>
+  </data>
+  <data name="&gt;&gt;AddNew.Name" xml:space="preserve">
+    <value>AddNew</value>
+  </data>
+  <data name="colBranchName.Width" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="toolStripLabel13.Text" xml:space="preserve">
+    <value>of {0}</value>
+  </data>
+  <data name="colID15.Caption" xml:space="preserve">
+    <value>رقم الفرع</value>
+  </data>
+  <data name="repositoryItemLookUpEdit3.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolStripTextBox13.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ItemForBranchTelephone1.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="TheRoomTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 26</value>
+  </data>
+  <data name="&gt;&gt;tblBranchesBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripTextBox13.AccessibleName" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="ItemForEmail.CustomizationFormText" xml:space="preserve">
+    <value>الإيميل:</value>
+  </data>
+  <data name="colID15.Width" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="colMobile.Width" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="&gt;&gt;textEditVat.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="toolStripSeparator38.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 54</value>
+  </data>
+  <data name="layoutControlItem3.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem1</value>
+  </data>
+  <data name="&gt;&gt;ItemForBranchAddress1.Name" xml:space="preserve">
+    <value>ItemForBranchAddress1</value>
+  </data>
+  <data name="colEnterTime7.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ItemForEmail.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;UpdateRecord.Name" xml:space="preserve">
+    <value>UpdateRecord</value>
+  </data>
+  <data name="textEditVat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="checkEditEnableVat.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;BranchNameTextEdit.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup42.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;checkEditEnableVat.Name" xml:space="preserve">
+    <value>checkEditEnableVat</value>
+  </data>
+  <data name="layoutControlItem4.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem2</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v22.2" name="DevExpress.Utils.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="repositoryItemLookUpEdit23.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="bindingNavigator10.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="toolStripButton88.RightToLeftAutoMirrorImage" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textEditVat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 319</value>
+  </data>
+  <data name="&gt;&gt;WasherLogoPictureEdit.Parent" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="EmailTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 26</value>
+  </data>
+  <data name="colID15.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ItemForTheTradeRec.Name" xml:space="preserve">
+    <value>ItemForTheTradeRec</value>
+  </data>
+  <data name="checkEditEnableVat.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit37.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit37</value>
+  </data>
+  <data name="layoutControlItem5.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem2</value>
+  </data>
+  <data name="repositoryItemLookUpEdit38.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolStripTextBox13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 27</value>
+  </data>
+  <data name="dataLayoutControl10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="TaxNumberTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="BranchAddressTextEdit1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="checkEditEnableVat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>791, 319</value>
+  </data>
+  <data name="&gt;&gt;ItemForWasherOwnerName.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;MobileTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="checkEditEnableVat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="Delete.RightToLeftAutoMirrorImage" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BranchgridControl1.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;MobileTextEdit.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="checkEditEnableVat.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BranchgridControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="layoutControlItem3.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton89.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit3.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit3</value>
+  </data>
+  <data name="checkEditEnable2Invoic.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;TheRoomTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;WasherOwnerNameTextEdit.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;WasherOwnerNameTextEdit.Parent" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="&gt;&gt;textEdit46.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="colBranchAddress.Width" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="&gt;&gt;AddNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ItemForCompanyName.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="Delete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 51</value>
+  </data>
+  <data name="BranchgridControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 368</value>
+  </data>
+  <data name="repositoryItemLookUpEdit37.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="WasherOwnerNameTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 26</value>
+  </data>
+  <data name="ItemForCompanyName.Text" xml:space="preserve">
+    <value>اسم الشركة:</value>
+  </data>
+  <data name="&gt;&gt;dataLayoutControl10.Name" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="&gt;&gt;checkEditEnable2Invoic.Parent" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton89.Name" xml:space="preserve">
+    <value>toolStripButton89</value>
+  </data>
+  <data name="&gt;&gt;TheRoomTextEdit.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="Save.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 51</value>
+  </data>
+  <data name="colBranchName.Caption" xml:space="preserve">
+    <value>اسم الفرع</value>
+  </data>
+  <data name="&gt;&gt;colBranchName.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="btnRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 51</value>
+  </data>
+  <data name="textEdit46.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;ItemForWasherLogo.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;TheRoomTextEdit.Name" xml:space="preserve">
+    <value>TheRoomTextEdit</value>
+  </data>
+  <data name="&gt;&gt;IDTextEdit.Name" xml:space="preserve">
+    <value>IDTextEdit</value>
+  </data>
+  <data name="checkEditEnable2Invoic.Properties.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridColumn24.Width" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="&gt;&gt;colID15.Name" xml:space="preserve">
+    <value>colID15</value>
+  </data>
+  <data name="repositoryItemLookUpEdit37.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;toolStripSeparator38.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator38.Name" xml:space="preserve">
+    <value>toolStripSeparator38</value>
+  </data>
+  <data name="&gt;&gt;bindingNavigator10.Name" xml:space="preserve">
+    <value>bindingNavigator10</value>
+  </data>
+  <data name="ItemForWasherOwnerName.CustomizationFormText" xml:space="preserve">
+    <value>اسم المالك:</value>
+  </data>
+  <data name="colBranchTelephone.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;textEdit46.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="Delete.Text" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="repositoryItemLookUpEdit23.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colEnterTime7.Caption" xml:space="preserve">
+    <value>تاريخ الادخال</value>
+  </data>
+  <data name="&gt;&gt;tblUsersBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ItemForBranchName.Text" xml:space="preserve">
+    <value>اسم الفرع:</value>
+  </data>
+  <data name="BranchAddressTextEdit1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 26</value>
+  </data>
+  <data name="BranchTelephoneTextEdit1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;ItemForBranchTelephone1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="Save.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="layoutControlItem2.Text" xml:space="preserve">
+    <value>ملاحظات فاتورة المبيعات:</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>9, 19</value>
+  </data>
+  <data name="checkEditEnable2Invoic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>988, 319</value>
+  </data>
+  <data name="&gt;&gt;Print.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gridView17.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ItemForTheTradeRec.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="CompanyNameTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 26</value>
+  </data>
+  <data name="&gt;&gt;BranchgridControl1.Parent" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="AddNew.RightToLeftAutoMirrorImage" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit23.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ItemForCompanyName.CustomizationFormText" xml:space="preserve">
+    <value>اسم المغسلة:</value>
+  </data>
+  <data name="&gt;&gt;toolStripTextBox13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripButton91.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 51</value>
+  </data>
+  <data name="colNotes14.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="colEnterTime7.VisibleIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;ItemForBranchTelephone1.Name" xml:space="preserve">
+    <value>ItemForBranchTelephone1</value>
+  </data>
+  <data name="Print.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;checkEditEnable2Invoic.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="dataLayoutControl10.Text" xml:space="preserve">
+    <value>dataLayoutControl2</value>
+  </data>
+  <data name="colBranchName.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colNotes14.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Save.Text" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="BranchTelephoneTextEdit1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>946, 177</value>
+  </data>
+  <data name="&gt;&gt;TheTradeRecTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.XtraForm, DevExpress.Utils.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="TheRoomTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="repositoryItemLookUpEdit38.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit23.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit23</value>
+  </data>
+  <data name="checkEditEnable2Invoic.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditEnable2Invoic.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;toolStripSeparator37.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="CompanyNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>946, 147</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 6, 4, 6</value>
+  </data>
+  <data name="IDTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="ItemForTheTradeRec.Text" xml:space="preserve">
+    <value>السجل التجاري:</value>
+  </data>
+  <data name="repositoryItemLookUpEdit3.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="MobileTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 26</value>
+  </data>
+  <data name="dataLayoutControl10.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="repositoryItemLookUpEdit8.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;textEditVat.Name" xml:space="preserve">
+    <value>textEditVat</value>
+  </data>
+  <data name="AddNew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 51</value>
+  </data>
+  <data name="WasherOwnerNameTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator37.Name" xml:space="preserve">
+    <value>toolStripSeparator37</value>
+  </data>
+  <data name="BranchNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>644, 117</value>
+  </data>
+  <data name="Delete.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="gridView18.Appearance.EvenRow.BackColor2" type="System.Drawing.Color, System.Drawing">
+    <value>AliceBlue</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit8.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ItemForWasherOwnerName.Text" xml:space="preserve">
+    <value>اسم المالك:</value>
+  </data>
+  <data name="layoutControlItem1.Text" xml:space="preserve">
+    <value>رقم الفرع:</value>
+  </data>
+  <data name="&gt;&gt;ItemForWasherOwnerName.Name" xml:space="preserve">
+    <value>ItemForWasherOwnerName</value>
+  </data>
+  <data name="repositoryItemLookUpEdit8.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="Print.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 51</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem4.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="IDTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="XtraFormBranch.IconOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="&gt;&gt;TaxNumberTextEdit.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Name" xml:space="preserve">
+    <value>layoutControlItem5</value>
+  </data>
+  <data name="BranchgridControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1252, 257</value>
+  </data>
+  <data name="TheTaxRecTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Name" xml:space="preserve">
+    <value>layoutControlItem3</value>
+  </data>
+  <data name="layoutControlItem2.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;textEdit46.Parent" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="colBranchAddress.Caption" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="&gt;&gt;IDTextEdit.Parent" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="&gt;&gt;checkEditEnableVat.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ItemForBranchAddress1.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="toolStripTextBox13.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ItemForBranchTelephone1.CustomizationFormText" xml:space="preserve">
+    <value>الهاتف:</value>
+  </data>
+  <data name="repositoryItemLookUpEdit38.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;layoutControlItem2.Name" xml:space="preserve">
+    <value>layoutControlItem2</value>
+  </data>
+  <data name="&gt;&gt;gridView18.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;WasherLogoPictureEdit.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="checkEditEnableVat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;UpdateRecord.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;WasherOwnerNameTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ItemForPostNumber.Name" xml:space="preserve">
+    <value>ItemForPostNumber</value>
+  </data>
+  <data name="WasherLogoPictureEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 117</value>
+  </data>
+  <data name="colUserID6.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="toolStripButton91.Text" xml:space="preserve">
+    <value>Move last</value>
+  </data>
+  <data name="BranchgridControl1.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;ItemForBranchAddress1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="btnRefresh.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="ItemForPostNumber.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="BranchgridControl1.EmbeddedNavigator.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ItemForMobile.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="bindingNavigator10.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colBranchAddress.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textEditVat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>579, 26</value>
+  </data>
+  <data name="textEdit46.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 291</value>
+  </data>
+  <data name="toolStripButton89.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 51</value>
+  </data>
+  <data name="btnRefresh.Text" xml:space="preserve">
+    <value>تحديث</value>
+  </data>
+  <data name="repositoryItemLookUpEdit4.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;BranchgridControl1.Name" xml:space="preserve">
+    <value>BranchgridControl1</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="BranchgridControl1.EmbeddedNavigator.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 7, 4, 7</value>
+  </data>
+  <data name="bindingNavigator10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 14</value>
+  </data>
+  <assembly alias="DevExpress.Data.v22.2" name="DevExpress.Data.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="checkEditEnable2Invoic.Properties.GlyphVerticalAlignment" type="DevExpress.Utils.VertAlignment, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton88.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TheTradeRecTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton90.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v22.2" name="DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="BranchgridControl1.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="colNotes14.Caption" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="&gt;&gt;BranchgridControl1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="EmailTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 177</value>
+  </data>
+  <data name="BranchgridControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="textEditVat.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="EmailTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;colBranchName.Name" xml:space="preserve">
+    <value>colBranchName</value>
+  </data>
+  <data name="&gt;&gt;Save.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripSeparator37.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 54</value>
+  </data>
+  <data name="textEdit46.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="layoutControlGroup1.Text" xml:space="preserve">
+    <value>بيانات الفرع</value>
+  </data>
+  <data name="&gt;&gt;CompanyNameTextEdit.Name" xml:space="preserve">
+    <value>CompanyNameTextEdit</value>
+  </data>
+  <data name="repositoryItemLookUpEdit37.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;MobileTextEdit.Name" xml:space="preserve">
+    <value>MobileTextEdit</value>
+  </data>
+  <data name="&gt;&gt;TaxNumberTextEdit.Name" xml:space="preserve">
+    <value>TaxNumberTextEdit</value>
+  </data>
+  <data name="&gt;&gt;Delete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit38.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit38</value>
+  </data>
+  <data name="&gt;&gt;TheTaxRecTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit38.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ItemForBranchAddress1.Text" xml:space="preserve">
+    <value>العنوان:</value>
+  </data>
+  <data name="&gt;&gt;colUserID6.Name" xml:space="preserve">
+    <value>colUserID6</value>
+  </data>
+  <data name="&gt;&gt;BranchAddressTextEdit1.Name" xml:space="preserve">
+    <value>BranchAddressTextEdit1</value>
+  </data>
+  <data name="TaxNumberTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 26</value>
+  </data>
+  <data name="toolStripButton90.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 51</value>
+  </data>
+  <data name="toolStripLabel13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 51</value>
+  </data>
+  <data name="dataLayoutControl10.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="MobileTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="IDTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 26</value>
+  </data>
+  <data name="colID15.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem124.Name" xml:space="preserve">
+    <value>layoutControlItem124</value>
+  </data>
+  <data name="&gt;&gt;tblUsersBindingSource.Name" xml:space="preserve">
+    <value>tblUsersBindingSource</value>
+  </data>
+  <data name="textEdit46.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;BranchAddressTextEdit1.Parent" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="&gt;&gt;dataLayoutControl10.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textEditVat.Parent" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="colBranchTelephone.Width" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="bindingNavigator10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="&gt;&gt;EmailTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ItemForMobile.Text" xml:space="preserve">
+    <value>الجوال:</value>
+  </data>
+  <data name="WasherOwnerNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>644, 147</value>
+  </data>
+  <data name="&gt;&gt;ItemForEmail.Name" xml:space="preserve">
+    <value>ItemForEmail</value>
+  </data>
+  <data name="bindingNavigator10.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 3, 0</value>
+  </data>
+  <data name="&gt;&gt;TheTradeRecTextEdit.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="textEditVat.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="IDTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>946, 117</value>
+  </data>
+  <data name="&gt;&gt;checkEditEnable2Invoic.Name" xml:space="preserve">
+    <value>checkEditEnable2Invoic</value>
+  </data>
+  <data name="&gt;&gt;TheTaxRecTextEdit.Name" xml:space="preserve">
+    <value>TheTaxRecTextEdit</value>
+  </data>
+  <data name="BranchgridControl1.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
+  <data name="BranchTelephoneTextEdit1.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;BranchNameTextEdit.Parent" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="&gt;&gt;ItemForPostNumber.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="dataLayoutControl10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="WasherLogoPictureEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Name" xml:space="preserve">
+    <value>btnRefresh</value>
+  </data>
+  <data name="&gt;&gt;gridColumn20.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="toolStripButton88.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 51</value>
+  </data>
+  <data name="WasherLogoPictureEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>295, 116</value>
+  </data>
+  <data name="ItemForTheRoom.Text" xml:space="preserve">
+    <value>الغرفة التجارية:</value>
+  </data>
+  <data name="ItemForEmail.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="BranchgridControl1.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="layoutControlGroup2.Text" xml:space="preserve">
+    <value>الاعدادات</value>
+  </data>
+  <data name="&gt;&gt;BranchNameTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bindingNavigator10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingNavigator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Save.Name" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit37.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BranchAddressTextEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;IDTextEdit.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;MobileTextEdit.Parent" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="&gt;&gt;BranchTelephoneTextEdit1.Name" xml:space="preserve">
+    <value>BranchTelephoneTextEdit1</value>
+  </data>
+  <data name="&gt;&gt;gridColumn24.Name" xml:space="preserve">
+    <value>gridColumn24</value>
+  </data>
+  <data name="&gt;&gt;EmailTextEdit.Name" xml:space="preserve">
+    <value>EmailTextEdit</value>
+  </data>
+  <data name="toolStripButton90.Text" xml:space="preserve">
+    <value>Move next</value>
+  </data>
+  <data name="BranchgridControl1.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v22.2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;ItemForCompanyName.Name" xml:space="preserve">
+    <value>ItemForCompanyName</value>
+  </data>
+  <data name="&gt;&gt;colID15.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="colUserID6.VisibleIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="layoutControlItem4.Text" xml:space="preserve">
+    <value>تفعيل ضريبة المبيعات:</value>
+  </data>
+  <data name="ItemForPostNumber.CustomizationFormText" xml:space="preserve">
+    <value>الرقم الضريبي:</value>
+  </data>
+  <data name="TheTradeRecTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>644, 207</value>
+  </data>
+  <data name="bindingNavigator10.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="dataLayoutControl10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 2, 4, 2</value>
+  </data>
+  <data name="MobileTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;TheTradeRecTextEdit.Parent" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>XtraFormBranch</value>
+  </data>
+  <data name="repositoryItemLookUpEdit3.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="layoutControlItem4.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;ItemForBranchName.Name" xml:space="preserve">
+    <value>ItemForBranchName</value>
+  </data>
+  <data name="bindingNavigator10.Text" xml:space="preserve">
+    <value>bindingNavigator2</value>
+  </data>
+  <data name="AddNew.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton91.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Print.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="BranchgridControl1.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="Print.Text" xml:space="preserve">
+    <value>طباعة</value>
+  </data>
+  <data name="checkEditEnable2Invoic.Properties.GlyphAlignment" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Far</value>
+  </data>
+  <data name="layoutControlItem3.Text" xml:space="preserve">
+    <value>ضريبة القيمة المضافة:</value>
+  </data>
+  <data name="colBranchTelephone.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;WasherLogoPictureEdit.Name" xml:space="preserve">
+    <value>WasherLogoPictureEdit</value>
+  </data>
+  <data name="&gt;&gt;ItemForMobile.Name" xml:space="preserve">
+    <value>ItemForMobile</value>
+  </data>
+  <data name="bindingNavigator10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1252, 54</value>
+  </data>
+  <data name="ItemForCompanyName.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;BranchgridControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="BranchTelephoneTextEdit1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 26</value>
+  </data>
+  <data name="&gt;&gt;TaxNumberTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;WasherLogoPictureEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PictureEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit4.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit4</value>
+  </data>
+  <data name="&gt;&gt;tblBranchesBindingSource.Name" xml:space="preserve">
+    <value>tblBranchesBindingSource</value>
+  </data>
+  <data name="toolStripButton89.Text" xml:space="preserve">
+    <value>Move previous</value>
+  </data>
+  <data name="&gt;&gt;bindingNavigator10.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;BranchTelephoneTextEdit1.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;checkEditEnable2Invoic.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BranchAddressTextEdit1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="layoutControlItem5.Text" xml:space="preserve">
+    <value>طباعة نسختين لفاتورة المبيعات</value>
+  </data>
+  <data name="TheTaxRecTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;ItemForTheTaxRec.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ItemForTheRoom.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ItemForWasherLogo.Name" xml:space="preserve">
+    <value>ItemForWasherLogo</value>
+  </data>
+  <data name="&gt;&gt;gridView17.Name" xml:space="preserve">
+    <value>gridView17</value>
+  </data>
+  <data name="BranchgridControl1.EmbeddedNavigator.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="BranchgridControl1.EmbeddedNavigator.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="CompanyNameTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit8.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit8</value>
+  </data>
+  <data name="&gt;&gt;CompanyNameTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;TaxNumberTextEdit.Parent" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit3.Name" xml:space="preserve">
+    <value>repositoryItemTextEdit3</value>
+  </data>
+  <data name="&gt;&gt;colBranchTelephone.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="layoutControlItem5.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;CompanyNameTextEdit.Parent" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="toolStripSeparator39.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 54</value>
+  </data>
+  <data name="&gt;&gt;TheTaxRecTextEdit.Parent" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="&gt;&gt;Print.Name" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup1.Name" xml:space="preserve">
+    <value>layoutControlGroup1</value>
+  </data>
+  <data name="ItemForTheTaxRec.Text" xml:space="preserve">
+    <value>السجل الضريبي:</value>
+  </data>
+  <data name="AddNew.Text" xml:space="preserve">
+    <value>اضافة جديد</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton91.Name" xml:space="preserve">
+    <value>toolStripButton91</value>
+  </data>
+  <data name="layoutControlGroup42.AppearanceTabPage.Header.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt, style=Bold</value>
+  </data>
+  <data name="colUserID6.Caption" xml:space="preserve">
+    <value>المستخدم</value>
+  </data>
+  <data name="&gt;&gt;colBranchTelephone.Name" xml:space="preserve">
+    <value>colBranchTelephone</value>
+  </data>
+  <data name="ItemForMobile.CustomizationFormText" xml:space="preserve">
+    <value>الجوال:</value>
+  </data>
+  <data name="BranchNameTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="repositoryItemLookUpEdit8.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem4.Name" xml:space="preserve">
+    <value>layoutControlItem4</value>
+  </data>
+  <data name="&gt;&gt;colBranchAddress.Name" xml:space="preserve">
+    <value>colBranchAddress</value>
+  </data>
+  <data name="ItemForPostNumber.Text" xml:space="preserve">
+    <value>الرقم الضريبي:</value>
+  </data>
+  <data name="repositoryItemLookUpEdit4.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MobileTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>644, 177</value>
+  </data>
+  <data name="checkEditEnable2Invoic.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BranchTelephoneTextEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;EmailTextEdit.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="toolStripButton88.Text" xml:space="preserve">
+    <value>Move first</value>
+  </data>
+  <data name="&gt;&gt;bindingNavigator10.Parent" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="IDTextEdit.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;EmailTextEdit.Parent" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;TheRoomTextEdit.Parent" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="&gt;&gt;checkEditEnableVat.Parent" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator39.Name" xml:space="preserve">
+    <value>toolStripSeparator39</value>
+  </data>
+  <data name="ItemForWasherLogo.CustomizationFormText" xml:space="preserve">
+    <value>ItemForWasherLogo</value>
+  </data>
+  <data name="TheTaxRecTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>946, 207</value>
+  </data>
+  <data name="&gt;&gt;gridColumn24.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;toolStripLabel13.Name" xml:space="preserve">
+    <value>toolStripLabel13</value>
+  </data>
+  <data name="ItemForWasherOwnerName.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="toolStripButton89.RightToLeftAutoMirrorImage" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;dataLayoutControl10.Type" xml:space="preserve">
+    <value>DevExpress.XtraDataLayout.DataLayoutControl, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="BranchAddressTextEdit1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 117</value>
+  </data>
+  <data name="colNotes14.Width" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="&gt;&gt;Delete.Name" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem1.Name" xml:space="preserve">
+    <value>layoutControlItem1</value>
+  </data>
+  <data name="EmailTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;IDTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="colEnterTime7.Width" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="&gt;&gt;textEditVat.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gridColumn20.Width" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="&gt;&gt;colUserID6.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;textEdit46.Name" xml:space="preserve">
+    <value>textEdit46</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton88.Name" xml:space="preserve">
+    <value>toolStripButton88</value>
+  </data>
+  <data name="&gt;&gt;TheTradeRecTextEdit.Name" xml:space="preserve">
+    <value>TheTradeRecTextEdit</value>
+  </data>
+  <data name="TaxNumberTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 147</value>
+  </data>
+  <data name="&gt;&gt;toolStripLabel13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TheTaxRecTextEdit.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;BranchTelephoneTextEdit1.Parent" xml:space="preserve">
+    <value>dataLayoutControl10</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1284, 639</value>
+  </data>
+  <data name="TaxNumberTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="checkEditEnableVat.Properties.GlyphVerticalAlignment" type="DevExpress.Utils.VertAlignment, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;colNotes14.Name" xml:space="preserve">
+    <value>colNotes14</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ItemForMobile.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="colBranchAddress.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup2.Name" xml:space="preserve">
+    <value>layoutControlGroup2</value>
+  </data>
+  <data name="&gt;&gt;colNotes14.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>الفروع</value>
+  </data>
+  <data name="toolStripLabel13.ToolTipText" xml:space="preserve">
+    <value>Total number of items</value>
+  </data>
+  <data name="&gt;&gt;colMobile.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="toolStripTextBox13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="&gt;&gt;gridColumn20.Name" xml:space="preserve">
+    <value>gridColumn20</value>
+  </data>
+  <data name="WasherLogoPictureEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="toolStripButton90.RightToLeftAutoMirrorImage" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton90.Name" xml:space="preserve">
+    <value>toolStripButton90</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem52.Name" xml:space="preserve">
+    <value>layoutControlItem52</value>
+  </data>
+  <data name="ItemForWasherLogo.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="BranchAddressTextEdit1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="repositoryItemLookUpEdit4.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="checkEditEnableVat.Properties.GlyphAlignment" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="dataLayoutControl10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1284, 639</value>
+  </data>
+  <data name="&gt;&gt;colEnterTime7.Name" xml:space="preserve">
+    <value>colEnterTime7</value>
+  </data>
+  <data name="&gt;&gt;colEnterTime7.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;WasherOwnerNameTextEdit.Name" xml:space="preserve">
+    <value>WasherOwnerNameTextEdit</value>
+  </data>
+  <data name="BranchNameTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 26</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator39.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BranchgridControl1.EmbeddedNavigator.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="checkEditEnable2Invoic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="&gt;&gt;toolStripTextBox13.Name" xml:space="preserve">
+    <value>toolStripTextBox13</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colBranchAddress.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ItemForTheTaxRec.Name" xml:space="preserve">
+    <value>ItemForTheTaxRec</value>
+  </data>
+  <data name="&gt;&gt;ItemForTheRoom.Name" xml:space="preserve">
+    <value>ItemForTheRoom</value>
+  </data>
+  <data name="checkEditEnable2Invoic.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BranchNameTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;dataLayoutControl10.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textEdit46.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1025, 24</value>
+  </data>
+  <data name="WasherOwnerNameTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="colUserID6.Width" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem124.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="TheTaxRecTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 26</value>
+  </data>
+  <data name="&gt;&gt;ItemForBranchName.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="colBranchName.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TheRoomTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="toolStripTextBox13.ToolTipText" xml:space="preserve">
+    <value>Current position</value>
+  </data>
+  <data name="repositoryItemLookUpEdit23.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="CompanyNameTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem52.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridView18.Name" xml:space="preserve">
+    <value>gridView18</value>
+  </data>
+  <data name="textEditVat.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemTextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BranchNameTextEdit.Name" xml:space="preserve">
+    <value>BranchNameTextEdit</value>
+  </data>
+  <data name="TheRoomTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 207</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup42.Name" xml:space="preserve">
+    <value>layoutControlGroup42</value>
+  </data>
+  <data name="layoutControlItem2.CustomizationFormText" xml:space="preserve">
+    <value>ملاحظات فاتورة المبيعات:</value>
+  </data>
+  <data name="TheTradeRecTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;checkEditEnableVat.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="colBranchTelephone.Caption" xml:space="preserve">
+    <value>الهاتف</value>
+  </data>
+  <data name="ItemForBranchTelephone1.Text" xml:space="preserve">
+    <value>الهاتف:</value>
+  </data>
+  <data name="checkEditEnableVat.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;CompanyNameTextEdit.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="BranchgridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>en</value>
+  </metadata>
+  <metadata name="bindingNavigator10.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="tblUsersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>371, 17</value>
+  </metadata>
+  <metadata name="tblBranchesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>177, 17</value>
+  </metadata>
+</root>

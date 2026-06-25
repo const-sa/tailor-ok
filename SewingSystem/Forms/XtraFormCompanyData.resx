@@ -1,0 +1,1641 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="checkEditEnable2Invoic.Properties.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ItemForWelcomeMessage.Text" xml:space="preserve">
+    <value>رسالة الترحيب</value>
+  </data>
+  <data name="&gt;&gt;RequestReceiptMessageMemoEdit.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="radioGroupMashinType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 59</value>
+  </data>
+  <data name="&gt;&gt;ItemForSendMessOnPreparation.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="textEdit46.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="ItemForSendMessOnSave.Text" xml:space="preserve">
+    <value>ارسال رسالة الترحيب:</value>
+  </data>
+  <data name="&gt;&gt;ItemForWelcomeMessage.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;RequestReceiptMessageMemoEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.MemoEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="SendMessOnPreparationCheckEdit.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="DevExpress.Utils.v22.2" name="DevExpress.Utils.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="teECRport.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;TheRoomTextEdit.Name" xml:space="preserve">
+    <value>TheRoomTextEdit</value>
+  </data>
+  <assembly alias="DevExpress.Data.v22.2" name="DevExpress.Data.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="checkEditEnable2Invoic.Properties.GlyphVerticalAlignment" type="DevExpress.Utils.VertAlignment, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="SendMessOnPreparationCheckEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup3.Name" xml:space="preserve">
+    <value>layoutControlGroup3</value>
+  </data>
+  <data name="&gt;&gt;SMS_access_tokenTextEdit.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;DataMainForWasher_print.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bindingNavigator2.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="SendMessOnPreparationCheckEdit.Properties.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;BranchAddressTextEdit.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="MessageTypeRadioGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 24</value>
+  </data>
+  <data name="checkEditEnable2Invoic.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;teECRport.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;textEdit46.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.MemoEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="radioGroupMashinType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>829, 568</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;SendMessOnSaveCheckEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="checkEditEnableVat.Properties.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MobileTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 26</value>
+  </data>
+  <data name="ItemForCompanyName.Text" xml:space="preserve">
+    <value>اسم الشركة:</value>
+  </data>
+  <data name="teECRport.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MobileTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>305, 166</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tsDefaultSendToECR.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="DataMainForWasherSave.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;SendMessOnSaveCheckEdit.Name" xml:space="preserve">
+    <value>SendMessOnSaveCheckEdit</value>
+  </data>
+  <data name="layoutControlGroup42.AppearanceTabPage.PageClient.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="layoutControlGroup42.Text" xml:space="preserve">
+    <value>الصرافة الآلية</value>
+  </data>
+  <data name="&gt;&gt;ItemForWasherOwnerName.Name" xml:space="preserve">
+    <value>ItemForWasherOwnerName</value>
+  </data>
+  <data name="&gt;&gt;TheTradeRecTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;MobileTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;CompanyNameTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ItemForSmsUserName.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="layoutControlItem7.Text" xml:space="preserve">
+    <value>نوع مكينة الصرافة الآلية</value>
+  </data>
+  <data name="ItemForMessageType.Text" xml:space="preserve">
+    <value>نوع الرسائل:</value>
+  </data>
+  <data name="TheRoomTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 226</value>
+  </data>
+  <data name="&gt;&gt;SMS_instance_idTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="checkEditEnable2Invoic.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="layoutControlItem23.CustomizationFormText" xml:space="preserve">
+    <value>إرسال إلى الصرافة الآلية</value>
+  </data>
+  <data name="layoutControlGroup42.OptionsPrint.AppearanceItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="TheTaxRecTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="labelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;TaxNumberTextEdit.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;ItemForBranchAddress.Name" xml:space="preserve">
+    <value>ItemForBranchAddress</value>
+  </data>
+  <data name="BranchAddressTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>770, 196</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1272, 686</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem21.Name" xml:space="preserve">
+    <value>layoutControlItem21</value>
+  </data>
+  <data name="SMS_access_tokenTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 600</value>
+  </data>
+  <data name="layoutControlGroup42.AppearanceTabPage.HeaderDisabled.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="EmailTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;SmsSenderNameTextEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;ItemForSmsPassword.Name" xml:space="preserve">
+    <value>ItemForSmsPassword</value>
+  </data>
+  <data name="&gt;&gt;SendMessOnSaveCheckEdit.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;DataMainForWashergraidControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="MobileTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;MessageTypeRadioGroup.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="bindingNavigator2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;ItemForCompanyName.Name" xml:space="preserve">
+    <value>ItemForCompanyName</value>
+  </data>
+  <data name="WelcomeMessageMemoEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="&gt;&gt;ItemForWasherLogo.Name" xml:space="preserve">
+    <value>ItemForWasherLogo</value>
+  </data>
+  <data name="labelControl1.Text" xml:space="preserve">
+    <value>لطلب تفعيل خدمة الواتس اب  او الرسائل النصيه التواصل معنا - 0506499275
+To request activation of the WhatsApp or text message service, contact us</value>
+  </data>
+  <data name="layoutControlItem5.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="SendMessOnSaveCheckEdit.Properties.GlyphVerticalAlignment" type="DevExpress.Utils.VertAlignment, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;SmsSenderNameTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.MemoEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="checkEditEnableVat.Properties.GlyphVerticalAlignment" type="DevExpress.Utils.VertAlignment, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;DataMainWash_layoutControlGroup60.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="layoutControlGroup4.CustomizationFormText" xml:space="preserve">
+    <value>اعدادات رسائل الواتس اب</value>
+  </data>
+  <data name="SMS_access_tokenTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="SmsPasswordTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>437, 598</value>
+  </data>
+  <data name="TheRoomTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;SmsUserNameTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BranchNameTextEdit.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;ItemForBranchTelephone.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="layoutControlItem23.AppearanceItemCaptionDisabled.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="ItemForRequestReceiptMessage.Text" xml:space="preserve">
+    <value>رسالة استلام الطلب</value>
+  </data>
+  <data name="&gt;&gt;CompanyNameTextEdit.Name" xml:space="preserve">
+    <value>CompanyNameTextEdit</value>
+  </data>
+  <data name="TaxNumberTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="SMS_access_tokenTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;textEdit30.Name" xml:space="preserve">
+    <value>textEdit30</value>
+  </data>
+  <data name="layoutControlItem6.CustomizationFormText" xml:space="preserve">
+    <value>رقم الفرع:</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup42.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ItemForSendMessOnSave.Name" xml:space="preserve">
+    <value>ItemForSendMessOnSave</value>
+  </data>
+  <data name="DataMainForWashergraidControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="TheTradeRecTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="ItemForSMS_instance_id.CustomizationFormText" xml:space="preserve">
+    <value>instance_id</value>
+  </data>
+  <data name="&gt;&gt;tblBrancheBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tsDefaultSendToECR.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="tsDefaultSendToECR.Properties.OnText" xml:space="preserve">
+    <value>تشغيل</value>
+  </data>
+  <data name="&gt;&gt;ItemForEmail.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="checkEditEnable2Invoic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 24</value>
+  </data>
+  <data name="&gt;&gt;SendMessOnPreparationCheckEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;SmsUserNameTextEdit.Name" xml:space="preserve">
+    <value>SmsUserNameTextEdit</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup4.Name" xml:space="preserve">
+    <value>layoutControlGroup4</value>
+  </data>
+  <data name="&gt;&gt;WasherLogoPictureEdit.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;ItemForTheTaxRec.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BranchNameTextEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;BranchNameTextEdit.Name" xml:space="preserve">
+    <value>BranchNameTextEdit</value>
+  </data>
+  <data name="MessageTypeRadioGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>398, 362</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;bindingNavigator2.Name" xml:space="preserve">
+    <value>bindingNavigator2</value>
+  </data>
+  <data name="DataMainForWashergraidControl.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="SendMessOnSaveCheckEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="&gt;&gt;IDTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ItemForTheRoom.Text" xml:space="preserve">
+    <value>الغرفة التجارية:</value>
+  </data>
+  <data name="SMS_instance_idTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="bindingNavigator2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ItemForPostNumber.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;checkEditEnableVat.Name" xml:space="preserve">
+    <value>checkEditEnableVat</value>
+  </data>
+  <data name="&gt;&gt;MobileTextEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;ItemForSendMessOnSave.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ItemForSmsSenderName.Text" xml:space="preserve">
+    <value>اسم المرسل:</value>
+  </data>
+  <data name="checkEditEnable2Invoic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>829, 457</value>
+  </data>
+  <data name="TheRoomTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="bindingNavigator2.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ItemForTheTaxRec.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="textEditVat.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;tsDefaultSendToECR.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ToggleSwitch, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="checkEditEnableVat.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;textEdit30.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;checkEditEnable2Invoic.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup35.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="checkEditEnableVat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>829, 429</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="tsDefaultSendToECR.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="layoutControlItem23.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;MobileTextEdit.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="SmsSenderNameTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;checkEditEnable2Invoic.Name" xml:space="preserve">
+    <value>checkEditEnable2Invoic</value>
+  </data>
+  <data name="&gt;&gt;textEdit46.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="SendMessOnSaveCheckEdit.Properties.GlyphAlignment" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="WasherOwnerNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>305, 136</value>
+  </data>
+  <data name="&gt;&gt;Refrash.Name" xml:space="preserve">
+    <value>Refrash</value>
+  </data>
+  <data name="BranchTelephoneTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 26</value>
+  </data>
+  <data name="&gt;&gt;WasherOwnerNameTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="MessageTypeRadioGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="bindingNavigator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1248, 59</value>
+  </data>
+  <data name="SendMessOnSaveCheckEdit.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="resource.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="layoutControlItem21.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;tsDefaultSendToECR.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;tsDefaultSendToECR.Name" xml:space="preserve">
+    <value>tsDefaultSendToECR</value>
+  </data>
+  <data name="BranchAddressTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="resource.Font1" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="&gt;&gt;ItemForSMS_access_token.Name" xml:space="preserve">
+    <value>ItemForSMS_access_token</value>
+  </data>
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="SmsSenderNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>437, 628</value>
+  </data>
+  <data name="&gt;&gt;teECRport.Name" xml:space="preserve">
+    <value>teECRport</value>
+  </data>
+  <data name="BranchTelephoneTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="TaxNumberTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 26</value>
+  </data>
+  <data name="&gt;&gt;SmsUserNameTextEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;DataMainForWashergraidControl.Name" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="textEdit46.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="RequestReceiptMessageMemoEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>399, 112</value>
+  </data>
+  <data name="BranchAddressTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;TaxNumberTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;EmailTextEdit.Name" xml:space="preserve">
+    <value>EmailTextEdit</value>
+  </data>
+  <data name="EmailTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>305, 196</value>
+  </data>
+  <data name="&gt;&gt;BranchAddressTextEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;SmsSenderNameTextEdit.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="ItemForSmsUserName.Text" xml:space="preserve">
+    <value>اسم المستخدم:</value>
+  </data>
+  <data name="&gt;&gt;IDTextEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;BranchAddressTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem2.Name" xml:space="preserve">
+    <value>layoutControlItem2</value>
+  </data>
+  <data name="TheTaxRecTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;ItemForSmsPassword.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ItemForTheTradeRec.CustomizationFormText" xml:space="preserve">
+    <value>السجل التجاري:</value>
+  </data>
+  <data name="layoutControlGroup42.OptionsPrint.AppearanceItemText.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="&gt;&gt;checkEditEnable2Invoic.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;bindingNavigator2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="RequestReceiptMessageMemoEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="&gt;&gt;textEditVat.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;ItemForBranchName.Name" xml:space="preserve">
+    <value>ItemForBranchName</value>
+  </data>
+  <data name="WasherOwnerNameTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="Refrash.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;checkEditEnableVat.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="tsDefaultSendToECR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 29</value>
+  </data>
+  <data name="layoutControlItem7.CustomizationFormText" xml:space="preserve">
+    <value>نوع مكينة الصرافة الآلية</value>
+  </data>
+  <data name="&gt;&gt;SendMessOnPreparationCheckEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="resource.Font8" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="layoutControlItem6.Text" xml:space="preserve">
+    <value>رقم الفرع:</value>
+  </data>
+  <data name="layoutControlGroup42.CustomizationFormText" xml:space="preserve">
+    <value>الصرافة الآلية</value>
+  </data>
+  <data name="layoutControlGroup42.AppearanceTabPage.HeaderHotTracked.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem21.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ItemForSmsUserName.Name" xml:space="preserve">
+    <value>ItemForSmsUserName</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup1.Name" xml:space="preserve">
+    <value>layoutControlGroup1</value>
+  </data>
+  <data name="textEditVat.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;TheRoomTextEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="WasherOwnerNameTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tblBrancheBindingSource.Name" xml:space="preserve">
+    <value>tblBrancheBindingSource</value>
+  </data>
+  <data name="ItemForMobile.Text" xml:space="preserve">
+    <value>الجوال:</value>
+  </data>
+  <data name="textEdit30.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Name" xml:space="preserve">
+    <value>layoutControlItem3</value>
+  </data>
+  <data name="teECRport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>829, 631</value>
+  </data>
+  <data name="&gt;&gt;ItemForCompanyName.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;RequestReceiptMessageMemoEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;ItemForMessageType.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ItemForPostNumber.Text" xml:space="preserve">
+    <value>الرقم الضريبي:</value>
+  </data>
+  <data name="IDTextEdit.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SendMessOnSaveCheckEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="ItemForSMS_access_token.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;SmsPasswordTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ItemForTheTradeRec.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="DataMainForWashergraidControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1272, 686</value>
+  </data>
+  <data name="resource.Font5" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="layoutControlItem23.Text" xml:space="preserve">
+    <value>إرسال إلى الصرافة الآلية</value>
+  </data>
+  <data name="SendMessOnPreparationCheckEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;ItemForMobile.Name" xml:space="preserve">
+    <value>ItemForMobile</value>
+  </data>
+  <data name="SmsUserNameTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 26</value>
+  </data>
+  <data name="RequestReceiptMessageMemoEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 414</value>
+  </data>
+  <data name="BranchAddressTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 26</value>
+  </data>
+  <data name="layoutControlGroup42.OptionsPrint.AppearanceGroupCaption.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="layoutControlItem5.Text" xml:space="preserve">
+    <value>طباعة نسختين للفاتورة</value>
+  </data>
+  <data name="textEditVat.EditValue" type="System.Decimal, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="layoutControlGroup4.Text" xml:space="preserve">
+    <value>اعدادات رسائل الواتس اب</value>
+  </data>
+  <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>555, 42</value>
+  </data>
+  <data name="SMS_instance_idTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 26</value>
+  </data>
+  <data name="BranchNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>305, 106</value>
+  </data>
+  <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>358, 285</value>
+  </data>
+  <data name="&gt;&gt;EmailTextEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;ItemForRequestReceiptMessage.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;SendMessOnPreparationCheckEdit.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;textEdit30.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ItemForSmsSenderName.Name" xml:space="preserve">
+    <value>ItemForSmsSenderName</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem1.Name" xml:space="preserve">
+    <value>layoutControlItem1</value>
+  </data>
+  <data name="CompanyNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>770, 136</value>
+  </data>
+  <data name="ItemForBranchAddress.Text" xml:space="preserve">
+    <value>العنوان:</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup42.Name" xml:space="preserve">
+    <value>layoutControlGroup42</value>
+  </data>
+  <data name="TheTaxRecTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>770, 226</value>
+  </data>
+  <data name="&gt;&gt;SMS_instance_idTextEdit.Name" xml:space="preserve">
+    <value>SMS_instance_idTextEdit</value>
+  </data>
+  <data name="resource.Font6" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="checkEditEnable2Invoic.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="ItemForSendMessOnSave.CustomizationFormText" xml:space="preserve">
+    <value>ارسال اشعار التفصيل:</value>
+  </data>
+  <data name="TaxNumberTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>829, 369</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Name" xml:space="preserve">
+    <value>labelControl1</value>
+  </data>
+  <data name="&gt;&gt;ItemForPostNumber.Name" xml:space="preserve">
+    <value>ItemForPostNumber</value>
+  </data>
+  <data name="textEditVat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 26</value>
+  </data>
+  <data name="tsDefaultSendToECR.Properties.OffText" xml:space="preserve">
+    <value>إيقاف</value>
+  </data>
+  <data name="&gt;&gt;Refrash.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TheTaxRecTextEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="layoutControlGroup35.AppearanceTabPage.Header.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt, style=Bold</value>
+  </data>
+  <data name="ItemForSendMessOnPreparation.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="CompanyNameTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;SmsPasswordTextEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="SendMessOnPreparationCheckEdit.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;BranchTelephoneTextEdit.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="layoutControlItem3.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem2</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem104.Name" xml:space="preserve">
+    <value>layoutControlItem104</value>
+  </data>
+  <data name="SendMessOnPreparationCheckEdit.Properties.GlyphAlignment" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="layoutControlGroup1.Text" xml:space="preserve">
+    <value>الاعدادات</value>
+  </data>
+  <data name="&gt;&gt;SMS_access_tokenTextEdit.Name" xml:space="preserve">
+    <value>SMS_access_tokenTextEdit</value>
+  </data>
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="&gt;&gt;SendMessOnPreparationCheckEdit.Name" xml:space="preserve">
+    <value>SendMessOnPreparationCheckEdit</value>
+  </data>
+  <data name="tsDefaultSendToECR.Properties.GlyphVerticalAlignment" type="DevExpress.Utils.VertAlignment, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="SmsUserNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>437, 568</value>
+  </data>
+  <data name="&gt;&gt;TaxNumberTextEdit.Name" xml:space="preserve">
+    <value>TaxNumberTextEdit</value>
+  </data>
+  <data name="bindingNavigator2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;WelcomeMessageMemoEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="checkEditEnableVat.Properties.GlyphAlignment" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="tsDefaultSendToECR.Location" type="System.Drawing.Point, System.Drawing">
+    <value>829, 535</value>
+  </data>
+  <data name="TheTradeRecTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 26</value>
+  </data>
+  <data name="SmsSenderNameTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 24</value>
+  </data>
+  <data name="DataMainWash_layoutControlGroup60.Text" xml:space="preserve">
+    <value>بيانات الشركة</value>
+  </data>
+  <data name="&gt;&gt;DataMainForWasherSave.Name" xml:space="preserve">
+    <value>DataMainForWasherSave</value>
+  </data>
+  <data name="&gt;&gt;WasherOwnerNameTextEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Name" xml:space="preserve">
+    <value>layoutControlItem5</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem6.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="resource.Font4" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="textEdit46.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1050, 25</value>
+  </data>
+  <data name="DataMainForWasher_print.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;BranchTelephoneTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="WasherOwnerNameTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 26</value>
+  </data>
+  <data name="layoutControlItem7.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="ItemForSmsPassword.Text" xml:space="preserve">
+    <value>كلمة المرور:</value>
+  </data>
+  <data name="&gt;&gt;DataMainForWashergraidControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TheTradeRecTextEdit.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;textEdit30.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem104.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="SendMessOnPreparationCheckEdit.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;RequestReceiptMessageMemoEdit.Name" xml:space="preserve">
+    <value>RequestReceiptMessageMemoEdit</value>
+  </data>
+  <data name="&gt;&gt;WelcomeMessageMemoEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.MemoEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;WasherLogoPictureEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;TheTradeRecTextEdit.Name" xml:space="preserve">
+    <value>TheTradeRecTextEdit</value>
+  </data>
+  <data name="&gt;&gt;MessageTypeRadioGroup.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.RadioGroup, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ItemForTheRoom.CustomizationFormText" xml:space="preserve">
+    <value>الغرفة التجارية:</value>
+  </data>
+  <data name="&gt;&gt;BranchNameTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="DataMainForWashergraidControl.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem4.Name" xml:space="preserve">
+    <value>layoutControlItem4</value>
+  </data>
+  <data name="&gt;&gt;radioGroupMashinType.Name" xml:space="preserve">
+    <value>radioGroupMashinType</value>
+  </data>
+  <data name="DataMainForWashergraidControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;ItemForSMS_access_token.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="layoutControlGroup42.AppearanceTabPage.Header.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="IDTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>770, 106</value>
+  </data>
+  <data name="layoutControlItem5.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem2</value>
+  </data>
+  <data name="&gt;&gt;EmailTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;CompanyNameTextEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>XtraFormCompanyData</value>
+  </data>
+  <data name="&gt;&gt;ItemForWelcomeMessage.Name" xml:space="preserve">
+    <value>ItemForWelcomeMessage</value>
+  </data>
+  <data name="layoutControlItem1.Text" xml:space="preserve">
+    <value>ضريبة القيمة المضافة:</value>
+  </data>
+  <data name="&gt;&gt;DataMainForWasherSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SendMessOnSaveCheckEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>207, 362</value>
+  </data>
+  <data name="checkEditEnable2Invoic.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SendMessOnSaveCheckEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="ItemForBranchTelephone.Text" xml:space="preserve">
+    <value>الهاتف:</value>
+  </data>
+  <data name="ItemForTheTradeRec.Text" xml:space="preserve">
+    <value>السجل التجاري:</value>
+  </data>
+  <data name="BranchTelephoneTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>770, 166</value>
+  </data>
+  <data name="&gt;&gt;DataMainForWashergraidControl.Type" xml:space="preserve">
+    <value>DevExpress.XtraDataLayout.DataLayoutControl, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="MobileTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="ItemForSendMessOnPreparation.CustomizationFormText" xml:space="preserve">
+    <value>ارسال اشعار التجهيز:</value>
+  </data>
+  <data name="ItemForSMS_access_token.CustomizationFormText" xml:space="preserve">
+    <value>access_token</value>
+  </data>
+  <data name="ItemForBranchName.Text" xml:space="preserve">
+    <value>اسم الفرع:</value>
+  </data>
+  <data name="layoutControlGroup42.AppearanceTabPage.HeaderActive.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="&gt;&gt;SmsPasswordTextEdit.Name" xml:space="preserve">
+    <value>SmsPasswordTextEdit</value>
+  </data>
+  <data name="&gt;&gt;checkEditEnableVat.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="BranchNameTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;checkEditEnable2Invoic.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bindingNavigator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingNavigator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BranchTelephoneTextEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;SMS_instance_idTextEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;WasherOwnerNameTextEdit.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;ItemForSmsSenderName.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;SmsUserNameTextEdit.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="textEditVat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="checkEditEnable2Invoic.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;ItemForBranchAddress.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ItemForTheTaxRec.Name" xml:space="preserve">
+    <value>ItemForTheTaxRec</value>
+  </data>
+  <data name="textEdit30.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 26</value>
+  </data>
+  <data name="textEdit46.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 256</value>
+  </data>
+  <data name="TheTaxRecTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 26</value>
+  </data>
+  <data name="bindingNavigator2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="ItemForSMS_instance_id.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;radioGroupMashinType.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="SmsUserNameTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="SMS_instance_idTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="BranchNameTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="layoutControlItem3.Text" xml:space="preserve">
+    <value>تفعيل ضريبة المبيعات:</value>
+  </data>
+  <data name="&gt;&gt;ItemForMobile.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;WasherLogoPictureEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PictureEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ItemForSMS_instance_id.Name" xml:space="preserve">
+    <value>ItemForSMS_instance_id</value>
+  </data>
+  <data name="layoutControlItem21.AppearanceItemCaptionDisabled.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="&gt;&gt;radioGroupMashinType.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="resource.Font3" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="layoutControlItem3.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;WasherOwnerNameTextEdit.Name" xml:space="preserve">
+    <value>WasherOwnerNameTextEdit</value>
+  </data>
+  <data name="textEdit46.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="TheRoomTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 26</value>
+  </data>
+  <data name="SendMessOnSaveCheckEdit.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DataMainForWasher_print.Text" xml:space="preserve">
+    <value>طباعة</value>
+  </data>
+  <data name="&gt;&gt;ItemForMessageType.Name" xml:space="preserve">
+    <value>ItemForMessageType</value>
+  </data>
+  <data name="TheTradeRecTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>305, 226</value>
+  </data>
+  <data name="&gt;&gt;BranchAddressTextEdit.Name" xml:space="preserve">
+    <value>BranchAddressTextEdit</value>
+  </data>
+  <data name="ItemForBranchName.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;ItemForTheTradeRec.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;checkEditEnableVat.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="SmsPasswordTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 26</value>
+  </data>
+  <data name="ItemForTheTaxRec.CustomizationFormText" xml:space="preserve">
+    <value>السجل الضريبي:</value>
+  </data>
+  <data name="&gt;&gt;textEditVat.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ItemForBranchTelephone.Name" xml:space="preserve">
+    <value>ItemForBranchTelephone</value>
+  </data>
+  <data name="WasherLogoPictureEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 106</value>
+  </data>
+  <data name="IDTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="radioGroupMashinType.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="BranchTelephoneTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;TheTaxRecTextEdit.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup2.Name" xml:space="preserve">
+    <value>layoutControlGroup2</value>
+  </data>
+  <data name="&gt;&gt;SMS_instance_idTextEdit.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="layoutControlItem1.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem1</value>
+  </data>
+  <data name="&gt;&gt;tsDefaultSendToECR.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;EmailTextEdit.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem6.Name" xml:space="preserve">
+    <value>layoutControlItem6</value>
+  </data>
+  <data name="teECRport.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem4.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="WasherLogoPictureEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;TheRoomTextEdit.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="layoutControlItem6.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="IDTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>بيانات الفرع الحالي واعداداته</value>
+  </data>
+  <data name="&gt;&gt;ItemForTheTradeRec.Name" xml:space="preserve">
+    <value>ItemForTheTradeRec</value>
+  </data>
+  <data name="WasherLogoPictureEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 116</value>
+  </data>
+  <data name="SendMessOnSaveCheckEdit.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="teECRport.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="WasherLogoPictureEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="Refrash.Text" xml:space="preserve">
+    <value>تحديث</value>
+  </data>
+  <data name="&gt;&gt;ItemForBranchName.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem23.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;textEditVat.Name" xml:space="preserve">
+    <value>textEditVat</value>
+  </data>
+  <data name="textEdit30.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="SendMessOnPreparationCheckEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 362</value>
+  </data>
+  <data name="&gt;&gt;ItemForEmail.Name" xml:space="preserve">
+    <value>ItemForEmail</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup4.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="SmsPasswordTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;TheTaxRecTextEdit.Name" xml:space="preserve">
+    <value>TheTaxRecTextEdit</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem23.Name" xml:space="preserve">
+    <value>layoutControlItem23</value>
+  </data>
+  <data name="checkEditEnableVat.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="layoutControlItem21.Text" xml:space="preserve">
+    <value>البورت</value>
+  </data>
+  <data name="ItemForSendMessOnSave.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup35.Name" xml:space="preserve">
+    <value>layoutControlGroup35</value>
+  </data>
+  <data name="&gt;&gt;TheTradeRecTextEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="ItemForWasherOwnerName.Text" xml:space="preserve">
+    <value>اسم المالك:</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Name" xml:space="preserve">
+    <value>layoutControlItem7</value>
+  </data>
+  <data name="&gt;&gt;MessageTypeRadioGroup.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="teECRport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 26</value>
+  </data>
+  <data name="checkEditEnableVat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 24</value>
+  </data>
+  <data name="resource.Font7" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="&gt;&gt;BranchTelephoneTextEdit.Name" xml:space="preserve">
+    <value>BranchTelephoneTextEdit</value>
+  </data>
+  <data name="&gt;&gt;DataMainWash_layoutControlGroup60.Name" xml:space="preserve">
+    <value>DataMainWash_layoutControlGroup60</value>
+  </data>
+  <data name="&gt;&gt;SmsSenderNameTextEdit.Name" xml:space="preserve">
+    <value>SmsSenderNameTextEdit</value>
+  </data>
+  <data name="&gt;&gt;MessageTypeRadioGroup.Name" xml:space="preserve">
+    <value>MessageTypeRadioGroup</value>
+  </data>
+  <data name="&gt;&gt;ItemForTheRoom.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="SendMessOnSaveCheckEdit.Properties.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;WelcomeMessageMemoEdit.Name" xml:space="preserve">
+    <value>WelcomeMessageMemoEdit</value>
+  </data>
+  <data name="&gt;&gt;radioGroupMashinType.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.RadioGroup, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="resource.Font2" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="&gt;&gt;ItemForSMS_instance_id.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="SmsUserNameTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="layoutControlItem21.CustomizationFormText" xml:space="preserve">
+    <value>البورت</value>
+  </data>
+  <data name="&gt;&gt;textEdit46.Name" xml:space="preserve">
+    <value>textEdit46</value>
+  </data>
+  <data name="ItemForSMS_access_token.Text" xml:space="preserve">
+    <value>access_token</value>
+  </data>
+  <data name="&gt;&gt;ItemForRequestReceiptMessage.Name" xml:space="preserve">
+    <value>ItemForRequestReceiptMessage</value>
+  </data>
+  <data name="&gt;&gt;textEdit46.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;textEditVat.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="SendMessOnPreparationCheckEdit.Properties.GlyphVerticalAlignment" type="DevExpress.Utils.VertAlignment, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="WelcomeMessageMemoEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 414</value>
+  </data>
+  <data name="layoutControlGroup3.Text" xml:space="preserve">
+    <value>SMS اعدادات رسائل </value>
+  </data>
+  <data name="ItemForTheRoom.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="ItemForSMS_instance_id.Text" xml:space="preserve">
+    <value>instance_id</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>9, 19</value>
+  </data>
+  <data name="textEdit30.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;SMS_access_tokenTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ItemForWasherOwnerName.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="checkEditEnable2Invoic.Properties.GlyphAlignment" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="BranchNameTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 26</value>
+  </data>
+  <data name="&gt;&gt;MobileTextEdit.Name" xml:space="preserve">
+    <value>MobileTextEdit</value>
+  </data>
+  <data name="&gt;&gt;teECRport.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;IDTextEdit.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="DataMainForWasher_print.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 56</value>
+  </data>
+  <data name="ItemForBranchName.CustomizationFormText" xml:space="preserve">
+    <value>اسم الفرع:</value>
+  </data>
+  <data name="&gt;&gt;ItemForSendMessOnPreparation.Name" xml:space="preserve">
+    <value>ItemForSendMessOnPreparation</value>
+  </data>
+  <data name="TaxNumberTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="checkEditEnableVat.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;IDTextEdit.Name" xml:space="preserve">
+    <value>IDTextEdit</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.XtraForm, DevExpress.Utils.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="Refrash.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 56</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem121.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="CompanyNameTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="DataMainForWasherSave.Text" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="SmsPasswordTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="EmailTextEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="DataMainForWashergraidControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;TheRoomTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ItemForTheRoom.Name" xml:space="preserve">
+    <value>ItemForTheRoom</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem121.Name" xml:space="preserve">
+    <value>layoutControlItem121</value>
+  </data>
+  <data name="ItemForTheTaxRec.Text" xml:space="preserve">
+    <value>السجل الضريبي:</value>
+  </data>
+  <data name="textEditVat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>829, 399</value>
+  </data>
+  <data name="checkEditEnableVat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="layoutControlItem2.Text" xml:space="preserve">
+    <value>ملاحظات فاتورة المبيعات:</value>
+  </data>
+  <data name="&gt;&gt;ItemForWasherLogo.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;CompanyNameTextEdit.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="TheTradeRecTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;DataMainForWasher_print.Name" xml:space="preserve">
+    <value>DataMainForWasher_print</value>
+  </data>
+  <data name="IDTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 26</value>
+  </data>
+  <data name="SmsSenderNameTextEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;SMS_access_tokenTextEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="&gt;&gt;SendMessOnSaveCheckEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="SendMessOnPreparationCheckEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="&gt;&gt;TaxNumberTextEdit.Parent" xml:space="preserve">
+    <value>DataMainForWashergraidControl</value>
+  </data>
+  <data name="DataMainForWasherSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 56</value>
+  </data>
+  <data name="&gt;&gt;WelcomeMessageMemoEdit.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="layoutControlItem7.AppearanceItemCaptionDisabled.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <data name="layoutControlGroup2.Text" xml:space="preserve">
+    <value>اعدادات الرسائل النصية</value>
+  </data>
+  <data name="EmailTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 26</value>
+  </data>
+  <data name="WelcomeMessageMemoEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>383, 112</value>
+  </data>
+  <data name="&gt;&gt;TheTaxRecTextEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ItemForEmail.Text" xml:space="preserve">
+    <value>الإيميل:</value>
+  </data>
+  <data name="&gt;&gt;teECRport.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="CompanyNameTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 26</value>
+  </data>
+  <data name="checkEditEnableVat.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SMS_instance_idTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 570</value>
+  </data>
+  <data name="layoutControlItem1.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="ItemForSendMessOnPreparation.Text" xml:space="preserve">
+    <value>ارسال استلام الطلب:</value>
+  </data>
+  <data name="SMS_access_tokenTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 26</value>
+  </data>
+  <data name="&gt;&gt;WasherLogoPictureEdit.Name" xml:space="preserve">
+    <value>WasherLogoPictureEdit</value>
+  </data>
+  <data name="&gt;&gt;SmsPasswordTextEdit.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="textEdit30.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 115</value>
+  </data>
+  <data name="layoutControlGroup42.OptionsPrint.AppearanceItemControl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
+  </data>
+  <metadata name="tblBrancheBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>308, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="bindingNavigator2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>154, 17</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>ar</value>
+  </metadata>
+</root>

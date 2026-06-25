@@ -1,0 +1,1779 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;colTotalFinal11.Name" xml:space="preserve">
+    <value>colTotalFinal11</value>
+  </data>
+  <data name="&gt;&gt;colID.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem22.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dateEdit1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;Allspn_BeforTax.Name" xml:space="preserve">
+    <value>Allspn_BeforTax</value>
+  </data>
+  <data name="PrintInvoice.Text" xml:space="preserve">
+    <value>معاينة قبل الطباعة</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroupDayn.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;AddNew.Name" xml:space="preserve">
+    <value>AddNew</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="PrintDirect.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="&gt;&gt;gridControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="spn_BeforTaxDayn.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="colTheUnit.Width" type="System.Int32, mscorlib">
+    <value>123</value>
+  </data>
+  <data name="colEnterTime.Width" type="System.Int32, mscorlib">
+    <value>157</value>
+  </data>
+  <data name="layoutControlItemMaden2.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="toolStripTextBox12.AccessibleName" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="&gt;&gt;tblBranchesBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="RefrechInvoice.Text" xml:space="preserve">
+    <value>تحديث</value>
+  </data>
+  <data name="&gt;&gt;dateEdit1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="colTheUnit.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtTotal.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="toolStripSeparator35.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 49</value>
+  </data>
+  <data name="colTheCatID.Summary2" xml:space="preserve">
+    <value>{0:n}</value>
+  </data>
+  <data name="PrintInvoice.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="textEdit3.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="txtTaxMaden.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="toolStripSeparator34.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 49</value>
+  </data>
+  <data name="PrintInvoice.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="&gt;&gt;UpdateRecord.Name" xml:space="preserve">
+    <value>UpdateRecord</value>
+  </data>
+  <data name="colTotalFinal11.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt, style=Bold</value>
+  </data>
+  <data name="txtTaxDayn.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItemMaden1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v22.2" name="DevExpress.Utils.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="repositoryItemLookUpEdit1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;txtTaxDayn.Parent" xml:space="preserve">
+    <value>dataLayoutControl2</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator35.Name" xml:space="preserve">
+    <value>toolStripSeparator35</value>
+  </data>
+  <data name="colTheCatID.Summary1" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="colTheCatID.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dateEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="colTheRaseed.Caption" xml:space="preserve">
+    <value>السبب</value>
+  </data>
+  <data name="&gt;&gt;dataLayoutControl2.Name" xml:space="preserve">
+    <value>dataLayoutControl2</value>
+  </data>
+  <data name="colTotalFinal11.Width" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="dateEdit1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 54</value>
+  </data>
+  <data name="textEdit3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 216</value>
+  </data>
+  <data name="txtTotal.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="bindingNavigator9.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 3, 0</value>
+  </data>
+  <data name="toolStripTextBox12.ToolTipText" xml:space="preserve">
+    <value>Current position</value>
+  </data>
+  <data name="BtnOnToFrist.Text" xml:space="preserve">
+    <value>Move previous</value>
+  </data>
+  <data name="BtnOnToLast.RightToLeftAutoMirrorImage" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator36.Name" xml:space="preserve">
+    <value>toolStripSeparator36</value>
+  </data>
+  <data name="&gt;&gt;textEdit3.Parent" xml:space="preserve">
+    <value>dataLayoutControl2</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup1.Name" xml:space="preserve">
+    <value>layoutControlGroup1</value>
+  </data>
+  <data name="&gt;&gt;tblSellInvoiceBindingSource.Name" xml:space="preserve">
+    <value>tblSellInvoiceBindingSource</value>
+  </data>
+  <data name="Allspn_BeforTax.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="RefrechInvoice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 46</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItemMaden2.Name" xml:space="preserve">
+    <value>layoutControlItemMaden2</value>
+  </data>
+  <data name="&gt;&gt;toolStripLabel12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SearchSaleInvoiceIDtxtedit.Properties.ContextImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABt0RVh0VGl0
+        bGUARmluZDtJZDtMb2NhdGU7U2VhcmNoyM3XXwAAAypJREFUOE9tkn1MzHEcx688NDLRH9iM2TQzbC0T
+        kh5wTh7qolPjuo6lx7vq7uzS80Wdq67aragRF5Ws4qLi1DAqtkxPltUllSUlRA/qHsrb9/erNrbe22vf
+        z/fh/d73ifGPzAgLCYsJiwjmBErU+Bz/CQCDEZ3xiKrNfQVpGyUKjVaaWmEMTy6t9vCN2hyecGtDgqqm
+        Mi6rxhCd+bhSGFewnqw1kygeUJ6ZAEkK3bEQXip9Xf/2Izq6vkBdUgtBYokhLuuJvqG1F509X5Fb9BQi
+        uaaWrF0glJVRnpkAInPOWfm+pOwnGPw2htoGHVKzS3DuQiEilVXoG/gFXfcQ8u8+gzC+GDzxVQfioY8z
+        F2DBjcgpuq9tQU/fMLQv30MYmQ3n4zJ4BmRB1/sdHd3fcOdBPYKj8sAV5d0kHuquZgI22R5Yd0ZaqG/7
+        MIim9i8o1TbCT6CEw5EYHOUr0dTxFW1dQ7hX3Yyw2GvwCcubtHXkrCJ+MzrAna8sKCx/g+HRSZimptHZ
+        O4SYZDXceXJkXK9C/9Aoxn7rYTCa8HngO0oe1iHtalk1i8WyJCHmDLb/Ff3nwRGyxXfwEpbi7uM21Lxo
+        RHqOBrzQZBz2FhNENEdITTEzJobbyYgXDDeuyjQ+oQdXokFg+QD8ZBXkMn8hN/8RDp4QQpZWgIRUQspt
+        xCtuIU6Rj1i5mt4li8wzXDjJ3a3tfVBrmuATXQ51ZQvqGtqhzCoe3u8eBGniNXK0PwgQp8NgmobeOI3L
+        mUWIiMnGfo8gMLbt5YeJEgvx7FUbPvX/gPZ5M/zFKkREym84u/kjVJpJTFPgBSdh0mCCb+BFjE+aEBCu
+        ADVPvYaVjR1HstUpuGOLUwhsdpzWrbFxkTKZTBtHph/OhCTht34KJ/kxGJ8wwYt3ASPjRpw6Fw9HJp8O
+        oP78UgL1NGsJqwmW1tbWy3e7ngaHH4WxCSPcfSS08eeYAeJYFdinzmOXKxf0Z5gPomX2Tt44Rm7/0HEB
+        DnkKwPIMxUF2CJjsYHrMfq/3/GYKoiW2O9kvtztwsN3Bi8aO1HZ7ZvukpebnNVMQzR3NirDiH1bOQmrG
+        0r9Edh2sF3LuhQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="bindingNavigator9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="gridView1.Appearance.EvenRow.BackColor2" type="System.Drawing.Color, System.Drawing">
+    <value>AliceBlue</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtTaxMaden.Name" xml:space="preserve">
+    <value>txtTaxMaden</value>
+  </data>
+  <data name="&gt;&gt;AddNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="colID161.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;colUserID.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Name" xml:space="preserve">
+    <value>layoutControlItem7</value>
+  </data>
+  <data name="&gt;&gt;Root.Name" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="colUserID.Width" type="System.Int32, mscorlib">
+    <value>170</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>الاشعارات الدائنة والمدينة</value>
+  </data>
+  <data name="SearchSaleInvoiceIDtxtedit.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="Allspn_BeforTax.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;spn_BeforTaxDayn.Parent" xml:space="preserve">
+    <value>dataLayoutControl2</value>
+  </data>
+  <data name="colID.Width" type="System.Int32, mscorlib">
+    <value>132</value>
+  </data>
+  <data name="toolStripTextBox12.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtTheSafy.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="spn_BeforTaxMaden.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 32</value>
+  </data>
+  <data name="repositoryItemLookUpEdit11.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Save.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 46</value>
+  </data>
+  <data name="colUserID.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem20.Name" xml:space="preserve">
+    <value>layoutControlItem20</value>
+  </data>
+  <data name="dateEdit1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <assembly alias="DevExpress.Data.v22.2" name="DevExpress.Data.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v22.2">
+    <value>Default</value>
+  </data>
+  <data name="colTotalFinal11.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="radioGroup1.EditValue" xml:space="preserve">
+    <value>مدين</value>
+  </data>
+  <data name="dataLayoutControl2.Text" xml:space="preserve">
+    <value>dataLayoutControl2</value>
+  </data>
+  <data name="repositoryItemLookUpEdit2.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItemDayn1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="layoutControlItemMaden1.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="colEnterTime.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="BtnOnToFrist.RightToLeftAutoMirrorImage" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;BtnOnToFrist.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PrintDirect.Text" xml:space="preserve">
+    <value>طباعة مباشرة</value>
+  </data>
+  <data name="&gt;&gt;tblNoteBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1174, 126</value>
+  </data>
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="toolStripTextBox12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="colThePrice.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;txtTheSafy.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="repositoryItemLookUpEdit111.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="colTotalFinal11.Caption" xml:space="preserve">
+    <value>الاجمالي</value>
+  </data>
+  <data name="radioGroup1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtTaxMaden.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 32</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>9, 19</value>
+  </data>
+  <data name="RefrechInvoice.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="colTheCatID.VisibleIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="spn_BeforTaxDayn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>411, 102</value>
+  </data>
+  <data name="repositoryItemLookUpEdit111.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;tblUsersBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Allspn_BeforTax.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;BtnFrist.Name" xml:space="preserve">
+    <value>BtnFrist</value>
+  </data>
+  <data name="bindingNavigator9.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem22.Name" xml:space="preserve">
+    <value>layoutControlItem22</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItemMaden2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colSellDate11.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="colTheCatID.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v22.2">
+    <value>Sum</value>
+  </data>
+  <data name="&gt;&gt;BtnFrist.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtTaxMaden.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 166</value>
+  </data>
+  <data name="Save.Text" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="colUserID.Summary2" xml:space="preserve">
+    <value>{0:n}</value>
+  </data>
+  <data name="spn_BeforTaxMaden.Location" type="System.Drawing.Point, System.Drawing">
+    <value>410, 166</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.XtraForm, DevExpress.Utils.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;dateEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit3.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit3</value>
+  </data>
+  <data name="&gt;&gt;bindingNavigator9.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem19.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="colTheNameAr.Width" type="System.Int32, mscorlib">
+    <value>138</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;PrintInvoice.Name" xml:space="preserve">
+    <value>PrintInvoice</value>
+  </data>
+  <data name="toolStripTextBox12.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;colID.Name" xml:space="preserve">
+    <value>colID</value>
+  </data>
+  <data name="txtTotal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>714, 216</value>
+  </data>
+  <data name="txtTotal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>327, 32</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;Allspn_BeforTax.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="AddNew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 46</value>
+  </data>
+  <data name="&gt;&gt;BtnLast.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataLayoutControl2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="SaveAndPrint.Text" xml:space="preserve">
+    <value>حفظ وطباعة</value>
+  </data>
+  <data name="colTheNameAr.Summary1" xml:space="preserve">
+    <value>Dayne</value>
+  </data>
+  <data name="colTheNameAr.Summary2" xml:space="preserve">
+    <value>{0:n}</value>
+  </data>
+  <data name="&gt;&gt;txtTaxMaden.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem19.Name" xml:space="preserve">
+    <value>layoutControlItem19</value>
+  </data>
+  <data name="colTheRaseed.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SearchSaleInvoiceIDtxtedit.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;layoutControlItem4.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="layoutControlItemMaden1.Text" xml:space="preserve">
+    <value>الضريبة (مدين)</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Name" xml:space="preserve">
+    <value>layoutControlItem5</value>
+  </data>
+  <data name="layoutControlItemMaden1.CustomizationFormText" xml:space="preserve">
+    <value>مدين</value>
+  </data>
+  <data name="&gt;&gt;tblSellInvoiceBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="repositoryItemLookUpEdit11.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;layoutControlItemDayn.Name" xml:space="preserve">
+    <value>layoutControlItemDayn</value>
+  </data>
+  <data name="BtnOnToLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 46</value>
+  </data>
+  <data name="&gt;&gt;SearchSaleInvoiceIDtxtedit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SearchLookUpEdit, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtTotal.Name" xml:space="preserve">
+    <value>txtTotal</value>
+  </data>
+  <data name="BtnFrist.Text" xml:space="preserve">
+    <value>Move first</value>
+  </data>
+  <data name="colTheNameAr.Caption" xml:space="preserve">
+    <value>دائن</value>
+  </data>
+  <data name="&gt;&gt;txtTheTax.Name" xml:space="preserve">
+    <value>txtTheTax</value>
+  </data>
+  <data name="colTheNameAr.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem2.Name" xml:space="preserve">
+    <value>layoutControlItem2</value>
+  </data>
+  <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>13, 12, 13, 12</value>
+  </data>
+  <data name="&gt;&gt;txtTheSafy.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;spn_BeforTaxDayn.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="layoutControlItemDayn1.CustomizationFormText" xml:space="preserve">
+    <value>المبلغ</value>
+  </data>
+  <data name="bindingNavigator9.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;UpdateRecord.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colTheNameAr.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="colUserID.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="dateEdit1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 28</value>
+  </data>
+  <data name="SearchSaleInvoiceIDtxtedit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>429, 54</value>
+  </data>
+  <data name="&gt;&gt;SaveAndPrint.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="colSellDate11.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit1.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit1</value>
+  </data>
+  <data name="txtTotal.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="colTheNameAr.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="txtTheSafy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 476</value>
+  </data>
+  <data name="spn_BeforTaxMaden.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtTaxDayn.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="PrintInvoice.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="&gt;&gt;colTheUnit.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="layoutControlItem22.Text" xml:space="preserve">
+    <value>السبب</value>
+  </data>
+  <data name="colSellDate11.Caption" xml:space="preserve">
+    <value>تاريخ الفاتورة</value>
+  </data>
+  <data name="colEnterTime.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
+  <data name="colID.Summary2" xml:space="preserve">
+    <value>{0:n}</value>
+  </data>
+  <data name="toolStripTextBox12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 32</value>
+  </data>
+  <data name="colID.VisibleIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;RefrechInvoice.Name" xml:space="preserve">
+    <value>RefrechInvoice</value>
+  </data>
+  <data name="&gt;&gt;bindingNavigator9.Name" xml:space="preserve">
+    <value>bindingNavigator9</value>
+  </data>
+  <data name="Allspn_BeforTax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>811, 476</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItemMaden.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="colUserID.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;SaveAndPrint.Name" xml:space="preserve">
+    <value>SaveAndPrint</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Name" xml:space="preserve">
+    <value>gridView1</value>
+  </data>
+  <data name="bindingNavigator9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1238, 49</value>
+  </data>
+  <data name="txtTaxMaden.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="&gt;&gt;colTheCatID.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="spn_BeforTaxDayn.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit11.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit11</value>
+  </data>
+  <data name="&gt;&gt;textEdit3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.MemoEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tblNoteBindingSource.Name" xml:space="preserve">
+    <value>tblNoteBindingSource</value>
+  </data>
+  <data name="&gt;&gt;spn_BeforTaxDayn.Name" xml:space="preserve">
+    <value>spn_BeforTaxDayn</value>
+  </data>
+  <data name="colThePrice.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v22.2">
+    <value>Sum</value>
+  </data>
+  <data name="dataLayoutControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1238, 546</value>
+  </data>
+  <data name="txtTaxDayn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="colID.Caption" xml:space="preserve">
+    <value>الضريبة(دائن)</value>
+  </data>
+  <data name="&gt;&gt;txtTaxMaden.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="layoutControlItem7.Text" xml:space="preserve">
+    <value>رقم الفاتورة</value>
+  </data>
+  <data name="layoutControlGroup1.Text" xml:space="preserve">
+    <value>الاجماليات النهائية للفاتورة</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator34.Name" xml:space="preserve">
+    <value>toolStripSeparator34</value>
+  </data>
+  <data name="&gt;&gt;gridControl1.Parent" xml:space="preserve">
+    <value>dataLayoutControl2</value>
+  </data>
+  <data name="colTheUnit.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItemMaden.Name" xml:space="preserve">
+    <value>layoutControlItemMaden</value>
+  </data>
+  <data name="colID.Summary1" xml:space="preserve">
+    <value>TaxDayne</value>
+  </data>
+  <data name="txtTheTax.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="colTheCatID.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
+  <data name="dataLayoutControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;gridView191.Name" xml:space="preserve">
+    <value>gridView191</value>
+  </data>
+  <data name="SearchSaleInvoiceIDtxtedit.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;SearchSaleInvoiceIDtxtedit.Name" xml:space="preserve">
+    <value>SearchSaleInvoiceIDtxtedit</value>
+  </data>
+  <data name="colUserID.Caption" xml:space="preserve">
+    <value>الضريبة(مدين)</value>
+  </data>
+  <data name="colID161.Caption" xml:space="preserve">
+    <value>رقم الفاتورة</value>
+  </data>
+  <data name="UpdateRecord.Text" xml:space="preserve">
+    <value>بيانات الاشعار</value>
+  </data>
+  <data name="colThePrice.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="AddNew.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAEFkZDtQbHVzO0JhcnM7UmliYm9u
+        O5UGMy8AAACPSURBVFhH7c5RCoQwDEVRN+imXJW7i82HIOlFHhKiSD4Owp1p+xYzexXGShgrYayEsRJG
+        xbrtdhV/V2FU9IAe0AP+PSBeniW+46bg6HCG+I6bgqPDGeI7bgqODmeI77gpqJTLFRgVNGB8b13PnzAq
+        xoXfG/AERkUPoAHji/+9g1HRA7JgrISxEsZKGOvYcgB55Y6E3tOuXgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="&gt;&gt;BtnOnToFrist.Name" xml:space="preserve">
+    <value>BtnOnToFrist</value>
+  </data>
+  <data name="&gt;&gt;tblUsersBindingSource.Name" xml:space="preserve">
+    <value>tblUsersBindingSource</value>
+  </data>
+  <data name="radioGroup1.Properties.Items2" xml:space="preserve">
+    <value>دائن</value>
+  </data>
+  <data name="radioGroup1.Properties.Items3" xml:space="preserve">
+    <value>اشعار دائن</value>
+  </data>
+  <data name="Save.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="radioGroup1.Properties.Items1" xml:space="preserve">
+    <value>اشعار مدين</value>
+  </data>
+  <data name="&gt;&gt;txtTheTax.Parent" xml:space="preserve">
+    <value>dataLayoutControl2</value>
+  </data>
+  <data name="textEdit3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>511, 32</value>
+  </data>
+  <data name="layoutControlItem20.Text" xml:space="preserve">
+    <value>نوع الاشعار</value>
+  </data>
+  <data name="&gt;&gt;PrintInvoice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 306</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;layoutControlGroup3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
+  <data name="spn_BeforTaxDayn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 32</value>
+  </data>
+  <data name="SaveAndPrint.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="gridControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="SearchSaleInvoiceIDtxtedit.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="&gt;&gt;dateEdit1.Parent" xml:space="preserve">
+    <value>dataLayoutControl2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit111.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit111</value>
+  </data>
+  <data name="layoutControlItemDayn1.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator34.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="colTheRaseed.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;gridControl1.Name" xml:space="preserve">
+    <value>gridControl1</value>
+  </data>
+  <data name="&gt;&gt;textEdit3.Name" xml:space="preserve">
+    <value>textEdit3</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit11.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="dateEdit1.Properties.CalendarTimeProperties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroupMaden.Name" xml:space="preserve">
+    <value>layoutControlGroupMaden</value>
+  </data>
+  <data name="txtTheTax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 28</value>
+  </data>
+  <data name="&gt;&gt;txtTaxMaden.Parent" xml:space="preserve">
+    <value>dataLayoutControl2</value>
+  </data>
+  <data name="&gt;&gt;textEdit3.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;radioGroup1.Name" xml:space="preserve">
+    <value>radioGroup1</value>
+  </data>
+  <data name="BtnLast.Text" xml:space="preserve">
+    <value>Move last</value>
+  </data>
+  <data name="&gt;&gt;txtTaxDayn.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroupDayn.Name" xml:space="preserve">
+    <value>layoutControlGroupDayn</value>
+  </data>
+  <data name="dataLayoutControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 61</value>
+  </data>
+  <data name="&gt;&gt;gridView191.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bindingNavigator9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingNavigator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="colTheNameAr.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator36.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Allspn_BeforTax.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colTheRaseed.VisibleIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="layoutControlItemMaden2.Text" xml:space="preserve">
+    <value>الاجمالي مع الضريبة</value>
+  </data>
+  <data name="dateEdit1.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="BtnFrist.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAASpJREFUOE9jGDygcNbz/00Lnv/PnPj4P1QIA4S3P8Apx5A789n/VUfe/8elKL77
+        wf/ghmu4DciY8vT/wn0fsCqK73n4f+n+///9qy/gNiCh58n/aVveYyiKaL8P1pw56/9/r9ITuA2I7Hr0
+        v3f1BxRFoa33wJpb1wFt7/z73yX/AG4DApsf/q+b/w6uKLjl7v9Fe///7wBqzpjz879d3c//9hnbcRvg
+        UXX/f/60NyiK7Ipv/0+f8/u/f9e3/zqF7/5bJKzHbYB96d3/2ZNfYyjSTzn/36ToxX+VrE//jSOX4TbA
+        Iu/O/9T+11gVGSSd+C+b9vW/bvA83AYYZt3+H9byEqci/dTL/zV8p+E2QCftxn+/6od4Fal4TMBtgFPu
+        lf8gBXgVDULAwAAA8HbAq6XlmnAAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="PrintInvoice.ToolTipText" xml:space="preserve">
+    <value>معاينة</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v22.2" name="DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="gridControl1.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v22.2">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;colTheUnit.Name" xml:space="preserve">
+    <value>colTheUnit</value>
+  </data>
+  <data name="&gt;&gt;colTheRaseed.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;spn_BeforTaxMaden.Name" xml:space="preserve">
+    <value>spn_BeforTaxMaden</value>
+  </data>
+  <data name="PrintDirect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 46</value>
+  </data>
+  <data name="layoutControlGroup3.Text" xml:space="preserve">
+    <value>قائمة الاشعارات لهذه الفاتورة</value>
+  </data>
+  <data name="layoutControlItem4.Text" xml:space="preserve">
+    <value>اجمالي الضريبة:</value>
+  </data>
+  <data name="repositoryItemLookUpEdit111.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colUserID.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v22.2">
+    <value>Sum</value>
+  </data>
+  <data name="colThePrice.Summary1" xml:space="preserve">
+    <value>Maden</value>
+  </data>
+  <data name="colTotalFinal11.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="BtnLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 46</value>
+  </data>
+  <data name="&gt;&gt;BtnOnToLast.Name" xml:space="preserve">
+    <value>BtnOnToLast</value>
+  </data>
+  <data name="radioGroup1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>327, 124</value>
+  </data>
+  <data name="BtnOnToLast.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAKNJREFUOE9jGHygcNbz/1AmeSB35rP/Cd33yDckY8rT//P2//6f0HWHPEMSep78
+        n73v1//OrX//u5VeJt2QyK5H/6ds+/W/ZOnf/wnT//63yT1LmiGBzQ//t659D9ZsXPLlv3T0tf/GkcuI
+        N8Sj6v7/krnv4JoVXXpIc4F96d3/gS3PyNMMAhZ5d/7bFFwhTzMIGGbdJl8zCOik3SBf81AEDAwAoH5f
+        oAc0QjgAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="SaveAndPrint.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="txtTaxDayn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 102</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>XtraFormCreditNote</value>
+  </data>
+  <data name="repositoryItemLookUpEdit3.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="repositoryItemLookUpEdit2.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;colID161.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItemDayn1.Name" xml:space="preserve">
+    <value>layoutControlItemDayn1</value>
+  </data>
+  <data name="AddNew.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="colThePrice.Summary2" xml:space="preserve">
+    <value>{0:n}</value>
+  </data>
+  <data name="dataLayoutControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="colTheNameAr.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v22.2">
+    <value>Sum</value>
+  </data>
+  <data name="spn_BeforTaxDayn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;spn_BeforTaxMaden.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtTaxDayn.Name" xml:space="preserve">
+    <value>txtTaxDayn</value>
+  </data>
+  <data name="&gt;&gt;bindingNavigator9.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;radioGroup1.Parent" xml:space="preserve">
+    <value>dataLayoutControl2</value>
+  </data>
+  <data name="BtnFrist.RightToLeftAutoMirrorImage" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="layoutControlItemDayn.CustomizationFormText" xml:space="preserve">
+    <value>المبلغ</value>
+  </data>
+  <data name="Save.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="colID161.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt, style=Bold</value>
+  </data>
+  <data name="RefrechInvoice.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="&gt;&gt;Save.Name" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="txtTheTax.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="spn_BeforTaxDayn.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator35.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PrintDirect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtTotal.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="colTheCatID.Caption" xml:space="preserve">
+    <value>الاجمالي</value>
+  </data>
+  <data name="txtTheTax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>432, 476</value>
+  </data>
+  <data name="toolStripLabel12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 46</value>
+  </data>
+  <data name="&gt;&gt;tblBranchesBindingSource.Name" xml:space="preserve">
+    <value>tblBranchesBindingSource</value>
+  </data>
+  <data name="&gt;&gt;dataLayoutControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraDataLayout.DataLayoutControl, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;spn_BeforTaxDayn.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Name" xml:space="preserve">
+    <value>layoutControlItem3</value>
+  </data>
+  <data name="txtTheTax.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="layoutControlItem5.Text" xml:space="preserve">
+    <value>الاجمالي بعد الضريبة:</value>
+  </data>
+  <data name="&gt;&gt;colThePrice.Name" xml:space="preserve">
+    <value>colThePrice</value>
+  </data>
+  <data name="txtTheSafy.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtTotal.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="txtTheSafy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 28</value>
+  </data>
+  <data name="colSellDate11.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt, style=Bold</value>
+  </data>
+  <data name="radioGroup1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>714, 88</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="txtTaxMaden.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="layoutControlItemMaden.Text" xml:space="preserve">
+    <value>مدين</value>
+  </data>
+  <data name="colID161.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colID.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Root.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Save.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtTaxDayn.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtTheSafy.Parent" xml:space="preserve">
+    <value>dataLayoutControl2</value>
+  </data>
+  <data name="AddNew.Text" xml:space="preserve">
+    <value>اضافة جديد</value>
+  </data>
+  <data name="radioGroup1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;colEnterTime.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="Allspn_BeforTax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 28</value>
+  </data>
+  <data name="toolStripSeparator36.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 49</value>
+  </data>
+  <data name="&gt;&gt;colSellDate11.Name" xml:space="preserve">
+    <value>colSellDate11</value>
+  </data>
+  <data name="SearchSaleInvoiceIDtxtedit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem4.Name" xml:space="preserve">
+    <value>layoutControlItem4</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup3.Name" xml:space="preserve">
+    <value>layoutControlGroup3</value>
+  </data>
+  <data name="repositoryItemLookUpEdit3.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="layoutControlItemDayn.Text" xml:space="preserve">
+    <value>دائن</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItemMaden1.Name" xml:space="preserve">
+    <value>layoutControlItemMaden1</value>
+  </data>
+  <data name="SearchSaleInvoiceIDtxtedit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>612, 30</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="repositoryItemLookUpEdit3.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="bindingNavigator9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 12</value>
+  </data>
+  <data name="&gt;&gt;txtTheTax.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="colID.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v22.2">
+    <value>Sum</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colID.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;colThePrice.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 10, 5, 10</value>
+  </data>
+  <data name="colTheUnit.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;colTotalFinal11.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;spn_BeforTaxMaden.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;radioGroup1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.RadioGroup, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;RefrechInvoice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItemDayn.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colID161.Name" xml:space="preserve">
+    <value>colID161</value>
+  </data>
+  <data name="colEnterTime.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colThePrice.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="colTheUnit.Caption" xml:space="preserve">
+    <value>نوع الاشعار</value>
+  </data>
+  <data name="&gt;&gt;colTheRaseed.Name" xml:space="preserve">
+    <value>colTheRaseed</value>
+  </data>
+  <data name="&gt;&gt;colUserID.Name" xml:space="preserve">
+    <value>colUserID</value>
+  </data>
+  <data name="txtTaxDayn.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="repositoryItemLookUpEdit2.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="bindingNavigator9.Text" xml:space="preserve">
+    <value>bindingNavigator2</value>
+  </data>
+  <data name="colTheCatID.Width" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="layoutControlItem19.Text" xml:space="preserve">
+    <value>تاريخ الاشعار</value>
+  </data>
+  <data name="&gt;&gt;txtTheTax.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txtTotal.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="BtnFrist.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 46</value>
+  </data>
+  <data name="&gt;&gt;dateEdit1.Name" xml:space="preserve">
+    <value>dateEdit1</value>
+  </data>
+  <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="BtnLast.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAASxJREFUOE9jGFygcNbz/1AmBgDJNS14/j9z4mOcahhyZz77n9B9D6sCkNyqI+//
+        h7c/wG1AxpSn/+ft//0/oesOhiKQ3MJ9H/4HN1zDbUBCz5P/s/f9+t+59e9/t9LLKApBctO2vP/vX30B
+        twGRXY/+T9n263/J0r//E6b//W+TexauGCTXu/rDf6/SE7gNCGx++L917XuwZuOSL/+lo6/9N45cBtYA
+        kqub/+6/S/4B3AZ4VN3/XzL3HVyzoksPXDFILn/am//2GdtxG2Bfevd/YMszDM0gAJLLnvz6v0XCetwG
+        WOTd+W9TcAVDMwiA5FL7X8O9hBUYZt3GqhkEQHJhLS//6wbPw22ATtoNnJIgOb/qh/81fKfhNgAfcMq9
+        8l/FYwIYQ4UGBWBgAAC+0b+zuQxOnAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="colTheRaseed.Width" type="System.Int32, mscorlib">
+    <value>261</value>
+  </data>
+  <data name="&gt;&gt;SearchSaleInvoiceIDtxtedit.Parent" xml:space="preserve">
+    <value>dataLayoutControl2</value>
+  </data>
+  <data name="dataLayoutControl2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="colThePrice.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtTotal.Parent" xml:space="preserve">
+    <value>dataLayoutControl2</value>
+  </data>
+  <data name="&gt;&gt;colEnterTime.Name" xml:space="preserve">
+    <value>colEnterTime</value>
+  </data>
+  <data name="layoutControlItemMaden2.CustomizationFormText" xml:space="preserve">
+    <value>مدين</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1264, 619</value>
+  </data>
+  <data name="colSellDate11.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="XtraFormCreditNote.IconOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACB0RVh0VGl0
+        bGUAU2FsZXM7Vmlld1NhbGVzO1NhbGVzVmlldzu1prbtAAABTUlEQVRYR+3QvVFDMRAEYJNQASEZKWXQ
+        ibuDgAqYoQACyOjAASUQiDvmVrP3ozcWZuTEwTfDSXvaZ3attbMqD1cqD1cqD1cqD1cqD1cqDz/3D6qd
+        AG+UuMsNYMHq4WO5woi73AAWrB52kKU93OGNEvLKDWBBV1ZBlvZwt7mPvOp/MAkd9QEbLh8Q9/HmL+5y
+        A1iQH5gV93u54i43gAX5gVlxv5cr7nIDWJAfmBX3e7niLjeABfmBWXG/lyvucgNYkB+YFfd7ueIuN4AF
+        +YFZcb+XK+5yA8SFPzrpA3j5P1w+YPoDouvibMtmnrvcABa8Fx9Cf8GbuKO7kbQjUo673AAWfBf8b3yl
+        u5G0I1KOu9wAEroS34If+7K7kXJHpCx3uQEs+CL4sUe6G0k7IuW4yw1gwVvxLA7iSdzQ3UjaESnHXW44
+        h/JwpfJwnbb7ARz8FpuZKltVAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="&gt;&gt;colTheCatID.Name" xml:space="preserve">
+    <value>colTheCatID</value>
+  </data>
+  <data name="&gt;&gt;Allspn_BeforTax.Parent" xml:space="preserve">
+    <value>dataLayoutControl2</value>
+  </data>
+  <data name="&gt;&gt;toolStripTextBox12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioGroup1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="txtTaxDayn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 32</value>
+  </data>
+  <data name="&gt;&gt;txtTheSafy.Name" xml:space="preserve">
+    <value>txtTheSafy</value>
+  </data>
+  <data name="toolStripLabel12.ToolTipText" xml:space="preserve">
+    <value>Total number of items</value>
+  </data>
+  <data name="&gt;&gt;BtnLast.Name" xml:space="preserve">
+    <value>BtnLast</value>
+  </data>
+  <data name="textEdit3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="colThePrice.Caption" xml:space="preserve">
+    <value>مدين</value>
+  </data>
+  <data name="txtTheSafy.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;BtnOnToLast.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="radioGroup1.Properties.Items" xml:space="preserve">
+    <value>مدين</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit111.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="PrintInvoice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 46</value>
+  </data>
+  <data name="SaveAndPrint.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v22.2">
+    <value>None</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="spn_BeforTaxMaden.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem20.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="layoutControlItem3.Text" xml:space="preserve">
+    <value>اجمالي المبلغ:</value>
+  </data>
+  <data name="layoutControlItemDayn1.Text" xml:space="preserve">
+    <value>الضريبة (دائن)</value>
+  </data>
+  <data name="Save.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        QmCC
+</value>
+  </data>
+  <data name="&gt;&gt;dataLayoutControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BtnLast.RightToLeftAutoMirrorImage" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="spn_BeforTaxMaden.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="PrintDirect.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;toolStripTextBox12.Name" xml:space="preserve">
+    <value>toolStripTextBox12</value>
+  </data>
+  <data name="txtTaxMaden.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
+  </data>
+  <data name="layoutControlItemDayn.ControlAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="colSellDate11.Width" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="&gt;&gt;PrintDirect.Name" xml:space="preserve">
+    <value>PrintDirect</value>
+  </data>
+  <data name="colUserID.Summary1" xml:space="preserve">
+    <value>TaxMaden</value>
+  </data>
+  <data name="spn_BeforTaxMaden.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;SearchSaleInvoiceIDtxtedit.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="PrintDirect.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="repositoryItemLookUpEdit11.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v22.2">
+    <value>Combo</value>
+  </data>
+  <data name="PrintInvoice.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="BtnOnToLast.Text" xml:space="preserve">
+    <value>Move next</value>
+  </data>
+  <data name="AddNew.RightToLeftAutoMirrorImage" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="BtnOnToFrist.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAALZJREFUOE9jGDogvP3BfyiTdBDf/eB/cMM18gyI73n4f+n+///9qy+QbkBE+32w
+        5sxZ//97lZ4gzYDQ1ntgza3rgLZ3/v3vkn+AeAOCW+7+X7T3//8OoOaMOT//29X9/G+fsZ00F9gV3/6f
+        Puf3f/+ub/91Ct/9t0hYT3oY6Kec/29S9OK/Stan/8aRy0g3AAQMkk78l037+l83eB55BoCAfurl/xq+
+        08g3AARUPCZQZsBgBQwMANAUYJgEulBVAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="BtnOnToFrist.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 46</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit2.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit2</value>
+  </data>
+  <data name="toolStripLabel12.Text" xml:space="preserve">
+    <value>of {0}</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroupMaden.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;spn_BeforTaxMaden.Parent" xml:space="preserve">
+    <value>dataLayoutControl2</value>
+  </data>
+  <data name="colID161.Width" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="&gt;&gt;colTheNameAr.Name" xml:space="preserve">
+    <value>colTheNameAr</value>
+  </data>
+  <data name="&gt;&gt;toolStripLabel12.Name" xml:space="preserve">
+    <value>toolStripLabel12</value>
+  </data>
+  <data name="SaveAndPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 46</value>
+  </data>
+  <data name="RefrechInvoice.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="colEnterTime.Caption" xml:space="preserve">
+    <value>تاريخ الاشعار</value>
+  </data>
+  <metadata name="tblSellInvoiceBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>764, 17</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>en</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="bindingNavigator9.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>610, 17</value>
+  </metadata>
+  <metadata name="tblUsersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>241, 17</value>
+  </metadata>
+  <metadata name="tblNoteBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>97</value>
+  </metadata>
+  <metadata name="tblBranchesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>416, 17</value>
+  </metadata>
+</root>

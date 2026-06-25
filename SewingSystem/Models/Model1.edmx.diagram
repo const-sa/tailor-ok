@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c1161bf0eefa47d1811b0335be8ac7a0" Name="Diagram1">
+        <EntityTypeShape EntityType="TAFCEL_DBModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblAlkbak" Width="1.5" PointX="3" PointY="47.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblAl_Qallab" Width="1.5" PointX="6" PointY="47.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblBranches" Width="1.5" PointX="0.75" PointY="44.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblcategories" Width="1.5" PointX="3" PointY="43.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblcominfo" Width="1.5" PointX="3" PointY="51.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblcustomers" Width="1.5" PointX="9" PointY="45.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblDefaultSizes" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblfactories" Width="1.5" PointX="6" PointY="43.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblFrontPacket" Width="1.5" PointX="6" PointY="51.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblInvoTafseel" Width="1.5" PointX="24.5" PointY="44.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblInvoTafseelDetail" Width="1.5" PointX="21.75" PointY="43.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblinvpura" Width="1.5" PointX="9" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblinvpurb" Width="1.5" PointX="24.75" PointY="39.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblitems" Width="1.5" PointX="19.5" PointY="45.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblJabzur" Width="1.5" PointX="9" PointY="53.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblpayments" Width="1.5" PointX="19.5" PointY="50.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblPermissions" Width="1.5" PointX="3" PointY="38" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblresources" Width="1.5" PointX="6" PointY="38" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblsanadm" Width="1.5" PointX="6" PointY="55.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblsanads" Width="1.5" PointX="14.25" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblsettings" Width="1.5" PointX="12" PointY="47.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblSidePacket" Width="1.5" PointX="12" PointY="43.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tbltailors" Width="1.5" PointX="12" PointY="52" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblUserGroup" Width="1.5" PointX="12" PointY="39.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TAFCEL_DBModel.tblUsers" Width="1.5" PointX="17.25" PointY="42.25" IsExpanded="true" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblAlkbak_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblAlkbak_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblInvoTafseelDetail_tblAlkbak" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblAl_Qallab_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblAl_Qallab_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblInvoTafseelDetail_tblAl_Qallab" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblcategories_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblcominfo_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblcustomers_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblfactories_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblFrontPacket_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblInvoTafseel_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblInvoTafseelDetail_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblinvpura_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblinvpurb_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblitems_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblJabzur_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblpayments_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblPermissions_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblresources_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblsanadm_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblsanads_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblsettings_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblSidePacket_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tbltailors_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblUserGroup_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblUsers_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblcategories_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblInvoTafseelDetail_tblcategories" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblitems_tblcategories" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblcominfo_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblcustomers_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblInvoTafseel_tblcustomers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblpayments_tblcustomers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblfactories_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblInvoTafseelDetail_tblfactories" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblFrontPacket_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblInvoTafseelDetail_tblFrontPacket" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblInvoTafseel_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblInvoTafseelDetail_tblInvoTafseel" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblInvoTafseelDetail_tblitems" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblInvoTafseelDetail_tblJabzur" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblInvoTafseelDetail_tblSidePacket" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblInvoTafseelDetail_tbltailors" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblInvoTafseelDetail_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblinvpura_tblresources" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblinvpura_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblinvpurb_tblinvpura" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblinvpurb_tblitems" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblinvpurb_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblitems_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblJabzur_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblpayments_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblPermissions_tblPermissions" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblPermissions_tblUserGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblPermissions_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblresources_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblsanads_tblresources" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblsanadm_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblsanads_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblsettings_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblSidePacket_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tbltailors_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblUserGroup_tblUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TAFCEL_DBModel.FK_tblUsers_tblUserGroup" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
