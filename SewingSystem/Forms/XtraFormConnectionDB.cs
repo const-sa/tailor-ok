@@ -27,6 +27,28 @@ namespace SewingSystem.Forms
         {
             InitializeComponent();
             txt_notes.Text = errMsg;
+            PrefillCurrentSettings();
+        }
+
+        /// <summary>
+        /// Pre-fills the dialog with the connection that is currently in effect
+        /// (decrypted into Program.* at startup) so the user just edits the values
+        /// instead of retyping the whole connection by hand.
+        /// </summary>
+        private void PrefillCurrentSettings()
+        {
+            txtServerName.Text = Program.ServerName;
+            txtDB_Name.Text = Program.DBName;
+            if (Program.Mode == "SQL")
+            {
+                rbSQL.Checked = true;
+                txtSqlUserName.Text = Program.SqlUserName;
+                txtSqlPassword.Text = Program.SqlPassword;
+            }
+            else
+            {
+                rbWindows.Checked = true;
+            }
         }
         private void rbSQL_CheckedChanged(object sender, EventArgs e)
         {
