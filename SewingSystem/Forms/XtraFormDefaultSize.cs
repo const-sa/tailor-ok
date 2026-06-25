@@ -56,13 +56,8 @@ namespace SewingSystem.Forms
             {
                 tblDefaultSizeBindingSource.EndEdit();
                 tblDefaultSize DefaultSize = tblDefaultSizeBindingSource.Current as tblDefaultSize;
-                using (var db = new DataClasses1DataContext(Program.ConnectionString))
-                {
-                    db.tblDefaultSizes.DeleteAllOnSubmit(db.tblDefaultSizes.Where(m => m.ID == DefaultSize.ID));
-                    db.tblDefaultSizes.InsertOnSubmit(DefaultSize);
-                    db.SubmitChanges();
-                    RefrechData();
-                }
+                new Data.Repository<tblDefaultSize>().Save(DefaultSize, m => m.ID == DefaultSize.ID, DefaultSize.ID == 0);
+                RefrechData();
                 MyFunaction.MessageBoxSave();
             }
         }
@@ -97,12 +92,8 @@ namespace SewingSystem.Forms
                 {
                     tblDefaultSize Size = tblDefaultSizeBindingSource.Current as tblDefaultSize;
                     tblDefaultSizeBindingSource.EndEdit();
-                    using (var db = new DataClasses1DataContext(Program.ConnectionString))
-                    {
-                        db.tblDefaultSizes.DeleteAllOnSubmit(db.tblDefaultSizes.Where(m => m.ID == Size.ID));
-                        db.SubmitChanges();
-                        RefrechData();
-                    }
+                    new Data.Repository<tblDefaultSize>().Delete(m => m.ID == Size.ID);
+                    RefrechData();
                 }
             }
         }

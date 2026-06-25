@@ -300,12 +300,7 @@ namespace SewingSystem.Forms
                         XtraMessageBox.Show("عفوا لا يمكن ان يكون المبلغ المتبقي اقل من الصفر");
                         return;
                     }
-                    using (var db = new DataClasses1DataContext(Program.ConnectionString))
-                    {
-                        db.tblSellCreditNotes.DeleteAllOnSubmit(db.tblSellCreditNotes.Where(m => m.ID == CurrentInvoice.ID));
-                        db.tblSellCreditNotes.InsertOnSubmit(CurrentInvoice);
-                        db.SubmitChanges();
-                    }
+                    new Data.Repository<tblSellCreditNote>().Save(CurrentInvoice, m => m.ID == CurrentInvoice.ID, CurrentInvoice.ID == 0);
                     spn_Paid.ReadOnly = true;
                     SaveSuccess = true;
                     AddNew.Enabled = true;

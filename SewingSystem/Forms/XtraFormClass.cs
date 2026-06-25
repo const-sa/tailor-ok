@@ -55,13 +55,8 @@ namespace SewingSystem.Forms
         {
             if (CurrentClasse == null)
                 return;
-            using (var db = new DataClasses1DataContext(Program.ConnectionString))
-                {
-                    db.tblClasses.DeleteAllOnSubmit(db.tblClasses.Where(m => m.ID == CurrentClasse.ID));
-                    db.tblClasses.InsertOnSubmit(CurrentClasse);
-                    db.SubmitChanges();
-                    RefrechData();
-                }
+            new Data.Repository<tblClasse>().Save(CurrentClasse, m => m.ID == CurrentClasse.ID, CurrentClasse.ID == 0);
+            RefrechData();
                 MyFunaction.MessageBoxSave();
                 UpdateRecord.Enabled = tblPermissionWashType.FirstOrDefault(p => p.PermissionName == Program.Update)?.TheValues??false;
         }
@@ -82,12 +77,8 @@ namespace SewingSystem.Forms
                 return;
             if (MyFunaction.MessageBoxDelete() != DialogResult.Yes)
                 return;
-            using (var db = new DataClasses1DataContext(Program.ConnectionString))
-            {
-                db.tblClasses.DeleteAllOnSubmit(db.tblClasses.Where(m => m.ID == CurrentClasse.ID));
-                db.SubmitChanges();
-                RefrechData();
-            }
+            new Data.Repository<tblClasse>().Delete(m => m.ID == CurrentClasse.ID);
+            RefrechData();
         }
         Report.XtraReportClasses rptCategorie;
         private void Print_Click(object sender, EventArgs e)

@@ -55,13 +55,8 @@ namespace SewingSystem.Forms
             {
                 tblFactorieBindingSource.EndEdit();
                 tblFactorie Factorie = tblFactorieBindingSource.Current as tblFactorie;
-                using (var db = new DataClasses1DataContext(Program.ConnectionString))
-                {
-                    db.tblFactories.DeleteAllOnSubmit(db.tblFactories.Where(m => m.ID == Factorie.ID));
-                    db.tblFactories.InsertOnSubmit(Factorie);
-                    db.SubmitChanges();
-                    RefrechData();
-                }
+                new Data.Repository<tblFactorie>().Save(Factorie, m => m.ID == Factorie.ID, Factorie.ID == 0);
+                RefrechData();
                 MyFunaction.MessageBoxSave();
                 UpdateRecord.Enabled = tblPermissionWashType.FirstOrDefault(p => p.PermissionName == Program.Update)?.TheValues??false;
             }
@@ -87,12 +82,8 @@ namespace SewingSystem.Forms
                 {
                     tblFactorie Factorie = tblFactorieBindingSource.Current as tblFactorie;
                     tblFactorieBindingSource.EndEdit();
-                    using (var db = new DataClasses1DataContext(Program.ConnectionString))
-                    {
-                        db.tblFactories.DeleteAllOnSubmit(db.tblFactories.Where(m => m.ID == Factorie.ID));
-                        db.SubmitChanges();
-                        RefrechData();
-                    }
+                    new Data.Repository<tblFactorie>().Delete(m => m.ID == Factorie.ID);
+                    RefrechData();
                 }
             }
         }

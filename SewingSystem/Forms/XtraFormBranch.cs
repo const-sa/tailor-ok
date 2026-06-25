@@ -54,13 +54,8 @@ namespace SewingSystem.Forms
             {
                 tblBranche Branch = tblBranchesBindingSource.Current as tblBranche;
                 tblBranchesBindingSource.EndEdit();
-                using (var db = new DataClasses1DataContext(Program.ConnectionString))
-                {
-                    db.tblBranches.DeleteAllOnSubmit(db.tblBranches.Where(m => m.ID == Branch.ID));
-                    db.tblBranches.InsertOnSubmit(Branch);
-                    db.SubmitChanges(); 
-                    FunactionRefrech();
-                }
+                new Data.Repository<tblBranche>().Save(Branch, m => m.ID == Branch.ID, Branch.ID == 0);
+                FunactionRefrech();
                 myfunction.MessageBoxSave();
                 UpdateRecord.Enabled = tblPermissionWashType.FirstOrDefault(p => p.PermissionName == Program.Update)?.TheValues??false;
             }
@@ -90,13 +85,9 @@ namespace SewingSystem.Forms
                 }
                 if (myfunction.MessageBoxDelete() == DialogResult.Yes)
                 {
-                    using (var db = new DataClasses1DataContext(Program.ConnectionString))
-                    {
-                        tblBranchesBindingSource.EndEdit();
-                        db.tblBranches.DeleteAllOnSubmit(db.tblBranches.Where(m => m.ID == Branch.ID));
-                        db.SubmitChanges();
-                        FunactionRefrech();
-                    }
+                    tblBranchesBindingSource.EndEdit();
+                    new Data.Repository<tblBranche>().Delete(m => m.ID == Branch.ID);
+                    FunactionRefrech();
                 }
             }
         }

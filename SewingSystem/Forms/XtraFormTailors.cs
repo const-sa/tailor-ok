@@ -55,13 +55,8 @@ namespace SewingSystem.Forms
             {
                 tblTailorBindingSource.EndEdit();
                 tblTailor Tailor = tblTailorBindingSource.Current as tblTailor;
-                using (var db = new DataClasses1DataContext(Program.ConnectionString))
-                {
-                    db.tblTailors.DeleteAllOnSubmit(db.tblTailors.Where(m => m.ID == Tailor.ID));
-                    db.tblTailors.InsertOnSubmit(Tailor);
-                    db.SubmitChanges();
-                    RefrechData();
-                }
+                new Data.Repository<tblTailor>().Save(Tailor, m => m.ID == Tailor.ID, Tailor.ID == 0);
+                RefrechData();
                 MyFunaction.MessageBoxSave();
                 UpdateRecord.Enabled = tblPermissionWashType.FirstOrDefault(p => p.PermissionName == Program.Update)?.TheValues??false;
             }
@@ -87,12 +82,8 @@ namespace SewingSystem.Forms
                 {
                     tblTailor Tailor = tblTailorBindingSource.Current as tblTailor;
                     tblTailorBindingSource.EndEdit();
-                    using (var db = new DataClasses1DataContext(Program.ConnectionString))
-                    {
-                        db.tblTailors.DeleteAllOnSubmit(db.tblTailors.Where(m => m.ID == Tailor.ID));
-                        db.SubmitChanges();
-                        RefrechData();
-                    }
+                    new Data.Repository<tblTailor>().Delete(m => m.ID == Tailor.ID);
+                    RefrechData();
                 }
             }
         }
