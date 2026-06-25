@@ -264,6 +264,7 @@
     <Compile Include="Classes\Session.cs" />
     <Compile Include="Classes\TLVCls.cs" />
     <Compile Include="Classes\WhatsappMessage.cs" />
+    <Compile Include="Data\Repository.cs" />
     <Compile Include="DAL\Class1.cs" />
     <Compile Include="DAL\Model1.Context.cs">
       <AutoGen>True</AutoGen>

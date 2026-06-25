@@ -70,18 +70,8 @@ namespace SewingSystem.Forms
                         RefrechUser();
                         return;
                     }
-                    using (var db = new DataClasses1DataContext(Program.ConnectionString))
-                    {
-                        if (user.ID == 0)
-                            db.tblUsers.InsertOnSubmit(user);
-                        else
-                        {
-                            db.tblUsers.DeleteAllOnSubmit(db.tblUsers.Where(m => m.ID == user.ID));
-                            db.tblUsers.InsertOnSubmit(user);
-                        }
-                        db.SubmitChanges();
-                        RefrechUser();
-                    }
+                    new Data.Repository<tblUser>().Save(user, m => m.ID == user.ID, user.ID == 0);
+                    RefrechUser();
 
                     MyFunaction.MessageBoxSave();
                 }
@@ -125,18 +115,8 @@ namespace SewingSystem.Forms
                         RefrechUser();
                         return;
                     }
-                    using (var db = new DataClasses1DataContext(Program.ConnectionString))
-                    {
-                        if (tblUserGroupss.ID == 0)
-                            db.tblUserGroups.InsertOnSubmit(tblUserGroupss);
-                        else
-                        {
-                            db.tblUserGroups.DeleteAllOnSubmit(db.tblUserGroups.Where(m => m.ID == tblUserGroupss.ID));
-                            db.tblUserGroups.InsertOnSubmit(tblUserGroupss);
-                        }
-                        db.SubmitChanges();
-                        RefrechUser();
-                    }
+                    new Data.Repository<tblUserGroup>().Save(tblUserGroupss, m => m.ID == tblUserGroupss.ID, tblUserGroupss.ID == 0);
+                    RefrechUser();
                     MyFunaction.MessageBoxSave();
                 }
             }
@@ -178,12 +158,8 @@ namespace SewingSystem.Forms
                 if (MyFunaction.MessageBoxDelete() == DialogResult.Yes)
                 {
                     tblUserGroupBindingSource.EndEdit();
-                    using (var db = new DataClasses1DataContext(Program.ConnectionString))
-                    {
-                        db.tblUserGroups.DeleteAllOnSubmit(db.tblUserGroups.Where(m => m.ID == UserGroup.ID));
-                        db.SubmitChanges();
-                        RefrechUser();
-                    }
+                    new Data.Repository<tblUserGroup>().Delete(m => m.ID == UserGroup.ID);
+                    RefrechUser();
                 }
             }
         }
@@ -205,12 +181,8 @@ namespace SewingSystem.Forms
                 if (MyFunaction.MessageBoxDelete() == DialogResult.Yes)
                 {
                     tblUsersBindingSource.EndEdit();
-                    using (var db = new DataClasses1DataContext(Program.ConnectionString))
-                    {
-                        db.tblUsers.DeleteAllOnSubmit(db.tblUsers.Where(m => m.ID == User.ID));
-                        db.SubmitChanges();
-                        RefrechUser();
-                    }
+                    new Data.Repository<tblUser>().Delete(m => m.ID == User.ID);
+                    RefrechUser();
                 }
             }
         }
