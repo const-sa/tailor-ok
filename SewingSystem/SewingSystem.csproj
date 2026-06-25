@@ -256,6 +256,7 @@
     <Compile Include="Classes\ClsXtraMssgBox.cs" />
     <Compile Include="Classes\DatabaseHelper.cs" />
     <Compile Include="Classes\FileFolderHelper.cs" />
+    <Compile Include="Classes\Logger.cs" />
     <Compile Include="Classes\Master.cs" />
     <Compile Include="Classes\MyAppearance.cs" />
     <Compile Include="Classes\MyFunaction.cs" />

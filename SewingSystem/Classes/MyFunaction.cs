@@ -1,4 +1,4 @@
-﻿using DevExpress.XtraEditors;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -69,10 +69,7 @@ namespace SewingSystem.Classes
                 gridView.OptionsBehavior.ReadOnly = true;
                 gridView.Appearance.Empty.BackColor = System.Drawing.Color.AliceBlue;
             }
-            catch (Exception)
-            {
-
-            }
+            catch (Exception logEx) { SewingSystem.Classes.Logger.Log(logEx); }
         }
         public void OpenForm(UserControl Master, string Caption)
         {

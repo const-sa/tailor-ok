@@ -1,4 +1,4 @@
-﻿using DevExpress.XtraBars.Ribbon;
+using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraGrid.Views.Grid;
@@ -133,11 +133,7 @@ namespace SewingSystem.Forms
                 barListItem2.Caption = $"نسخة تجريبية: متبقي {days} حتى إنتها النسخة";
                 barListItem2.Visibility = BarItemVisibility.Always;
             }
-            catch (Exception)
-            {
-
-
-            }
+            catch (Exception logEx) { SewingSystem.Classes.Logger.Log(logEx); }
         }
 
         #region Classes 

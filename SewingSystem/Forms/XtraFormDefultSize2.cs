@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -619,9 +619,7 @@ namespace SewingSystem.Forms
                             }
                         }
                     }
-                    catch (Exception ex)
-                    {
-                    }
+                    catch (Exception ex) { SewingSystem.Classes.Logger.Log(ex); }
                 }
                 string mssg = $"الفاتورة رقم: {CurrentInvoice?.InvoNumber} ";
                 if (Session.tblSellInvoice.Any(v => v.ID == CurrentInvoice.ID))

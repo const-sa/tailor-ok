@@ -1,4 +1,4 @@
-﻿using DevExpress.XtraGrid.Views.Base.ViewInfo;
+using DevExpress.XtraGrid.Views.Base.ViewInfo;
 using SewingSystem.LinqModel;
 using System;
 using System.Collections.Generic;
@@ -94,10 +94,7 @@ namespace SewingSystem.Classes
                 }
 
             }
-               catch (Exception )
-            {
-
-            }
+               catch (Exception logEx) { SewingSystem.Classes.Logger.Log(logEx); }
 
         }
 
@@ -114,10 +111,7 @@ namespace SewingSystem.Classes
                         tblSellInvoice = db.tblSellInvoices.Where(s => s.BranchID == Program.User.BranchID).ToList();
                 }
             }
-            catch (Exception)
-            {
-
-            }
+            catch (Exception logEx) { SewingSystem.Classes.Logger.Log(logEx); }
 
         }
         public static List<LinqModel.tblPayment> tblPayment;
@@ -133,10 +127,7 @@ namespace SewingSystem.Classes
                         tblPayment = db.tblPayments.Where(s => s.BranchID == Program.User.BranchID).ToList();
                 }
             }
-               catch (Exception)
-            {
-
-            }
+               catch (Exception logEx) { SewingSystem.Classes.Logger.Log(logEx); }
 
         }
         public static void RefreshDatatSellInvoice(tblSellInvoice sell)
@@ -165,10 +156,7 @@ namespace SewingSystem.Classes
                         tblSellInvoiceDetaile = db.tblSellInvoiceDetailes.Where(s => s.BranchID == Program.User.BranchID).ToList();
                 }
             }
-               catch (Exception)
-            {
-
-            }
+               catch (Exception logEx) { SewingSystem.Classes.Logger.Log(logEx); }
 
         }
 
@@ -207,10 +195,7 @@ namespace SewingSystem.Classes
                         tblBuyInvoice = db.tblBuyInvoices.Where(s => s.BranchID == Program.User.BranchID).ToList();
                 }
             }
-               catch (Exception)
-            {
-
-            }
+               catch (Exception logEx) { SewingSystem.Classes.Logger.Log(logEx); }
 
         }
 
@@ -227,10 +212,7 @@ namespace SewingSystem.Classes
                         tblBuyInvoiceDetaile = db.tblBuyInvoiceDetailes.Where(s => s.BranchID == Program.User.BranchID).ToList();
                 }
             }
-               catch (Exception)
-            {
-                
-            }
+               catch (Exception logEx) { SewingSystem.Classes.Logger.Log(logEx); }
 
         }
 
@@ -245,10 +227,7 @@ namespace SewingSystem.Classes
                     tblUserGroup = db.tblUserGroups.ToList();
                 }
             }
-               catch (Exception)
-            {
-
-            }
+               catch (Exception logEx) { SewingSystem.Classes.Logger.Log(logEx); }
 
 
         }
@@ -275,10 +254,7 @@ namespace SewingSystem.Classes
                         tblCustomer = db.tblCustomers.Where(s => s.BranchID == Program.User.BranchID).ToList();
                 }
             }
-               catch (Exception)
-            {
-
-            }
+               catch (Exception logEx) { SewingSystem.Classes.Logger.Log(logEx); }
 
         }
 
@@ -295,10 +271,7 @@ namespace SewingSystem.Classes
                         tblSupplier = db.tblSuppliers.Where(s => s.BranchID == Program.User.BranchID).ToList();
                 }
             }
-            catch (Exception)
-            {
-
-            }
+            catch (Exception logEx) { SewingSystem.Classes.Logger.Log(logEx); }
 
         }
 
@@ -316,10 +289,7 @@ namespace SewingSystem.Classes
                         tblDefaultSize = db.tblDefaultSizes.Where(s => s.BranchID == Program.User.BranchID).ToList();
                 }
             }
-               catch (Exception)
-            {
-
-            }
+               catch (Exception logEx) { SewingSystem.Classes.Logger.Log(logEx); }
 
         }
     }

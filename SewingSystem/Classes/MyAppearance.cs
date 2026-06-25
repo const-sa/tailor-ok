@@ -1,4 +1,4 @@
-﻿using DevExpress.Utils;
+using DevExpress.Utils;
 using DevExpress.Utils.Extensions;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
@@ -33,10 +33,7 @@ namespace SewingSystem.Classes
                     bindingNavigator.BackColor = System.Drawing.Color.AliceBlue;
                 }
             }
-            catch (Exception)
-            {
-
-            }
+            catch (Exception logEx) { SewingSystem.Classes.Logger.Log(logEx); }
 
         }
         public static void SetAppearanceDataLayoutControl(this LayoutControl dataLayout)
@@ -82,10 +79,7 @@ namespace SewingSystem.Classes
                     bindingNavigator.BackColor = systemColors;
                 layoutControlGroup.AppearanceItemCaption.TextOptions.HAlignment = HorzAlignment.Far;
             }
-            catch (Exception)
-            {
-
-            }
+            catch (Exception logEx) { SewingSystem.Classes.Logger.Log(logEx); }
         }
         static TypeConverter converter = TypeDescriptor.GetConverter(typeof(Font));
 

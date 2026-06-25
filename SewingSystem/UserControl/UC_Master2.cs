@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -213,10 +213,7 @@ namespace SewingSystem.Forms
                 //dataLayout.ShowCustomization += DataLayoutControl1_ShowCustomization;
                 //dataLayout.HideCustomization += DataLayoutControl1_HideCustomization;
             }
-            catch (Exception)
-            {
-
-            }
+            catch (Exception logEx) { SewingSystem.Classes.Logger.Log(logEx); }
         }
         GridView gridView => gridControl?.MainView as GridView;
         public ComponentFlyoutDialog flyDialog = new ComponentFlyoutDialog();

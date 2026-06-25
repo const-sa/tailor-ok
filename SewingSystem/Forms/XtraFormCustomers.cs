@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -242,9 +242,7 @@ namespace SewingSystem.Forms
                                 }
                             }
                         }
-                        catch (Exception ex)
-                        {
-                        }
+                        catch (Exception ex) { SewingSystem.Classes.Logger.Log(ex); }
                     }
                     if (Session.tblCustomer.Any(v => v.ID == CurrCustomer.ID))
                     {
