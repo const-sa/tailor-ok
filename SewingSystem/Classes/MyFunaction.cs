@@ -89,42 +89,37 @@ namespace SewingSystem.Classes
         }
         public static void DecryptionSetting()
         {
-            int a = 0;
+            // Decrypt each persisted setting independently. A missing or invalid
+            // (non-decryptable) value falls back to an empty string instead of
+            // throwing — this previously aborted the whole method and triggered
+            // infinite recursion, crashing the app on first run / bad config.
+            Program.ProductTrue = SafeDecrypt(Properties.Settings.Default.ProductTrue);
+            Program.ProductBeginDate = SafeDecrypt(Properties.Settings.Default.ProductBeginDate);
+            Program.ProductEndDate = SafeDecrypt(Properties.Settings.Default.ProductEndDate);
+            Program.ServerName = SafeDecrypt(Properties.Settings.Default.ServerName);
+            Program.DBName = SafeDecrypt(Properties.Settings.Default.DBName);
+            Program.Mode = SafeDecrypt(Properties.Settings.Default.Mode);
+            Program.SqlUserName = SafeDecrypt(Properties.Settings.Default.SqlUserName);
+            Program.SqlPassword = SafeDecrypt(Properties.Settings.Default.SqlPassword);
+        }
+
+        /// <summary>
+        /// Decrypts a setting value, returning "" for empty or non-decryptable input
+        /// (so a single bad value never aborts loading the rest of the settings).
+        /// When the connection settings end up empty the app falls back to the
+        /// connection dialog (XtraFormConnectionDB), which is the intended setup path.
+        /// </summary>
+        private static string SafeDecrypt(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                return "";
             try
             {
-                //    ProductKey = "A7Z7-A3A6-S0H4-I2I4-M5R"; 
-                // Decryption(Properties.Settings.Default.ProductKey);
-                Program.ProductTrue =  Decryption(Properties.Settings.Default.ProductTrue);
-                Program.ProductBeginDate =  Decryption(Properties.Settings.Default.ProductBeginDate);
-                Program.ProductEndDate =  Decryption(Properties.Settings.Default.ProductEndDate);
-                Program.ServerName =  Decryption(Properties.Settings.Default.ServerName);
-                Program.DBName =  Decryption(Properties.Settings.Default.DBName);
-                Program.Mode =  Decryption(Properties.Settings.Default.Mode);
-                Program.SqlUserName =  Decryption(Properties.Settings.Default.SqlUserName);
-                Program.SqlPassword =  Decryption(Properties.Settings.Default.SqlPassword);
-
+                return Decryption(value);
             }
-            catch (Exception)
+            catch
             {
-                if (a > 5)
-                {
-                    return;
-                }
-                else
-                {
-                    a++;
-                    //Properties.Settings.Default.ProductKey =  Encryption("A7Z7-A3A6-S0H4-I2I4-M5R");
-                    //Properties.Settings.Default.ProductTrue = Encryption("true");
-                    //Properties.Settings.Default.ProductBeginDate =  Encryption("2019-08-18");
-                    //Properties.Settings.Default.ProductEndDate =  Encryption("2019-08-19");
-                    Properties.Settings.Default.ServerName =  Encryption(".");
-                    Properties.Settings.Default.DBName =  Encryption("DBT_SH");
-                    Properties.Settings.Default.Mode =  Encryption("Windows");
-                    Properties.Settings.Default.SqlUserName =  Encryption("");
-                    Properties.Settings.Default.SqlPassword =  Encryption("");
-                    Properties.Settings.Default.Save();
-                    DecryptionSetting();
-                }
+                return "";
             }
         }
         private static string key = "absdefghijklmnolabsdefghijklmnol";
