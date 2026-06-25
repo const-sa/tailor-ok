@@ -80,25 +80,32 @@ namespace SewingSystem.Forms
                     User.UserName = UserNameTextEdit.Text.Trim().ToString();
                 if (UserPasswordTextEdit.Text.Trim() != string.Empty)
                     User.UserPassword = UserPasswordTextEdit.Text.Trim().ToString();
-                var CurruntUser = Session.tblUser.Where(u => u.UserName == User.UserName & u.UserPassword == User.UserPassword & u.BranchID == User.BranchID);
-                if (CurruntUser.Count() > 0)
-                {
-                    Program.User = CurruntUser.FirstOrDefault();
-                    Program.Branch = Session.tblBranche.SingleOrDefault(b => b.ID == Program.User.BranchID);
-                    Program.LogInUser = true;
-                    Close();
-                }
-                else if (CurruntUser.Count() > 1)
+                // Match on username + branch, then verify the password (BCrypt hash
+                // or legacy plaintext). Previously this compared the password as
+                // plaintext, so users created through the UI (stored hashed) could
+                // never log in. Check the ">1" ambiguity first so it is reachable.
+                var CurruntUser = Session.tblUser
+                    .Where(u => u.UserName == User.UserName && u.BranchID == User.BranchID)
+                    .Where(u => PasswordHasher.Verify(User.UserPassword, u.UserPassword))
+                    .ToList();
+                if (CurruntUser.Count > 1)
                 {
                     if (Properties.Settings.Default.Language == "ar-SA")
                         XtraMessageBox.Show("يوجد اكثر من مستخدم بنفس البيانات قم بمراجعة مدير النظام", "خطاء", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     else if (Properties.Settings.Default.Language == "en-US")
                         XtraMessageBox.Show("There is more than one user with the same data, refer to the system administrator", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+                else if (CurruntUser.Count == 1)
+                {
+                    Program.User = CurruntUser.First();
+                    Program.Branch = Session.tblBranche.SingleOrDefault(b => b.ID == Program.User.BranchID);
+                    Program.LogInUser = true;
+                    Close();
+                }
                 else
                 {
                     if (Properties.Settings.Default.Language == "ar-SA")
-                        XtraMessageBox.Show(/*BranchIDTextEdit.EditValue.ToString() + User.UserName.ToString() + User.UserPassword.ToString() +*/ "       اسم المستخدم او كلمة المرور غير صحيحة", "خطاء", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        XtraMessageBox.Show("       اسم المستخدم او كلمة المرور غير صحيحة", "خطاء", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     else if (Properties.Settings.Default.Language == "en-US")
                         XtraMessageBox.Show("Username or password is incorrect!!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }

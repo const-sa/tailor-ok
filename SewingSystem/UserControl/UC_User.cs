@@ -43,7 +43,7 @@ namespace SewingSystem.Forms
         {
             if (user == null) return;
             if (IsNew||user.UserPassword != oldPassword)
-                user.UserPassword = BCrypt.Net.BCrypt.HashPassword(PasswordTextEdit.Text);
+                user.UserPassword = SewingSystem.Classes.PasswordHasher.Hash(PasswordTextEdit.Text);
             base.Save();
         }
         string oldPassword;

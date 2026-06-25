@@ -259,6 +259,7 @@
     <Compile Include="Classes\Logger.cs" />
     <Compile Include="Classes\Master.cs" />
     <Compile Include="Classes\MyAppearance.cs" />
+    <Compile Include="Classes\PasswordHasher.cs" />
     <Compile Include="Classes\MyFunaction.cs" />
     <Compile Include="Classes\Session.cs" />
     <Compile Include="Classes\TLVCls.cs" />
