@@ -73,30 +73,12 @@ namespace SewingSystem
         [STAThread]
         static void Main()
         {
-            if (!IsRunAsAdministrator())
-            {
-                // إعادة تشغيل التطبيق مع صلاحيات المسؤول
-                var processInfo = new ProcessStartInfo
-                {
-                    UseShellExecute = true,
-                    FileName = Application.ExecutablePath,
-                    Verb = "runas"
-                };
-
-                try
-                {
-                    Process.Start(processInfo);
-                }
-                catch (Exception)
-                {
-                    //MessageBox.Show("The application requires administrator privileges to run.");
-                    MessageBox.Show("يرجى تشغيل البرنامج كمسؤول");
-                    return;
-                }
-
-                Application.Exit();
-                return;
-            }
+            // Administrator rights are no longer forced on every launch (that
+            // produced a UAC prompt each time). Normal operation only needs to
+            // connect to SQL Server via Windows auth, which does not require
+            // elevation. The one path that does need admin — the first-run
+            // auto-attach of the .mdf below — already fails gracefully into the
+            // connection dialog, which is the intended setup path.
 
 
             //if (!Properties.Settings.Default.is_activated)
