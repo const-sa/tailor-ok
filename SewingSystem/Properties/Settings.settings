@@ -23,6 +23,9 @@
     <Setting Name="ServerName" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="ConnType" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
     <Setting Name="ProductTrue" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>

@@ -254,6 +254,7 @@
     <Compile Include="Classes\ClsEncryption.cs" />
     <Compile Include="Classes\ClsHardDriveSerial.cs" />
     <Compile Include="Classes\ClsXtraMssgBox.cs" />
+    <Compile Include="Classes\ConnectionStatus.cs" />
     <Compile Include="Classes\DatabaseHelper.cs" />
     <Compile Include="Classes\FileFolderHelper.cs" />
     <Compile Include="Classes\Logger.cs" />
@@ -263,6 +264,19 @@
     <Compile Include="Classes\MyFunaction.cs" />
     <Compile Include="Classes\Session.cs" />
     <Compile Include="Classes\TLVCls.cs" />
+    <Compile Include="Classes\Zatca\ZatcaConfig.cs" />
+    <Compile Include="Classes\Zatca\ZatcaCrypto.cs" />
+    <Compile Include="Classes\Zatca\ZatcaQr.cs" />
+    <Compile Include="Classes\Zatca\ZatcaApiClient.cs" />
+    <Compile Include="Classes\Zatca\ZatcaUbl.cs" />
+    <Compile Include="Classes\Zatca\ZatcaSigner.cs" />
+    <Compile Include="Classes\Zatca\ZatcaService.cs" />
+    <Compile Include="Classes\Zatca\ZatcaInvoiceMapper.cs" />
+    <Compile Include="Classes\Zatca\ZatcaIcon.cs" />
+    <Compile Include="Classes\Whatsapp\CwtsClient.cs" />
+    <Compile Include="Classes\Whatsapp\WhatsappConfig.cs" />
+    <Compile Include="Classes\Whatsapp\WhatsappService.cs" />
+    <Compile Include="Classes\Whatsapp\WhatsappIcon.cs" />
     <Compile Include="Classes\WhatsappMessage.cs" />
     <Compile Include="Data\Repository.cs" />
     <Compile Include="DAL\Class1.cs" />
@@ -315,6 +329,21 @@
       <DependentUpon>XtraFormActive.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\XtraFormBackupSett.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormZatcaSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormReturnInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormZatcaHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormZatcaReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormWhatsapp.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\XtraFormBackupSett.Designer.cs">

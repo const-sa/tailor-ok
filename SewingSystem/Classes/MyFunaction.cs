@@ -98,6 +98,7 @@ namespace SewingSystem.Classes
             Program.Mode = SafeDecrypt(Properties.Settings.Default.Mode);
             Program.SqlUserName = SafeDecrypt(Properties.Settings.Default.SqlUserName);
             Program.SqlPassword = SafeDecrypt(Properties.Settings.Default.SqlPassword);
+            Program.ConnType = SafeDecrypt(Properties.Settings.Default.ConnType);
         }
 
         /// <summary>

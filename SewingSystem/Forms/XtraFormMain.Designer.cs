@@ -76,6 +76,13 @@
             this.barListItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.btn_Customers = new DevExpress.XtraBars.BarButtonItem();
             this.btnBackupSett = new DevExpress.XtraBars.BarButtonItem();
+            this.btnZatcaSett = new DevExpress.XtraBars.BarButtonItem();
+            this.btnReturnInvoice = new DevExpress.XtraBars.BarButtonItem();
+            this.btnZatcaHelp = new DevExpress.XtraBars.BarButtonItem();
+            this.btnZatcaReport = new DevExpress.XtraBars.BarButtonItem();
+            this.btnWhatsapp = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageWhatsapp = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroupWhatsapp = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.BtnGabth = new DevExpress.XtraBars.BarButtonItem();
             this.BtnSarf2 = new DevExpress.XtraBars.BarButtonItem();
             this.BtnCreditNote2 = new DevExpress.XtraBars.BarButtonItem();
@@ -284,6 +291,11 @@
             this.barListItem2,
             this.btn_Customers,
             this.btnBackupSett,
+            this.btnZatcaSett,
+            this.btnReturnInvoice,
+            this.btnZatcaHelp,
+            this.btnZatcaReport,
+            this.btnWhatsapp,
             this.BtnGabth,
             this.BtnSarf2,
             this.BtnCreditNote2,
@@ -303,7 +315,8 @@
             this.Report_ribbonPage,
             this.ribbonPage4,
             this.ribbonPage11,
-            this.ribbonPage8});
+            this.ribbonPage8,
+            this.ribbonPageWhatsapp});
             this.ribbonControl1.ShowPageHeadersInFormCaption = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
@@ -675,7 +688,50 @@
             this.btnBackupSett.ImageOptions.LargeImage = global::SewingSystem.Properties.Resources.database_32x321;
             this.btnBackupSett.Name = "btnBackupSett";
             this.btnBackupSett.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBackupSett_ItemClick);
-            // 
+            //
+            // btnZatcaSett
+            //
+            this.btnZatcaSett.Caption = "إعدادات ربط الزكاة";
+            this.btnZatcaSett.Id = 120;
+            this.btnZatcaSett.ImageOptions.Image = global::SewingSystem.Properties.Resources.database_16x16;
+            this.btnZatcaSett.ImageOptions.LargeImage = global::SewingSystem.Properties.Resources.database_32x321;
+            this.btnZatcaSett.Name = "btnZatcaSett";
+            this.btnZatcaSett.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnZatcaSett_ItemClick);
+            //
+            // btnReturnInvoice
+            //
+            this.btnReturnInvoice.Caption = "مرتجع مبيعات";
+            this.btnReturnInvoice.Id = 121;
+            this.btnReturnInvoice.ImageOptions.Image = global::SewingSystem.Properties.Resources.database_16x16;
+            this.btnReturnInvoice.ImageOptions.LargeImage = global::SewingSystem.Properties.Resources.database_32x321;
+            this.btnReturnInvoice.Name = "btnReturnInvoice";
+            this.btnReturnInvoice.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnReturnInvoice_ItemClick);
+            //
+            // btnZatcaHelp
+            //
+            this.btnZatcaHelp.Caption = "دليل الزكاة والاستخدام";
+            this.btnZatcaHelp.Id = 122;
+            this.btnZatcaHelp.ImageOptions.Image = global::SewingSystem.Properties.Resources.database_16x16;
+            this.btnZatcaHelp.ImageOptions.LargeImage = global::SewingSystem.Properties.Resources.database_32x321;
+            this.btnZatcaHelp.Name = "btnZatcaHelp";
+            this.btnZatcaHelp.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnZatcaHelp_ItemClick);
+            //
+            // btnZatcaReport
+            //
+            this.btnZatcaReport.Caption = "تقارير الزكاة";
+            this.btnZatcaReport.Id = 124;
+            this.btnZatcaReport.Name = "btnZatcaReport";
+            this.btnZatcaReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnZatcaReport_ItemClick);
+            //
+            // btnWhatsapp
+            //
+            this.btnWhatsapp.Caption = "الواتساب والرسائل";
+            this.btnWhatsapp.Id = 123;
+            this.btnWhatsapp.ImageOptions.Image = global::SewingSystem.Properties.Resources.database_16x16;
+            this.btnWhatsapp.ImageOptions.LargeImage = global::SewingSystem.Properties.Resources.database_32x321;
+            this.btnWhatsapp.Name = "btnWhatsapp";
+            this.btnWhatsapp.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnWhatsapp_ItemClick);
+            //
             // BtnGabth
             // 
             resources.ApplyResources(this.BtnGabth, "BtnGabth");
@@ -877,7 +933,24 @@
             // ribbonPageGroup8
             // 
             this.ribbonPageGroup8.ItemLinks.Add(this.btnBackupSett);
+            this.ribbonPageGroup8.ItemLinks.Add(this.btnZatcaSett);
+            this.ribbonPageGroup8.ItemLinks.Add(this.btnReturnInvoice);
+            this.ribbonPageGroup8.ItemLinks.Add(this.btnZatcaHelp);
+            this.ribbonPageGroup8.ItemLinks.Add(this.btnZatcaReport);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            //
+            // ribbonPageWhatsapp
+            //
+            this.ribbonPageWhatsapp.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroupWhatsapp});
+            this.ribbonPageWhatsapp.Name = "ribbonPageWhatsapp";
+            this.ribbonPageWhatsapp.Text = "الواتساب والرسائل";
+            //
+            // ribbonPageGroupWhatsapp
+            //
+            this.ribbonPageGroupWhatsapp.ItemLinks.Add(this.btnWhatsapp);
+            this.ribbonPageGroupWhatsapp.Name = "ribbonPageGroupWhatsapp";
+            this.ribbonPageGroupWhatsapp.Text = "رسائل العملاء";
             // 
             // ribbonPage8
             // 
@@ -1596,6 +1669,13 @@
         private DevExpress.XtraBars.BarStaticItem barListItem2;
         private DevExpress.XtraBars.BarButtonItem btn_Customers;
         private DevExpress.XtraBars.BarButtonItem btnBackupSett;
+        private DevExpress.XtraBars.BarButtonItem btnZatcaSett;
+        private DevExpress.XtraBars.BarButtonItem btnReturnInvoice;
+        private DevExpress.XtraBars.BarButtonItem btnZatcaHelp;
+        private DevExpress.XtraBars.BarButtonItem btnZatcaReport;
+        private DevExpress.XtraBars.BarButtonItem btnWhatsapp;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageWhatsapp;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupWhatsapp;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;

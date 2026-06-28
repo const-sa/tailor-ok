@@ -106,6 +106,18 @@ namespace SewingSystem.Properties {
                 this["ServerName"] = value;
             }
         }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ConnType {
+            get {
+                return ((string)(this["ConnType"]));
+            }
+            set {
+                this["ConnType"] = value;
+            }
+        }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

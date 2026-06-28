@@ -53,6 +53,8 @@ namespace SewingSystem
         public static string Mode;
         public static string SqlUserName;
         public static string SqlPassword;
+        // نوع الاتصال: داخلي (خادم محلي) أو خارجي (خادم بعيد) — Classes.ConnectionStatus.Internal/External
+        public static string ConnType;
 
         public static bool is5DaysTrail = true;
         public static int TargetValue = 40 * 60;
@@ -115,6 +117,7 @@ namespace SewingSystem
                     Properties.Settings.Default.Mode = Classes.MyFunaction.Encryption("Windows");
                     Properties.Settings.Default.ServerName = Classes.MyFunaction.Encryption(Program.ServerName);
                     Properties.Settings.Default.DBName = Classes.MyFunaction.Encryption(Program.DBName);
+                    Properties.Settings.Default.ConnType = Classes.MyFunaction.Encryption(Classes.ConnectionStatus.Internal);
                     Properties.Settings.Default.Save();
 
                     MyFunaction.DecryptionSetting();

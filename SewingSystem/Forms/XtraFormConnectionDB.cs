@@ -23,11 +23,160 @@ namespace SewingSystem.Forms
     public partial class XtraFormConnectionDB : DevExpress.XtraEditors.XtraForm
     {
         Classes.MyFunaction myfunaction = new Classes.MyFunaction();
+
+        // --- "نوع الاتصال" (داخلي / خارجي) + مؤشر الحالة (أحمر/أخضر) ---
+        private DevExpress.XtraEditors.PanelControl pnlConnType;
+        private RadioButton rbInternal;   // داخلي
+        private RadioButton rbExternal;   // خارجي
+        private DevExpress.XtraEditors.SimpleButton btnTest; // اختبار الاتصال
+        private PictureBox picStatus;     // الدائرة الحمراء/الخضراء
+        private Label lblStatus;          // متصل / غير متصل
+        private bool _loadingConnType;    // يمنع تطبيق الإعداد المسبق أثناء التهيئة
+
         public XtraFormConnectionDB(string errMsg = "")
         {
             InitializeComponent();
+            BuildConnTypeUi();
             txt_notes.Text = errMsg;
             PrefillCurrentSettings();
+        }
+
+        /// <summary>
+        /// يبني شريط اختيار نوع الاتصال (داخلي/خارجي) مع زر اختبار الاتصال
+        /// ومؤشر الحالة (دائرة حمراء = غير متصل، خضراء = متصل) أعلى تبويب الخادم.
+        /// </summary>
+        private void BuildConnTypeUi()
+        {
+            this.Height += 52; // مساحة إضافية للشريط الجديد
+
+            pnlConnType = new DevExpress.XtraEditors.PanelControl();
+            pnlConnType.Dock = DockStyle.Top;
+            pnlConnType.Height = 92;
+            pnlConnType.RightToLeft = RightToLeft.Yes;
+
+            lblConnTitle = new Label
+            {
+                Text = "نوع الاتصال:",
+                Font = new Font("Tahoma", 8F, FontStyle.Bold),
+                ForeColor = Color.FromArgb(64, 0, 0),
+                AutoSize = true
+            };
+
+            rbInternal = new RadioButton
+            {
+                Text = "داخلي (خادم محلي)",
+                Font = new Font("Tahoma", 8F, FontStyle.Bold),
+                ForeColor = Color.FromArgb(64, 0, 0),
+                Size = new Size(200, 24),
+                RightToLeft = RightToLeft.Yes
+            };
+            rbExternal = new RadioButton
+            {
+                Text = "خارجي (خادم بعيد)",
+                Font = new Font("Tahoma", 8F, FontStyle.Bold),
+                ForeColor = Color.FromArgb(64, 0, 0),
+                Size = new Size(200, 24),
+                RightToLeft = RightToLeft.Yes
+            };
+            rbInternal.CheckedChanged += rbConnType_CheckedChanged;
+            rbExternal.CheckedChanged += rbConnType_CheckedChanged;
+
+            btnTest = new DevExpress.XtraEditors.SimpleButton
+            {
+                Text = "اختبار الاتصال",
+                Size = new Size(130, 30)
+            };
+            btnTest.Click += btnTest_Click;
+
+            picStatus = new PictureBox { SizeMode = PictureBoxSizeMode.AutoSize };
+            lblStatus = new Label
+            {
+                Text = "غير متصل",
+                Font = new Font("Tahoma", 8F, FontStyle.Bold),
+                ForeColor = Color.FromArgb(214, 48, 48),
+                AutoSize = true
+            };
+
+            pnlConnType.Controls.Add(lblConnTitle);
+            pnlConnType.Controls.Add(rbInternal);
+            pnlConnType.Controls.Add(rbExternal);
+            pnlConnType.Controls.Add(btnTest);
+            pnlConnType.Controls.Add(picStatus);
+            pnlConnType.Controls.Add(lblStatus);
+
+            // يوضع داخل تبويب "الاتصال بالخادم" أعلى عناصر النموذج.
+            ServerConnect.Controls.Add(pnlConnType);
+            pnlConnType.BringToFront();
+
+            // التخطيط يدويًا حسب العرض الفعلي للوحة (يدعم RTL وتغيير الحجم).
+            pnlConnType.SizeChanged += (s, e) => LayoutConnTypePanel();
+            LayoutConnTypePanel();
+
+            SetStatus(false, "غير متصل");
+        }
+
+        private Label lblConnTitle;
+        private void LayoutConnTypePanel()
+        {
+            int w = pnlConnType.ClientSize.Width;
+            // الجانب الأيمن: العنوان + خياري داخلي/خارجي.
+            lblConnTitle.Location = new Point(w - lblConnTitle.Width - 12, 10);
+            rbInternal.Location = new Point(w - rbInternal.Width - 12, 32);
+            rbExternal.Location = new Point(w - rbExternal.Width - 12, 58);
+            // الجانب الأيسر: زر الاختبار + مؤشر الحالة.
+            btnTest.Location = new Point(12, 32);
+            picStatus.Location = new Point(12, 66);
+            lblStatus.Location = new Point(32, 66);
+        }
+
+        private void SetStatus(bool connected, string text)
+        {
+            picStatus.Image = Classes.ConnectionStatus.Dot(connected, 14);
+            lblStatus.Text = text;
+            lblStatus.ForeColor = connected
+                ? Color.FromArgb(46, 184, 92)
+                : Color.FromArgb(214, 48, 48);
+        }
+
+        /// <summary>عند اختيار المستخدم لنوع الاتصال يُعبّأ الإعداد المسبق المناسب.</summary>
+        private void rbConnType_CheckedChanged(object sender, EventArgs e)
+        {
+            if (_loadingConnType) return;
+            if (!((RadioButton)sender).Checked) return;
+
+            if (rbExternal.Checked)
+            {
+                txtServerName.Text = Classes.ConnectionStatus.ExternalServer;
+                txtDB_Name.Text = Classes.ConnectionStatus.ExternalDB;
+                rbSQL.Checked = true;
+                txtSqlUserName.Text = Classes.ConnectionStatus.ExternalUser;
+                txtSqlPassword.Text = Classes.ConnectionStatus.ExternalPassword;
+            }
+            else
+            {
+                txtServerName.Text = Classes.ConnectionStatus.InternalServer;
+                txtDB_Name.Text = Classes.ConnectionStatus.InternalDB;
+                rbWindows.Checked = true;
+            }
+            SetStatus(false, "غير متصل");
+        }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            this.UseWaitCursor = true;
+            string err;
+            bool ok = Classes.ConnectionStatus.Test(
+                txtServerName.Text.Trim(),
+                txtDB_Name.Text.Trim(),
+                rbWindows.Checked,
+                txtSqlUserName.Text.Trim(),
+                txtSqlPassword.Text,
+                out err);
+            this.UseWaitCursor = false;
+            SetStatus(ok, ok ? "متصل" : "غير متصل");
+            if (!ok)
+                MessageBox.Show("تعذّر الاتصال:\n" + err, "اختبار الاتصال",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         /// <summary>
@@ -37,6 +186,15 @@ namespace SewingSystem.Forms
         /// </summary>
         private void PrefillCurrentSettings()
         {
+            // تحديد نوع الاتصال المحفوظ دون استبدال القيم الحالية (يتم تطبيق
+            // الإعداد المسبق فقط عند اختيار المستخدم لاحقًا).
+            _loadingConnType = true;
+            if (Program.ConnType == Classes.ConnectionStatus.External)
+                rbExternal.Checked = true;
+            else
+                rbInternal.Checked = true;
+            _loadingConnType = false;
+
             txtServerName.Text = Program.ServerName;
             txtDB_Name.Text = Program.DBName;
             if (Program.Mode == "SQL")
@@ -76,6 +234,8 @@ namespace SewingSystem.Forms
             Properties.Settings.Default.Mode = rbWindows.Checked == true ? Classes.MyFunaction.Encryption("Windows") : Classes.MyFunaction.Encryption("SQL");
             Properties.Settings.Default.SqlUserName = Classes.MyFunaction.Encryption(txtSqlUserName.Text);
             Properties.Settings.Default.SqlPassword = Classes.MyFunaction.Encryption(txtSqlPassword.Text);
+            Properties.Settings.Default.ConnType = Classes.MyFunaction.Encryption(
+                rbExternal.Checked ? Classes.ConnectionStatus.External : Classes.ConnectionStatus.Internal);
             Properties.Settings.Default.Save();
             MyFunaction.DecryptionSetting();
             try
@@ -143,12 +303,19 @@ namespace SewingSystem.Forms
             string configPath = Path.Combine(executablePath, "SewingSystem.exe.config");
             FileFolderHelper.SetFilePermissions(configPath);
 
+            // Use the DECRYPTED connection values (Program.* are refreshed by
+            // MyFunaction.DecryptionSetting() inside SettingServer above). The
+            // raw Properties.Settings values are AES-encrypted, so passing them
+            // here previously wrote the encrypted base64 as the server/catalog
+            // and forced SQL auth (Mode != "Windows"), producing a connection
+            // string that EF could never open ("The underlying provider failed
+            // on Open.").
             string newConnectionString = DatabaseHelper.GetConnectionString(
-                Properties.Settings.Default.DBName,
-                Properties.Settings.Default.ServerName,
-                Properties.Settings.Default.SqlUserName,
-                Properties.Settings.Default.SqlPassword,
-                Properties.Settings.Default.Mode == "Windows"
+                Program.DBName,
+                Program.ServerName,
+                Program.SqlUserName,
+                Program.SqlPassword,
+                Program.Mode == "Windows"
                 );
 
             DatabaseHelper.UpdateConnectionString(Program.DBName_static + "Entities", newConnectionString);

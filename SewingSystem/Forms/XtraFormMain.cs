@@ -85,6 +85,15 @@ namespace SewingSystem.Forms
         public XtraFormMain()
         {
             InitializeComponent();
+            // WhatsApp ribbon button uses a generated WhatsApp-style icon (green bubble).
+            btnWhatsapp.ImageOptions.Image = Classes.Whatsapp.WhatsappIcon.Get(16);
+            btnWhatsapp.ImageOptions.LargeImage = Classes.Whatsapp.WhatsappIcon.Get(32);
+            // ZATCA buttons get a tax / e-invoice (QR) icon instead of the generic database one.
+            foreach (var b in new[] { btnZatcaSett, btnReturnInvoice, btnZatcaHelp, btnZatcaReport })
+            {
+                b.ImageOptions.Image = Classes.Zatca.ZatcaIcon.Get(16);
+                b.ImageOptions.LargeImage = Classes.Zatca.ZatcaIcon.Get(32);
+            }
             TrailRemainingDays();
         }
 
@@ -100,6 +109,31 @@ namespace SewingSystem.Forms
             flyDailog.WaitForm(this, 0);
             barStaticItemBranch.Caption = Session.tblBranche.Where(b => b.ID == Program.User.BranchID).FirstOrDefault().BranchName + "      ";
             barStaticItemUser.Caption = Program.User.UserName + "      ";
+            ShowConnectionStatus();
+        }
+
+        private BarStaticItem barConnStatus;
+        /// <summary>
+        /// يضيف مؤشر حالة الاتصال إلى شريط الحالة: دائرة خضراء = متصل، حمراء =
+        /// غير متصل، مع نوع الاتصال (داخلي/خارجي).
+        /// </summary>
+        private void ShowConnectionStatus()
+        {
+            try
+            {
+                bool connected = Classes.ConnectionStatus.TestCurrent();
+                string type = Classes.ConnectionStatus.TypeCaption(Program.ConnType);
+
+                if (barConnStatus == null)
+                {
+                    barConnStatus = new BarStaticItem();
+                    ribbonControl1.Items.Add(barConnStatus);
+                    ribbonStatusBar1.ItemLinks.Add(barConnStatus);
+                }
+                barConnStatus.ImageOptions.Image = Classes.ConnectionStatus.Dot(connected, 14);
+                barConnStatus.Caption = (connected ? "متصل" : "غير متصل") + " (" + type + ")      ";
+            }
+            catch (Exception ex) { Classes.Logger.Log(ex); }
         }
         private void TrailRemainingDays()
         {
@@ -531,6 +565,41 @@ namespace SewingSystem.Forms
         {
             frmBackupSett = new XtraFormBackupSett();
             frmBackupSett.Show();
+        }
+
+        XtraFormZatcaSettings frmZatcaSett;
+        private void btnZatcaSett_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmZatcaSett = new XtraFormZatcaSettings();
+            frmZatcaSett.Show();
+        }
+
+        XtraFormReturnInvoice frmReturnInvoice;
+        private void btnReturnInvoice_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmReturnInvoice = new XtraFormReturnInvoice();
+            frmReturnInvoice.Show();
+        }
+
+        XtraFormZatcaHelp frmZatcaHelp;
+        private void btnZatcaHelp_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmZatcaHelp = new XtraFormZatcaHelp();
+            frmZatcaHelp.Show();
+        }
+
+        XtraFormZatcaReport frmZatcaReport;
+        private void btnZatcaReport_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmZatcaReport = new XtraFormZatcaReport();
+            frmZatcaReport.Show();
+        }
+
+        XtraFormWhatsapp frmWhatsapp;
+        private void btnWhatsapp_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmWhatsapp = new XtraFormWhatsapp();
+            frmWhatsapp.Show();
         }
 
         XtraFormExplanations frmExplanations;
