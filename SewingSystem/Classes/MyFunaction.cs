@@ -406,6 +406,12 @@ namespace SewingSystem.Classes
 
        public static bool BackupDatabase(string connectionString, string backupDirectory)
         {
+            // النسخ الاحتياطي على مستوى الخادم (BACKUP DATABASE) يكتب على نظام ملفات
+            // خادم SQL، وهذا غير متاح مع الاتصال الخارجي (استضافة مشتركة). نتخطّاه بصمت
+            // لتجنّب رسالة الخطأ — تتولّى الاستضافة عمل النسخ الاحتياطي في هذه الحالة.
+            if (Program.ConnType == ConnectionStatus.External)
+                return false;
+
             string databaseName = new SqlConnectionStringBuilder(connectionString).InitialCatalog;
             string backupFileName = Path.Combine(backupDirectory, $"{databaseName}_{DateTime.Now:yyyyMMdd_HHmmss}.bak");
 
