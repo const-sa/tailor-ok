@@ -254,7 +254,7 @@
   <data name="checkEditEnable2Invoic.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
-  <assembly alias="DevExpress.Data.v22.2" name="DevExpress.Data.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <assembly alias="DevExpress.Data.v22.2" name="DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="checkEditEnable2Invoic.Properties.GlyphAlignment" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v22.2">
     <value>Far</value>
   </data>

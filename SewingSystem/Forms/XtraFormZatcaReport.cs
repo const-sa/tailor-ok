@@ -8,6 +8,7 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
 using Newtonsoft.Json.Linq;
+using SewingSystem.Reports;
 
 namespace SewingSystem.Forms
 {
@@ -15,7 +16,7 @@ namespace SewingSystem.Forms
     /// تقارير الزكاة: قائمة الفواتير المُبلّغة وحالتها، مع استخراج الأخطاء
     /// والتنبيهات القادمة من رد الهيئة وأسبابها. مبنية بعناصر DevExpress.
     /// </summary>
-    public class XtraFormZatcaReport : DevExpress.XtraEditors.XtraForm
+    public class XtraFormZatcaReport : FormZatcaMaster
     {
         private static readonly Font Bold = new Font("Tahoma", 9.75F, FontStyle.Bold);
         private GridControl grid;
@@ -29,24 +30,24 @@ namespace SewingSystem.Forms
         private void BuildUi()
         {
             Text = "تقارير الزكاة (الأخطاء والتنبيهات)";
-            RightToLeft = RightToLeft.Yes; RightToLeftLayout = false;
+            RightToLeft = RightToLeft.Yes; RightToLeftLayout = true;
             AutoScaleMode = AutoScaleMode.None;
             StartPosition = FormStartPosition.CenterScreen;
-            ClientSize = new Size(900, 600);
+            ClientSize = new Size(900, 708);
+            Classes.Zatca.ZatcaUi.ApplyIcon(this);
+            BtnSave.Visible = false;     // التقرير للعرض فقط — لا حفظ
+            BtnPrint.Visible = true;     // الطباعة متاحة هنا
 
-            // top filter bar
+            // top filter bar (التحديث صار في شريط الأدوات العلوي)
+            // الإحداثيات تُعكَس آلياً بسبب RightToLeftLayout=true فتظهر العناصر على اليمين
             var grpTop = Grp("تصفية", new Point(10, 8), new Size(880, 56));
-            cboFilter = new ComboBoxEdit { Location = new Point(690, 22), Size = new Size(180, 24) };
+            cboFilter = new ComboBoxEdit { Location = new Point(70, 22), Size = new Size(180, 24) };
             cboFilter.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             cboFilter.Properties.Items.AddRange(new object[] { "الكل", "أخطاء فقط", "تنبيهات", "مبلّغة بنجاح", "غير مبلّغة" });
             cboFilter.SelectedIndex = 0;
             cboFilter.SelectedIndexChanged += (s, e) => ApplyFilter();
-            var btnRefresh = new SimpleButton { Text = "تحديث", Location = new Point(520, 20), Size = new Size(150, 28) };
-            btnRefresh.ImageOptions.Image = Classes.Zatca.ZatcaIcon.Get(16);
-            btnRefresh.Click += (s, e) => LoadData();
-            grpTop.Controls.Add(new LabelControl { Text = "العرض:", Location = new Point(815, 25), AutoSizeMode = LabelAutoSizeMode.None, Size = new Size(50, 18), Appearance = { Font = Bold, TextOptions = { HAlignment = DevExpress.Utils.HorzAlignment.Far } } });
+            grpTop.Controls.Add(new LabelControl { Text = "العرض:", Location = new Point(12, 25), AutoSizeMode = LabelAutoSizeMode.None, Size = new Size(50, 18), Appearance = { Font = Bold, TextOptions = { HAlignment = DevExpress.Utils.HorzAlignment.Near } } });
             grpTop.Controls.Add(cboFilter);
-            grpTop.Controls.Add(btnRefresh);
 
             // grid
             var grpGrid = Grp("الفواتير وحالة الإبلاغ", new Point(10, 70), new Size(880, 350));
@@ -68,9 +69,22 @@ namespace SewingSystem.Forms
             txtDetail.Properties.ReadOnly = true;
             grpDetail.Controls.Add(txtDetail);
 
-            Controls.Add(grpGrid);
-            Controls.Add(grpDetail);
-            Controls.Add(grpTop);
+            var content = new PanelControl { Dock = DockStyle.Fill };
+            content.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            content.Controls.Add(grpGrid);
+            content.Controls.Add(grpDetail);
+            content.Controls.Add(grpTop);
+
+            ContentPanel.Controls.Add(content);
+            ContentPanel.Controls.Add(Classes.Zatca.ZatcaUi.Header("تقارير الزكاة",
+                                                      "حالة الإبلاغ — الأخطاء والتنبيهات"));
+        }
+
+        protected override void OnRefreshClick() => LoadData();
+        protected override void OnPrintClick()
+        {
+            if (_table == null) { XtraMessageBox.Show("لا توجد بيانات للطباعة."); return; }
+            GridReportP.Print(grid, "تقارير الزكاة", "");
         }
 
         private GroupControl Grp(string text, Point loc, Size size)

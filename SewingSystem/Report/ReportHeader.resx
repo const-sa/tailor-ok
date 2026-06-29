@@ -125,7 +125,7 @@
   <data name="xrLabelReport.ForeColor" type="System.Drawing.Color, System.Drawing">
     <value>Navy</value>
   </data>
-  <assembly alias="DevExpress.Data.v22.2" name="DevExpress.Data.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <assembly alias="DevExpress.Data.v22.2" name="DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="xrLabelReport.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.2">
     <value>727.5383, 268.242554</value>
   </data>
@@ -390,7 +390,7 @@
   <data name="$this.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <assembly alias="DevExpress.Drawing.v22.2" name="DevExpress.Drawing.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <assembly alias="DevExpress.Drawing.v22.2" name="DevExpress.Drawing.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="$this.Margins" type="DevExpress.Drawing.DXMargins, DevExpress.Drawing.v22.2">
     <value>50, 50, 4.06667662, 1.617214</value>
   </data>
@@ -403,7 +403,7 @@
   <data name="$this.PaperKind" type="System.Drawing.Printing.PaperKind, System.Drawing">
     <value>A4</value>
   </data>
-  <assembly alias="DevExpress.XtraReports.v22.2" name="DevExpress.XtraReports.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <assembly alias="DevExpress.XtraReports.v22.2" name="DevExpress.XtraReports.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="$this.ReportUnit" type="DevExpress.XtraReports.UI.ReportUnit, DevExpress.XtraReports.v22.2">
     <value>TenthsOfAMillimeter</value>
   </data>

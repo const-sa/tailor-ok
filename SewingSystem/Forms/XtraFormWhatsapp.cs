@@ -32,7 +32,8 @@ namespace SewingSystem.Forms
             RightToLeftLayout = false;            // keep literal coordinates; text still renders RTL
             AutoScaleMode = AutoScaleMode.None;
             StartPosition = FormStartPosition.CenterScreen;
-            ClientSize = new Size(700, 662);
+            ClientSize = new Size(700, 726);
+            WhatsappUi.ApplyIcon(this);
 
             // ===== group 1: connection =====
             var grpConn = Grp("بيانات الاتصال (c-wts)", new Point(12, 10), new Size(676, 196));
@@ -70,6 +71,7 @@ namespace SewingSystem.Forms
             // ===== group 3: test + save =====
             var grpTest = Grp("تجربة وحفظ", new Point(12, 468), new Size(676, 182));
             txtTestNo = new TextEdit { Location = new Point(430, 30), Size = new Size(135, 24) };
+            WhatsappUi.Ltr(txtInstance, txtToken, txtTestNo);     // أرقام إنجليزية (لاتينية)
             cboTestTpl = new ComboBoxEdit { Location = new Point(285, 30), Size = new Size(140, 24) };
             cboTestTpl.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             cboTestTpl.Properties.Items.AddRange(new object[] { "ترحيب", "بيانات التفصيل", "جاهز للاستلام", "تم التسليم" });
@@ -77,6 +79,10 @@ namespace SewingSystem.Forms
             btnTest = Btn("إرسال تجريبي", 135, 24, 150, 38, WhatsappIcon.Get(32), BtnTest_Click);
             btnVerify = Btn("تحقق من الاتصال", 345, 66, 160, 40, WhatsappIcon.Get(32), BtnVerify_Click);
             btnSave = Btn("حفظ", 175, 66, 160, 40, Properties.Resources.saveall_32x32, BtnSave_Click);
+            btnSave.Appearance.BackColor = WhatsappUi.BrandDark;
+            btnSave.Appearance.ForeColor = Color.White;
+            btnSave.Appearance.Options.UseBackColor = true;
+            btnSave.Appearance.Options.UseForeColor = true;
             txtStatus = new MemoEdit { Location = new Point(14, 110), Size = new Size(648, 60) };
             txtStatus.Properties.ReadOnly = true;
             grpTest.Controls.Add(Lbl("جوال التجربة:", 570, 33, 90));
@@ -87,9 +93,14 @@ namespace SewingSystem.Forms
             grpTest.Controls.Add(btnSave);
             grpTest.Controls.Add(txtStatus);
 
-            Controls.Add(grpConn);
-            Controls.Add(grpTpl);
-            Controls.Add(grpTest);
+            var content = new PanelControl { Dock = DockStyle.Fill };
+            content.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            content.Controls.Add(grpConn);
+            content.Controls.Add(grpTpl);
+            content.Controls.Add(grpTest);
+
+            Controls.Add(content);
+            Controls.Add(WhatsappUi.Header("الواتساب والرسائل", "ربط c-wts وقوالب الرسائل التلقائية"));
         }
 
         private GroupControl Grp(string text, Point loc, Size size)

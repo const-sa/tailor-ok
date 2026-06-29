@@ -474,11 +474,17 @@ namespace SewingSystem.Forms
             FormSanadSarf = new XtraFormSanadSarf();
             FormSanadSarf.Show();
         }
-        //XtraFormInvoTafseels2 FormInvoTafseels;
+        XtraFormInvoTafseels2 FormInvoTafseels2;
         private void BtnTafseeal_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //FormInvoTafseels = new XtraFormInvoTafseels2();
-            //FormInvoTafseels.Show();
+            FormInvoTafseels2 = new XtraFormInvoTafseels2();
+            FormInvoTafseels2.Show();
+        }
+
+        private void btnTafseelNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormInvoTafseels2 = new XtraFormInvoTafseels2();
+            FormInvoTafseels2.Show();
         }
         Report.XtraFormReportGapth FormReportGapth;
         private void BtnReportGapth_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -498,11 +504,10 @@ namespace SewingSystem.Forms
             FormCreditNote = new XtraFormCreditNote();
             FormCreditNote.Show();
         }
-        //XtraFormInvoTafseels FormInvoTafseels1;
         private void BtnTafseel1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //FormInvoTafseels1 = new XtraFormInvoTafseels();
-            //FormInvoTafseels1.Show();
+            FormInvoTafseels2 = new XtraFormInvoTafseels2();
+            FormInvoTafseels2.Show();
         }
         XtraFormBuyInvoice FormBuyInvoice;
         private void BtnSupliy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

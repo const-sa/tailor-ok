@@ -55,9 +55,8 @@ namespace SewingSystem.Forms
             spn_BeforTax.EditValueChanging += Spn_Tax_EditValueChanging1;
 
             tblSellInvoiceBindingSource.CurrentChanged += TblSellInvoiceBindingSource_CurrentChanged;
-            Session.tblCustomer.ListChanged += TblCustomer_ListChanged;
-            Session.tblSellInvoice.ListChanged += TblSellInvoice_ListChanged;
-            Session.tblClasses.ListChanged += TblClasses_ListChanged;
+            // Session.* are now plain List<> (no ListChanged event in the current model);
+            // live-refresh subscriptions removed. Data is refreshed via RefrashAll().
             PrintDirect.Click += PrintDirect_Click;
             RefrashAll();
             PrintInvoice.Visible = PrintDirect.Visible;
@@ -157,7 +156,7 @@ namespace SewingSystem.Forms
                     int v = s.Count();
                     if (v > 0)
                     {
-                        if (int.Parse((currentInvo.CusNumber as string) ?? "0") > 0)
+                        if ((currentInvo.CusNumber ?? 0) > 0)
                         {
                             tblCustomerBindingSource.DataSource = Session.tblCustomer.Where(c => c.CusNumber == currentInvo.CusNumber).ToList();
                             tblDefaultSizeBindingSource.DataSource = Session.tblDefaultSize.Where(c => c.ID == currentInvo.SizeID).ToList();
@@ -182,9 +181,9 @@ namespace SewingSystem.Forms
             tblCustomer.BranchID = Program.User.BranchID;
             tblCustomer.UserID = Program.User.ID;
             if (Session.tblCustomer.Where(s => s.BranchID == Program.User.BranchID).Count() <= 0)
-                tblCustomer.CusNumber = "1";
+                tblCustomer.CusNumber = 1;
             else
-                tblCustomer.CusNumber = (Session.tblCustomer.Where(s => s.BranchID == Program.User.BranchID).Max(i => MyFunaction.GetlongValue((i.CusNumber as string) ?? "0")) + 1).ToString();
+                tblCustomer.CusNumber = Session.tblCustomer.Where(s => s.BranchID == Program.User.BranchID).Max(i => i.CusNumber) + 1;
             tblCustomerBindingSource.DataSource = tblCustomer;
         }
         public void TblSizeAddingNew()
@@ -233,7 +232,7 @@ namespace SewingSystem.Forms
                     if (tblSellInvoiceBindingSource.Current != null)
                     {
                         tblSellInvoice currentsell = tblSellInvoiceBindingSource.Current as tblSellInvoice;
-                        if (int.Parse((currentsell.CusNumber as string) ?? "0") > 0)
+                        if ((currentsell.CusNumber ?? 0) > 0)
                         {
                             tblCustomerBindingSource.DataSource = Session.tblCustomer.Where(c => c.CusNumber == currentsell.CusNumber).ToList();
                             tblDefaultSizeBindingSource.DataSource = Session.tblDefaultSize.Where(c => c.ID == currentsell.SizeID).ToList();
@@ -262,7 +261,7 @@ namespace SewingSystem.Forms
                     tblSellInvoice sell = tblSellInvoiceBindingSource.Current as tblSellInvoice;
                     string CustomerName = "";
                     string Mobil = "";
-                    if (((sell.CusNumber as string) ?? "") != "")
+                    if ((sell.CusNumber ?? 0) != 0)
                     {
                         tblCustomer cus;
                         cus = Session.tblCustomer.SingleOrDefault(u => u.CusNumber == sell.CusNumber & u.BranchID == sell.BranchID);
@@ -485,12 +484,12 @@ namespace SewingSystem.Forms
             tblSell.ThePay = "Deferred آجل";
             tblSell.EnterTime = DateTime.Now;
             if (Session.tblSellInvoice.Where(s => s.BranchID == Program.User.BranchID).Count() <= 0)
-                tblSell.InvoNumber = "1";
+                tblSell.InvoNumber = 1;
             else
             {
                 try
                 {
-                    tblSell.InvoNumber = (Session.tblSellInvoice.Where(s => s.BranchID == Program.User.BranchID).Max(i => MyFunaction.GetlongValue((i.InvoNumber as string) ?? "0")) + 1).ToString();
+                    tblSell.InvoNumber = Session.tblSellInvoice.Where(s => s.BranchID == Program.User.BranchID).Max(i => i.InvoNumber ?? 0) + 1;
                 }
                 catch (Exception ex)
                 {
@@ -537,7 +536,7 @@ namespace SewingSystem.Forms
             tblSellInvoice sale = tblSellInvoiceBindingSource.Current as tblSellInvoice;
             if (sale != null)
             {
-                tblCustomerBindingSource.DataSource = Session.tblCustomer.Where(s => s.CusNumber == ((sale.CusNumber as string) ?? "0")).ToList();
+                tblCustomerBindingSource.DataSource = Session.tblCustomer.Where(s => s.CusNumber == (sale.CusNumber ?? 0)).ToList();
                 tblDefaultSizeBindingSource.DataSource = Session.tblDefaultSize.Where(s => s.ID == sale.SizeID).ToList();
             }
             searchLookUpEditDefaultSize.Properties.DataSource = Session.tblDefaultSize.ToList();

@@ -4,6 +4,11 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraLayout;
+using DevExpress.XtraLayout.Utils;
 using SewingSystem.Classes.Zatca;
 
 namespace SewingSystem.Forms
@@ -15,12 +20,15 @@ namespace SewingSystem.Forms
     /// بالكود (RTL) بدون designer/resx. ملاحظة: شاشة الإشعارات الدائنة/المدينة بالمبلغ
     /// (XtraFormCreditNote / tblNote) تبقى كما هي لأغراض التسويات المالية.
     /// </summary>
-    public class XtraFormReturnInvoice : DevExpress.XtraEditors.XtraForm
+    public class XtraFormReturnInvoice : FormZatcaMaster
     {
-        private TextBox txtInvoNo, txtRetAmount, txtReason, txtInfo;
-        private DataGridView grid;
-        private CheckBox chkRestoreStock, chkReportNow;
-        private Button btnLoad, btnFull, btnSave;
+        private static readonly Font Bold = new Font("Tahoma", 9.75F, FontStyle.Bold);
+        private TextEdit txtInvoNo, txtRetAmount, txtReason;
+        private MemoEdit txtInfo;
+        private GridControl grid;
+        private GridView gridView;
+        private CheckEdit chkRestoreStock, chkReportNow;
+        private SimpleButton btnLoad, btnFull;
         private DataTable _lines;
 
         private int _origId = -1, _origInvoNo = -1, _branchId = 1, _cusNumber;
@@ -35,63 +43,90 @@ namespace SewingSystem.Forms
             Text = "مرتجع مبيعات (إشعار دائن)";
             RightToLeft = RightToLeft.Yes; RightToLeftLayout = true;
             StartPosition = FormStartPosition.CenterScreen;
-            ClientSize = new Size(820, 600);
+            ClientSize = new Size(860, 744);
+            MinimumSize = new Size(720, 604);
             Font = new Font("Tahoma", 9.75f);
+            ZatcaUi.ApplyIcon(this);
 
-            var top = new FlowLayoutPanel { Dock = DockStyle.Top, FlowDirection = FlowDirection.RightToLeft, RightToLeft = RightToLeft.Yes, Height = 44, Padding = new Padding(10, 8, 10, 4) };
-            txtInvoNo = new TextBox { Width = 140 };
+            // ---- editors ----
+            txtInvoNo = new TextEdit();
             btnLoad = MkBtn("تحميل الفاتورة", (s, e) => LoadInvoice());
-            top.Controls.Add(new Label { Text = "رقم الفاتورة الأصلية:", AutoSize = true, Padding = new Padding(4, 6, 0, 0) });
-            top.Controls.Add(txtInvoNo);
-            top.Controls.Add(btnLoad);
+            txtInfo = new MemoEdit();
+            txtInfo.Properties.ReadOnly = true;
 
-            txtInfo = new TextBox { Dock = DockStyle.Top, ReadOnly = true, Multiline = true, Height = 70, BackColor = Color.WhiteSmoke };
+            grid = new GridControl { RightToLeft = RightToLeft.Yes };
+            gridView = new GridView(grid) { GridControl = grid };
+            grid.MainView = gridView;
+            gridView.OptionsView.ShowGroupPanel = false;
+            gridView.OptionsView.ColumnAutoWidth = true;
+            gridView.OptionsBehavior.Editable = true;
+            gridView.OptionsSelection.MultiSelect = false;
+            gridView.Appearance.HeaderPanel.Font = Bold;
+            gridView.Appearance.HeaderPanel.Options.UseFont = true;
 
-            grid = new DataGridView
-            {
-                Dock = DockStyle.Fill, RightToLeft = RightToLeft.Yes, AllowUserToAddRows = false,
-                AllowUserToDeleteRows = false, AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
-                SelectionMode = DataGridViewSelectionMode.CellSelect
-            };
+            txtRetAmount = new TextEdit();
+            txtReason = new TextEdit(); txtReason.EditValue = "مرتجع - Return";
+            ZatcaUi.Ltr(txtInvoNo, txtRetAmount);     // أرقام إنجليزية (لاتينية)
+            chkRestoreStock = new CheckEdit { Text = "إرجاع الكميات للمخزون", Checked = true };
+            chkReportNow = new CheckEdit { Text = "إبلاغ الزكاة الآن (يتطلب تفعيلاً ناجحاً)", Checked = false };
 
-            var bottom = new TableLayoutPanel { Dock = DockStyle.Bottom, ColumnCount = 2, RightToLeft = RightToLeft.Yes, Height = 150, Padding = new Padding(10) };
-            bottom.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 170));
-            bottom.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
-            txtRetAmount = new TextBox { Dock = DockStyle.Fill };
-            txtReason = new TextBox { Dock = DockStyle.Fill, Text = "مرتجع - Return" };
-            chkRestoreStock = new CheckBox { Text = "إرجاع الكميات للمخزون", Checked = true, AutoSize = true };
-            chkReportNow = new CheckBox { Text = "إبلاغ الزكاة الآن (يتطلب تفعيلاً ناجحاً)", Checked = false, AutoSize = true };
-            AddRow(bottom, "مبلغ المرتجع (شامل الضريبة):", txtRetAmount);
-            AddRow(bottom, "سبب المرتجع:", txtReason);
-            AddRow(bottom, "", chkRestoreStock);
-            AddRow(bottom, "", chkReportNow);
+            btnFull = MkBtn("مرتجع كامل", (s, e) => FillFull());     // الحفظ صار في شريط الأدوات العلوي
 
-            var btns = new FlowLayoutPanel { Dock = DockStyle.Bottom, FlowDirection = FlowDirection.RightToLeft, RightToLeft = RightToLeft.Yes, Height = 48, Padding = new Padding(10, 6, 10, 6) };
-            btnFull = MkBtn("مرتجع كامل", (s, e) => FillFull());
-            btnSave = MkBtn("حفظ المرتجع", (s, e) => Save());
-            btns.Controls.Add(btnSave); btns.Controls.Add(btnFull);
+            // ---- layout ----
+            var lc = new LayoutControl { Dock = DockStyle.Fill, RightToLeft = RightToLeft.Yes };
+            var root = lc.Root;
+            root.GroupBordersVisible = false;
+            root.Padding = new DevExpress.XtraLayout.Utils.Padding(10);
 
-            Controls.Add(grid);
-            Controls.Add(bottom);
-            Controls.Add(btns);
-            Controls.Add(txtInfo);
-            Controls.Add(top);
+            // original invoice
+            var gInv = root.AddGroup("الفاتورة الأصلية");
+            var itNo = gInv.AddItem("رقم الفاتورة الأصلية", txtInvoNo);
+            itNo.SizeConstraintsType = SizeConstraintsType.Custom; itNo.MaxSize = new Size(320, 26); itNo.MinSize = new Size(260, 26);
+            AddButtonItem(gInv, btnLoad, itNo);
+            var itInfo = gInv.AddItem(string.Empty, txtInfo);
+            itInfo.TextVisible = false;
+            itInfo.SizeConstraintsType = SizeConstraintsType.Custom; itInfo.MinSize = new Size(100, 48); itInfo.MaxSize = new Size(0, 48);
+
+            // items grid (fills remaining height)
+            var gItems = root.AddGroup("أصناف الفاتورة — حدّد الكميات المرتجعة");
+            var itGrid = gItems.AddItem(string.Empty, grid);
+            itGrid.TextVisible = false;
+
+            // return details
+            var gRet = root.AddGroup("بيانات المرتجع");
+            var itAmount = gRet.AddItem("مبلغ المرتجع (شامل الضريبة)", txtRetAmount);
+            itAmount.SizeConstraintsType = SizeConstraintsType.Custom; itAmount.MaxSize = new Size(360, 26); itAmount.MinSize = new Size(300, 26);
+            gRet.AddItem("سبب المرتجع", txtReason);
+            var itChk1 = gRet.AddItem(string.Empty, chkRestoreStock); itChk1.TextVisible = false;
+            var itChk2 = gRet.AddItem(string.Empty, chkReportNow, itChk1, InsertType.Right); itChk2.TextVisible = false;
+            AddButtonItem(gRet, btnFull, itChk1, InsertType.Bottom);
+
+            ContentPanel.Controls.Add(lc);   // fill (added first → fills remaining space)
+            ContentPanel.Controls.Add(ZatcaUi.Header("مرتجع مبيعات (إشعار دائن)", "نوع 381 — مرتبط بفاتورة بيع أصلية"));
 
             SetEnabled(false);
         }
 
-        private Button MkBtn(string t, EventHandler h) { var b = new Button { Text = t, AutoSize = true, Height = 32, MinimumSize = new Size(130, 32), Margin = new Padding(4) }; b.Click += h; return b; }
-        private void AddRow(TableLayoutPanel t, string label, Control c)
+        protected override void OnSaveClick() => Save();
+        protected override void OnRefreshClick() => LoadInvoice();
+
+        private SimpleButton MkBtn(string t, EventHandler h) { var b = new SimpleButton { Text = t }; b.Click += h; return b; }
+
+        private LayoutControlItem AddButtonItem(LayoutControlGroup g, SimpleButton btn, BaseLayoutItem rel, InsertType insert = InsertType.Right)
         {
-            int r = t.RowCount++; t.RowStyles.Add(new RowStyle(SizeType.Absolute, 32));
-            t.Controls.Add(new Label { Text = label, TextAlign = ContentAlignment.MiddleRight, Dock = DockStyle.Fill }, 0, r);
-            t.Controls.Add(c, 1, r);
+            var it = rel == null ? g.AddItem(string.Empty, btn) : g.AddItem(string.Empty, btn, rel, insert);
+            it.TextVisible = false;
+            it.SizeConstraintsType = SizeConstraintsType.Custom;
+            it.MinSize = new Size(150, 38);
+            it.MaxSize = new Size(170, 38);
+            return it;
         }
-        private void SetEnabled(bool on) { grid.Enabled = txtRetAmount.Enabled = txtReason.Enabled = btnFull.Enabled = btnSave.Enabled = chkRestoreStock.Enabled = chkReportNow.Enabled = on; }
+
+        private void SetEnabled(bool on) { grid.Enabled = txtRetAmount.Enabled = txtReason.Enabled = btnFull.Enabled = chkRestoreStock.Enabled = chkReportNow.Enabled = on; BtnSave.Enabled = on; }
 
         private void LoadInvoice()
         {
-            if (!int.TryParse(txtInvoNo.Text.Trim(), out int no)) { MessageBox.Show("أدخل رقم فاتورة صحيح."); return; }
+            if (!int.TryParse(txtInvoNo.Text.Trim(), out int no)) { XtraMessageBox.Show("أدخل رقم فاتورة صحيح."); return; }
             try
             {
                 using (var con = new SqlConnection(Program.ConnectionString))
@@ -103,8 +138,8 @@ namespace SewingSystem.Forms
                         cmd.Parameters.AddWithValue("@n", no);
                         using (var r = cmd.ExecuteReader())
                         {
-                            if (!r.Read()) { MessageBox.Show("لم يتم العثور على الفاتورة."); return; }
-                            if (Convert.ToBoolean(r[9])) { MessageBox.Show("هذه الفاتورة نفسها مرتجع، لا يمكن إرجاعها."); return; }
+                            if (!r.Read()) { XtraMessageBox.Show("لم يتم العثور على الفاتورة."); return; }
+                            if (Convert.ToBoolean(r[9])) { XtraMessageBox.Show("هذه الفاتورة نفسها مرتجع، لا يمكن إرجاعها."); return; }
                             _origId = Convert.ToInt32(r[0]); _origInvoNo = Convert.ToInt32(r[1]);
                             _customer = r[2] == DBNull.Value ? "" : r[2].ToString();
                             _origTotal = r[5] == DBNull.Value ? 0 : Convert.ToDouble(r[5]);
@@ -141,15 +176,17 @@ namespace SewingSystem.Forms
                 txtRetAmount.Text = _origTotal.ToString("0.00", CultureInfo.InvariantCulture);
                 SetEnabled(true);
             }
-            catch (Exception ex) { MessageBox.Show("تعذّر التحميل: " + ex.Message); }
+            catch (Exception ex) { XtraMessageBox.Show("تعذّر التحميل: " + ex.Message); }
         }
 
         private void BindGrid()
         {
             grid.DataSource = _lines;
+            gridView.PopulateColumns();
             string[] ro = { "ClassNumber", "ClassName", "OrigLength", "OrigCount" };
-            foreach (DataGridViewColumn col in grid.Columns) col.ReadOnly = Array.IndexOf(ro, col.Name) >= 0;
-            void H(string n, string h) { if (grid.Columns[n] != null) grid.Columns[n].HeaderText = h; }
+            foreach (DevExpress.XtraGrid.Columns.GridColumn col in gridView.Columns)
+                col.OptionsColumn.AllowEdit = Array.IndexOf(ro, col.FieldName) < 0;
+            void H(string n, string h) { var c = gridView.Columns[n]; if (c != null) c.Caption = h; }
             H("ClassNumber", "رقم الصنف"); H("ClassName", "اسم الصنف"); H("OrigLength", "الطول الأصلي");
             H("OrigCount", "العدد الأصلي"); H("RetLength", "الطول المرتجع"); H("RetCount", "العدد المرتجع");
         }
@@ -157,23 +194,23 @@ namespace SewingSystem.Forms
         private void FillFull()
         {
             foreach (DataRow row in _lines.Rows) { row["RetLength"] = row["OrigLength"]; row["RetCount"] = row["OrigCount"]; }
-            grid.Refresh();
+            gridView.RefreshData();
             txtRetAmount.Text = _origTotal.ToString("0.00", CultureInfo.InvariantCulture);
         }
 
         private void Save()
         {
-            grid.EndEdit();
-            if (_origId < 0) { MessageBox.Show("حمّل فاتورة أولاً."); return; }
+            gridView.CloseEditor(); gridView.UpdateCurrentRow();
+            if (_origId < 0) { XtraMessageBox.Show("حمّل فاتورة أولاً."); return; }
             if (!decimal.TryParse(txtRetAmount.Text.Trim(), NumberStyles.Any, CultureInfo.InvariantCulture, out decimal retTotal) || retTotal <= 0)
-            { MessageBox.Show("أدخل مبلغ مرتجع صحيحاً."); return; }
-            if (retTotal > (decimal)_origTotal + 0.01m) { MessageBox.Show("مبلغ المرتجع أكبر من إجمالي الفاتورة."); return; }
+            { XtraMessageBox.Show("أدخل مبلغ مرتجع صحيحاً."); return; }
+            if (retTotal > (decimal)_origTotal + 0.01m) { XtraMessageBox.Show("مبلغ المرتجع أكبر من إجمالي الفاتورة."); return; }
 
             foreach (DataRow row in _lines.Rows)
             {
                 double rl = ToD(row["RetLength"]), ol = ToD(row["OrigLength"]);
                 int rc = ToI(row["RetCount"]), oc = ToI(row["OrigCount"]);
-                if (rl < 0 || rc < 0 || rl > ol + 0.0001 || rc > oc) { MessageBox.Show($"كمية مرتجعة غير صحيحة للصنف {row["ClassNumber"]}."); return; }
+                if (rl < 0 || rc < 0 || rl > ol + 0.0001 || rc > oc) { XtraMessageBox.Show($"كمية مرتجعة غير صحيحة للصنف {row["ClassNumber"]}."); return; }
             }
 
             decimal retTax = _useTax ? Math.Round(retTotal - retTotal / (1 + (decimal)_taxRate / 100m), 2) : 0m;
@@ -240,10 +277,10 @@ SELECT CAST(SCOPE_IDENTITY() AS int);", con, tx))
                 string extra = "";
                 if (chkReportNow.Checked) extra = ReportToZatca(newId, newInvoNo, retTotal, retTax);
 
-                MessageBox.Show($"تم حفظ المرتجع برقم {newInvoNo} (مبلغ {retTotal:0.00}، ضريبة {retTax:0.00}).{extra}", "نجاح");
+                XtraMessageBox.Show($"تم حفظ المرتجع برقم {newInvoNo} (مبلغ {retTotal:0.00}، ضريبة {retTax:0.00}).{extra}", "نجاح");
                 SetEnabled(false); _origId = -1; grid.DataSource = null; txtInfo.Clear(); txtInvoNo.Clear();
             }
-            catch (Exception ex) { MessageBox.Show("فشل الحفظ: " + ex.Message); }
+            catch (Exception ex) { XtraMessageBox.Show("فشل الحفظ: " + ex.Message); }
         }
 
         private string ReportToZatca(int newId, int invoNo, decimal total, decimal tax)

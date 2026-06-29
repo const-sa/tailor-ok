@@ -42,6 +42,23 @@ namespace SewingSystem.Forms
             PrintDirect.Visible = tblPermissionWashType.FirstOrDefault(p => p.PermissionName == Program.Print)?.TheValues??false;
             PrintInvoice.Visible = tblPermissionWashType.FirstOrDefault(p => p.PermissionName == Program.Print)?.TheValues??false;
             UpdateRecord.Enabled = tblPermissionWashType.FirstOrDefault(p => p.PermissionName == Program.Update)?.TheValues??false;
+
+            // ★ علامة تمييز: تؤكد أن هذه الشاشة (DefultSize2) هي المعدّلة ★
+            this.Text = "فاتورة التفصيل ★ نسخة معدّلة (DefultSize2) ★";
+            var _mark = new DevExpress.XtraEditors.LabelControl
+            {
+                Name = "_lblEditMark",
+                Text = "★ نسخة معدّلة ★",
+                AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None,
+                Size = new System.Drawing.Size(220, 26),
+                Location = new System.Drawing.Point(12, 30)
+            };
+            _mark.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            _mark.Appearance.ForeColor = System.Drawing.Color.Red;
+            _mark.Appearance.Options.UseFont = true;
+            _mark.Appearance.Options.UseForeColor = true;
+            this.Controls.Add(_mark);
+            _mark.BringToFront();
         }
         ComponentFlyoutDialog flyDialog = new ComponentFlyoutDialog();
         private void XtraFormDefultSize2_Load(object sender, EventArgs e)

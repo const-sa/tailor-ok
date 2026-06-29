@@ -80,6 +80,7 @@
             this.btnReturnInvoice = new DevExpress.XtraBars.BarButtonItem();
             this.btnZatcaHelp = new DevExpress.XtraBars.BarButtonItem();
             this.btnZatcaReport = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTafseelNew = new DevExpress.XtraBars.BarButtonItem();
             this.btnWhatsapp = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageWhatsapp = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupWhatsapp = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -295,6 +296,7 @@
             this.btnReturnInvoice,
             this.btnZatcaHelp,
             this.btnZatcaReport,
+            this.btnTafseelNew,
             this.btnWhatsapp,
             this.BtnGabth,
             this.BtnSarf2,
@@ -570,7 +572,7 @@
             this.BtnTafseeal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnTafseeal.ImageOptions.Image")));
             this.BtnTafseeal.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnTafseeal.ImageOptions.LargeImage")));
             this.BtnTafseeal.Name = "BtnTafseeal";
-            this.BtnTafseeal.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            this.BtnTafseeal.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
             this.BtnTafseeal.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnTafseeal_ItemClick);
             // 
             // BtnReportGapth
@@ -611,7 +613,7 @@
             this.BtnTafseel1.Id = 82;
             this.BtnTafseel1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnTafseel1.ImageOptions.SvgImage")));
             this.BtnTafseel1.Name = "BtnTafseel1";
-            this.BtnTafseel1.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            this.BtnTafseel1.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
             this.BtnTafseel1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnTafseel1_ItemClick);
             // 
             // BtnSupliy
@@ -722,6 +724,15 @@
             this.btnZatcaReport.Id = 124;
             this.btnZatcaReport.Name = "btnZatcaReport";
             this.btnZatcaReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnZatcaReport_ItemClick);
+            //
+            // btnTafseelNew
+            //
+            this.btnTafseelNew.Caption = "مقاسات التفصيل (جديد)";
+            this.btnTafseelNew.Id = 125;
+            this.btnTafseelNew.ImageOptions.Image = global::SewingSystem.Properties.Resources.database_16x16;
+            this.btnTafseelNew.ImageOptions.LargeImage = global::SewingSystem.Properties.Resources.database_32x321;
+            this.btnTafseelNew.Name = "btnTafseelNew";
+            this.btnTafseelNew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTafseelNew_ItemClick);
             //
             // btnWhatsapp
             //
@@ -937,6 +948,7 @@
             this.ribbonPageGroup8.ItemLinks.Add(this.btnReturnInvoice);
             this.ribbonPageGroup8.ItemLinks.Add(this.btnZatcaHelp);
             this.ribbonPageGroup8.ItemLinks.Add(this.btnZatcaReport);
+            this.ribbonPageGroup8.ItemLinks.Add(this.btnTafseelNew);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             //
             // ribbonPageWhatsapp
@@ -1673,6 +1685,7 @@
         private DevExpress.XtraBars.BarButtonItem btnReturnInvoice;
         private DevExpress.XtraBars.BarButtonItem btnZatcaHelp;
         private DevExpress.XtraBars.BarButtonItem btnZatcaReport;
+        private DevExpress.XtraBars.BarButtonItem btnTafseelNew;
         private DevExpress.XtraBars.BarButtonItem btnWhatsapp;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageWhatsapp;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupWhatsapp;

@@ -1,35 +1,49 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
+using SewingSystem.Classes.Zatca;
 
 namespace SewingSystem.Forms
 {
     /// <summary>
     /// صفحة شرح داخل البرنامج: الربط مع هيئة الزكاة، مكان الفواتير والمرتجع
-    /// والمشتريات، مصدر رقم الفاتورة، وتعليمات الاستخدام. مبنية بالكود (RTL).
+    /// والمشتريات، مصدر رقم الفاتورة، وتعليمات الاستخدام. واجهة DevExpress (RTL).
     /// </summary>
-    public class XtraFormZatcaHelp : DevExpress.XtraEditors.XtraForm
+    public class XtraFormZatcaHelp : FormZatcaMaster
     {
         public XtraFormZatcaHelp()
         {
             Text = "دليل الاستخدام والربط مع الزكاة";
             RightToLeft = RightToLeft.Yes; RightToLeftLayout = true;
             StartPosition = FormStartPosition.CenterScreen;
-            ClientSize = new Size(760, 640);
+            ClientSize = new Size(780, 704);
+            MinimumSize = new Size(620, 520);
             Font = new Font("Tahoma", 10f);
+            ZatcaUi.ApplyIcon(this);
+            BtnSave.Visible = false;     // لا يوجد ما يُحفظ في صفحة الدليل
+            BtnRefresh.Visible = false;
 
-            var box = new TextBox
+            var box = new MemoEdit
             {
                 Dock = DockStyle.Fill,
-                Multiline = true,
-                ReadOnly = true,
-                ScrollBars = ScrollBars.Vertical,
                 RightToLeft = RightToLeft.Yes,
-                BackColor = Color.White,
-                Font = new Font("Tahoma", 10.5f, FontStyle.Bold),
                 Text = HelpText.Replace("\n", "\r\n")
             };
-            Controls.Add(box);
+            box.Properties.ReadOnly = true;
+            box.Properties.ScrollBars = ScrollBars.Vertical;
+            box.Properties.Appearance.Font = new Font("Tahoma", 10.5f, FontStyle.Bold);
+            box.Properties.Appearance.Options.UseFont = true;
+            box.Properties.WordWrap = true;
+
+            var pad = new PanelControl { Dock = DockStyle.Fill };
+            pad.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            pad.Padding = new System.Windows.Forms.Padding(10);
+            pad.Controls.Add(box);
+
+            ContentPanel.Controls.Add(pad);
+            ContentPanel.Controls.Add(ZatcaUi.Header("دليل الاستخدام والربط مع الزكاة",
+                                        "الفوترة الإلكترونية — المرحلة الثانية"));
         }
 
         public const string HelpText = @"
