@@ -41,7 +41,19 @@ namespace SewingSystem.Forms
             string code = the_serial + date.ToString();
             if (code == activate_tb.Text)
             {
-                Properties.Settings.Default.is_activated = true;
+                // حفظ التفعيل في قاعدة البيانات (مرتبط برقم المعالج) بدل ملف App.config المحلي
+                try
+                {
+                    new Classes.ActivationConfig
+                    {
+                        IsActivated = true,
+                        MachineSerial = the_serial,
+                        ActivatedAt = DateTime.Now
+                    }.Save();
+                }
+                catch (Exception ex) { XtraMessageBox.Show("تعذّر حفظ التفعيل في قاعدة البيانات: " + ex.Message); }
+
+                Properties.Settings.Default.is_activated = true; // إبقاء التوافق مع الإعداد القديم
                 Properties.Settings.Default.Save();
                 XtraMessageBox.Show("تم التفعيل بنجاح\nيرجى أعادة تشغيل البرنامج");
                 Application.Restart();

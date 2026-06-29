@@ -85,6 +85,10 @@ namespace SewingSystem.Forms
         public XtraFormMain()
         {
             InitializeComponent();
+            // زر «صور المقاسات» (شاشة إدارة مستقلة) — يُضاف برمجياً لتفادي تعارض الـ Id في الـ Designer.
+            var btnSizeImages = new DevExpress.XtraBars.BarButtonItem(ribbonControl1.Manager, "صور المقاسات");
+            btnSizeImages.ItemClick += (s, e) => { new XtraFormSizeImages().Show(); };
+            ribbonPageGroup3.ItemLinks.Add(btnSizeImages);
             // WhatsApp ribbon button uses a generated WhatsApp-style icon (green bubble).
             btnWhatsapp.ImageOptions.Image = Classes.Whatsapp.WhatsappIcon.Get(16);
             btnWhatsapp.ImageOptions.LargeImage = Classes.Whatsapp.WhatsappIcon.Get(32);

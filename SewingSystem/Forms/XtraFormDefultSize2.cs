@@ -33,6 +33,7 @@ namespace SewingSystem.Forms
         public XtraFormDefultSize2(tblSellInvoice cus, bool isnew = true)
         {
             InitializeComponent();
+            ApplySizeImages();
             IsNew = isnew;
             tblSellInvoiceBindingSource.DataSource = cus;
             Permission = Session.tblPermission.FirstOrDefault(p => p.ObjectName == "العملاء" & p.UserGroupID == Program.User.UserGroupID);
@@ -61,6 +62,26 @@ namespace SewingSystem.Forms
             _mark.BringToFront();
         }
         ComponentFlyoutDialog flyDialog = new ComponentFlyoutDialog();
+        // تحميل صور المقاسات المُستبدلة من قاعدة البيانات (تُبقي الصور المضمّنة لما لم يُستبدل).
+        private void ApplySizeImages()
+        {
+            try
+            {
+                var overrides = Classes.SizeImageStore.GetAllOverrides();
+                if (overrides.Count == 0) return;
+                foreach (var kv in overrides)
+                {
+                    var ctl = this.Controls.Find(kv.Key, true);
+                    if (ctl != null && ctl.Length > 0 && ctl[0] is DevExpress.XtraEditors.CheckEdit chk)
+                    {
+                        var img = Classes.SizeImageStore.Get(kv.Key);
+                        if (img != null) chk.BackgroundImage = img;
+                    }
+                }
+            }
+            catch { /* الصور تجميلية — لا توقف الشاشة */ }
+        }
+
         private void XtraFormDefultSize2_Load(object sender, EventArgs e)
         {
             if (Program.Branch.UseTax ?? false)

@@ -843,7 +843,6 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.btn_Customers);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup3.ItemLinks.Add(this.BtnSms);
-            this.ribbonPageGroup3.ItemLinks.Add(this.BtnTafseel1);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnSuppliers);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 

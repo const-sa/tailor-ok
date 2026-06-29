@@ -12,13 +12,20 @@ namespace SewingSystem.Classes.Whatsapp
     {
         public const int RowId = 1;
 
+        /// <summary>القالب الافتراضي لرسالة «جاهز للاستلام» (يُستخدم ما لم يُحفظ نص مخصّص).</summary>
+        public const string DefaultReady =
+            "عميلنا {اسم_العميل} 🌹\n" +
+            "طلبك جاهز للاستلام ✅\n" +
+            "نشكركم على الثقة بنا\n" +
+            "{الشركة}";
+
         public string Provider { get; set; } = "c-wts";
         public string Instance { get; set; }
         public string Token { get; set; }
         public bool Enabled { get; set; }
         public string TplWelcome { get; set; }
         public string TplOrder { get; set; }
-        public string TplReady { get; set; }
+        public string TplReady { get; set; } = DefaultReady;
         public string TplDelivered { get; set; }
         public bool SendOnSave { get; set; }
         public bool SendOnReady { get; set; }
@@ -50,7 +57,7 @@ namespace SewingSystem.Classes.Whatsapp
                     c.Enabled = B(r["Enabled"]);
                     c.TplWelcome = S(r["TplWelcome"]);
                     c.TplOrder = S(r["TplOrder"]);
-                    c.TplReady = S(r["TplReady"]);
+                    var ready = S(r["TplReady"]); if (!string.IsNullOrWhiteSpace(ready)) c.TplReady = ready;
                     c.TplDelivered = S(r["TplDelivered"]);
                     c.SendOnSave = B(r["SendOnSave"]);
                     c.SendOnReady = B(r["SendOnReady"]);

@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using SewingSystem.LinqModel;
 using System.Data.Entity;
 using SewingSystem.Classes;
+using SewingSystem.Classes.Whatsapp;
 using System.Collections.ObjectModel;
 using DevExpress.XtraEditors.Repository;
 using System.Threading;
@@ -49,6 +50,85 @@ namespace SewingSystem.Forms
             btnGomashType.Enabled = tblPermissionWashType.FirstOrDefault(p => p.PermissionName == "نوع القماش")?.TheValues??false;
             btnSms.Click += btnSearchByMobil_Click;
             BtnSendWhatsApp.Click += BtnSendWhatsApp_Click;
+            SetupReadyWhatsappButton();
+        }
+
+        // زر «الطلب جاهز» (واتساب): يُضاف برمجياً بجانب زر «استلام» داخل نفس الـ LayoutControl،
+        // وعند الضغط يرسل قالب «جاهز للاستلام» (c-wts) لجوال العميل بعد تأكيد منبثق.
+        private SimpleButton btnReadyWhatsapp;
+        private void SetupReadyWhatsappButton()
+        {
+            try
+            {
+                btnReadyWhatsapp = new SimpleButton { Name = "btnReadyWhatsapp", Text = "واتساب: الطلب جاهز" };
+                btnReadyWhatsapp.Appearance.BackColor = System.Drawing.Color.FromArgb(37, 211, 102); // أخضر واتساب
+                btnReadyWhatsapp.Appearance.ForeColor = System.Drawing.Color.White;
+                btnReadyWhatsapp.Appearance.Options.UseBackColor = true;
+                btnReadyWhatsapp.Appearance.Options.UseForeColor = true;
+                btnReadyWhatsapp.Click += BtnReadyWhatsapp_Click;
+
+                CustomerdataLayoutControl7.BeginUpdate();
+                DevExpress.XtraLayout.LayoutControlItem item;
+                try
+                {
+                    item = new DevExpress.XtraLayout.LayoutControlItem { Name = "lciReadyWhatsapp", TextVisible = false };
+                    CustomerdataLayoutControl7.Root.AddItem(item, this.layoutControlItem3, DevExpress.XtraLayout.Utils.InsertType.Left);
+                }
+                catch
+                {
+                    item = CustomerdataLayoutControl7.Root.AddItem();
+                    item.Name = "lciReadyWhatsapp";
+                    item.TextVisible = false;
+                }
+                item.Control = btnReadyWhatsapp;
+                CustomerdataLayoutControl7.EndUpdate();
+            }
+            catch { /* في حال تعذّر تعديل الـ layout لا نوقف الفورم */ }
+        }
+
+        private void BtnReadyWhatsapp_Click(object sender, EventArgs e)
+        {
+            if (CurrCustomer == null || CurrSale == null)
+            {
+                XtraMessageBox.Show("اختر تفصيلاً من القائمة أولاً.", "واتساب", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (XtraMessageBox.Show("سيتم إرسال رسالة «الطلب جاهز» للعميل عبر الواتساب.\nهل تريد المتابعة؟",
+                    "تأكيد الإرسال", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+                return;
+            try
+            {
+                var cfg = WhatsappConfig.Load();
+                if (!cfg.Enabled || string.IsNullOrWhiteSpace(cfg.Instance) || string.IsNullOrWhiteSpace(cfg.Token))
+                {
+                    XtraMessageBox.Show("إعدادات الواتساب غير مكتملة. فعّلها من شاشة «الواتساب والرسائل».",
+                        "واتساب", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                var mobile = CurrCustomer.Mobil;
+                if (string.IsNullOrWhiteSpace(mobile) || mobile.Trim().Length < 9)
+                {
+                    XtraMessageBox.Show("رقم جوال العميل غير صحيح.", "واتساب", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                var tokens = WhatsappService.Tokens(CurrCustomer.CustomerName, CurrSale.InvoNumber.ToString(),
+                    null, null, null, null, null);
+                var message = WhatsappService.Format(cfg.TplReady, tokens);
+
+                Cursor = Cursors.WaitCursor;
+                var res = WhatsappService.Send(cfg, mobile, message);
+                Cursor = Cursors.Default;
+
+                if (res != null && res.Ok)
+                    XtraMessageBox.Show("تم إرسال رسالة «الطلب جاهز» بنجاح ✅", "واتساب", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    XtraMessageBox.Show("تعذّر الإرسال: " + (res?.Error ?? "خطأ غير معروف"), "واتساب", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                Cursor = Cursors.Default;
+                XtraMessageBox.Show("خطأ أثناء الإرسال: " + ex.Message, "واتساب", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
        

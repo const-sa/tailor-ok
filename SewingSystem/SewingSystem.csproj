@@ -263,6 +263,7 @@
     <Compile Include="Classes\PasswordHasher.cs" />
     <Compile Include="Classes\MyFunaction.cs" />
     <Compile Include="Classes\Session.cs" />
+    <Compile Include="Classes\SizeImageStore.cs" />
     <Compile Include="Classes\TLVCls.cs" />
     <Compile Include="Classes\Zatca\ZatcaConfig.cs" />
     <Compile Include="Classes\Zatca\ZatcaCrypto.cs" />
@@ -274,6 +275,7 @@
     <Compile Include="Classes\Zatca\ZatcaInvoiceMapper.cs" />
     <Compile Include="Classes\Zatca\ZatcaIcon.cs" />
     <Compile Include="Classes\Zatca\ZatcaUi.cs" />
+    <Compile Include="Classes\ActivationConfig.cs" />
     <Compile Include="Classes\Whatsapp\CwtsClient.cs" />
     <Compile Include="Classes\Whatsapp\WhatsappConfig.cs" />
     <Compile Include="Classes\Whatsapp\WhatsappService.cs" />
@@ -349,6 +351,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\XtraFormWhatsapp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFormSizeImages.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\XtraFormBackupSett.Designer.cs">
