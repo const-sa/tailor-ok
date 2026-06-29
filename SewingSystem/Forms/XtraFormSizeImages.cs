@@ -22,6 +22,7 @@ namespace SewingSystem.Forms
             public Image Sample;                        // الصورة المضمّنة الأصلية
             public string Caption;
             public int Order;
+            public Point Pos;                           // موضع المربّع في شاشة التفصيل (لمطابقة الترتيب)
         }
 
         private readonly FlowLayoutPanel _flow;
@@ -57,8 +58,10 @@ namespace SewingSystem.Forms
             _flow = new FlowLayoutPanel
             {
                 Dock = DockStyle.Fill,
-                RightToLeft = RightToLeft.No, // مع RightToLeft للتدفّق = الرقم 1 يبدأ من اليمين
-                FlowDirection = FlowDirection.RightToLeft,
+                // الإعداد العربي القياسي: أول كرت (الترتيب 1) يبدأ من اليمين ثم يتدفّق لليسار
+                // وينزل لصفّ جديد. (RightToLeft=Yes + LeftToRight يعمل بثبات داخل فورم RTL.)
+                RightToLeft = RightToLeft.Yes,
+                FlowDirection = FlowDirection.LeftToRight,
                 WrapContents = true,
                 AutoScroll = true,
                 Padding = new Padding(8)
@@ -67,18 +70,41 @@ namespace SewingSystem.Forms
             Controls.Add(_flow);
             Controls.Add(top);
 
-            Reload();
+            // التحميل يتم بعد ظهور الشاشة مع مؤشّر «يتم جلب الصور من قاعدة البيانات»
+            // لأن القراءة قد تكون من خادم خارجي بعيد. يُنفّذ مرّة واحدة.
+            this.Shown += XtraFormSizeImages_Shown;
+        }
+
+        private bool _loaded;
+        private void XtraFormSizeImages_Shown(object sender, EventArgs e)
+        {
+            if (_loaded) return;
+            _loaded = true;
+            DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(this, typeof(WaitForm1));
+            try
+            {
+                DevExpress.XtraSplashScreen.SplashScreenManager.Default.SetWaitFormCaption("جاري التحميل");
+                DevExpress.XtraSplashScreen.SplashScreenManager.Default.SetWaitFormDescription("يتم جلب الصور من قاعدة البيانات...");
+                Reload();
+            }
+            finally
+            {
+                DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm();
+            }
         }
 
         // قراءة كل عناصر الصور من شاشة التفصيل وتجميع المكرّر حسب محتوى الصورة.
         private List<ImgGroup> Enumerate()
         {
-            var collected = new List<(string Name, Image Img)>();
+            var collected = new List<(string Name, Image Img, Point Pos)>();
+            var catalogKeys = new HashSet<string>(SizeImageStore.Catalog.Select(c => c.Key));
             XtraFormDefultSize2 probe = null;
             try
             {
                 probe = new XtraFormDefultSize2(new LinqModel.tblSellInvoice(), false);
-                CollectChecks(probe, collected);
+                // فرض تخطيط الشاشة (بدون إظهارها) لقراءة المواضع الفعلية للمربعات.
+                try { probe.Width = 1700; probe.Height = 950; probe.CreateControl(); probe.PerformLayout(); } catch { }
+                CollectChecks(probe, probe, collected, catalogKeys);
             }
             catch { }
 
@@ -89,9 +115,12 @@ namespace SewingSystem.Forms
                 var h = Hash(item.Img) ?? item.Name;
                 if (!byHash.TryGetValue(h, out var g))
                 {
-                    g = new ImgGroup { Sample = CloneImage(item.Img) };
+                    g = new ImgGroup { Sample = CloneImage(item.Img), Pos = item.Pos };
                     byHash[h] = g;
                 }
+                // الموضع الممثّل = الأعلى ثم الأيمن بين كل نسخ نفس الصورة
+                if (item.Pos.Y < g.Pos.Y || (item.Pos.Y == g.Pos.Y && item.Pos.X > g.Pos.X))
+                    g.Pos = item.Pos;
                 g.Names.Add(item.Name);
             }
             try { probe?.Dispose(); } catch { }
@@ -101,27 +130,39 @@ namespace SewingSystem.Forms
                 foreach (var c in SizeImageStore.Catalog)
                     groups.Add(new ImgGroup { Names = new List<string> { c.Key }, Sample = SizeImageStore.GetEmbedded(c.Key) });
 
-            int idx = 0;
             foreach (var g in groups)
             {
                 g.Names = g.Names.Distinct().OrderBy(x => x).ToList();
                 g.Key = g.Names.First();
-                var info = SizeImageStore.LoadOne(g.Key, SizeImageStore.DefaultCaption(g.Key), idx);
-                g.Caption = info.Caption;
-                g.Order = info.SortOrder;
-                idx++;
+                g.Caption = (_infoByKey != null && _infoByKey.TryGetValue(g.Key, out var info))
+                    ? info.Caption : SizeImageStore.DefaultCaption(g.Key);
             }
-            return groups.OrderBy(g => g.Order).ThenBy(g => g.Key).ToList();
+
+            // الترتيب مطابق لشاشة التفصيل: صفوف من الأعلى للأسفل، وداخل كل صف من اليمين لليسار.
+            bool havePos = groups.Any(g => g.Pos != Point.Empty);
+            return havePos
+                ? groups.OrderBy(g => g.Pos.Y / 24).ThenByDescending(g => g.Pos.X).ToList()
+                : groups.OrderBy(g => g.Key).ToList();
         }
 
-        private static void CollectChecks(Control root, List<(string, Image)> outp)
+        // يجمع المربعات (المطابقة لمفاتيح الكتالوج) مع موضعها النسبي داخل الفورم.
+        private static void CollectChecks(Control node, Control formRoot,
+            List<(string, Image, Point)> outp, HashSet<string> keys)
         {
-            foreach (Control c in root.Controls)
+            foreach (Control c in node.Controls)
             {
-                if (c is DevExpress.XtraEditors.CheckEdit chk && chk.BackgroundImage != null)
-                    outp.Add((chk.Name, chk.BackgroundImage));
-                if (c.Controls.Count > 0) CollectChecks(c, outp);
+                if (c is DevExpress.XtraEditors.CheckEdit chk && chk.BackgroundImage != null && keys.Contains(chk.Name))
+                    outp.Add((chk.Name, chk.BackgroundImage, AbsPos(chk, formRoot)));
+                if (c.Controls.Count > 0) CollectChecks(c, formRoot, outp, keys);
             }
+        }
+
+        // موضع العنصر بالنسبة للفورم (مجموع الإزاحات صعودًا في شجرة الآباء).
+        private static Point AbsPos(Control c, Control root)
+        {
+            int x = 0, y = 0;
+            for (var cur = c; cur != null && cur != root; cur = cur.Parent) { x += cur.Left; y += cur.Top; }
+            return new Point(x, y);
         }
 
         private static string Hash(Image img)
@@ -140,8 +181,15 @@ namespace SewingSystem.Forms
             try { return new Bitmap(img); } catch { return img; }
         }
 
+        // كاش يُقرأ من القاعدة مرّة واحدة لكل تحميل (استعلامان فقط بدل استعلام لكل صورة).
+        private Dictionary<string, byte[]> _overrideBytes;
+        private Dictionary<string, SizeImageInfo> _infoByKey;
+
         private void Reload()
         {
+            _overrideBytes = SizeImageStore.GetAllOverrides();                     // كل الصور المستبدلة دفعة واحدة
+            _infoByKey = SizeImageStore.LoadAll().ToDictionary(x => x.Key, x => x); // الأسماء/الترتيب دفعة واحدة
+
             var groups = Enumerate();
             _flow.SuspendLayout();
             _flow.Controls.Clear();
@@ -201,8 +249,11 @@ namespace SewingSystem.Forms
         {
             foreach (var n in g.Names)
             {
-                var db = SizeImageStore.DbImage(n);
-                if (db != null) return db;
+                if (_overrideBytes != null && _overrideBytes.TryGetValue(n, out var bytes))
+                {
+                    var db = SizeImageStore.ImageFromBytes(bytes);
+                    if (db != null) return db;
+                }
             }
             return g.Sample;
         }

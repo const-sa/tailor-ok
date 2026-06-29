@@ -90,6 +90,9 @@ IF COL_LENGTH('dbo.tblSizeImages','SortOrder') IS NULL ALTER TABLE dbo.tblSizeIm
             catch { return null; }
         }
 
+        /// <summary>تحويل بايتات صورة (من القاعدة) إلى Image دون أي استعلام إضافي.</summary>
+        public static Image ImageFromBytes(byte[] bytes) => FromBytes(bytes);
+
         private static Image FromBytes(byte[] bytes)
         {
             if (bytes == null || bytes.Length == 0) return null;

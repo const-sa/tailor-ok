@@ -74,7 +74,9 @@ namespace SewingSystem.Forms
                     var ctl = this.Controls.Find(kv.Key, true);
                     if (ctl != null && ctl.Length > 0 && ctl[0] is DevExpress.XtraEditors.CheckEdit chk)
                     {
-                        var img = Classes.SizeImageStore.Get(kv.Key);
+                        // البايتات وصلت بالفعل ضمن GetAllOverrides — نحوّلها مباشرة
+                        // بدل استعلام منفصل لكل صورة (مهم جداً مع الخادم الخارجي).
+                        var img = Classes.SizeImageStore.ImageFromBytes(kv.Value);
                         if (img != null) chk.BackgroundImage = img;
                     }
                 }
