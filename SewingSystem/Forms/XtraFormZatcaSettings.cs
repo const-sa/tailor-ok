@@ -46,7 +46,8 @@ namespace SewingSystem.Forms
             // ---------- editors ----------
             cboEnv = new ComboBoxEdit();
             cboEnv.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            cboEnv.Properties.Items.AddRange(new object[] { EnvDisplay("sandbox"), EnvDisplay("simulation"), EnvDisplay("production") });
+            // Sandbox أُزيل: يصلح للامتثال فقط ولا يمكن الإبلاغ به (يعطي شهادة اختبار باسم شركة أخرى).
+            cboEnv.Properties.Items.AddRange(new object[] { EnvDisplay("simulation"), EnvDisplay("production") });
 
             chkEnabled = new ToggleSwitch();
             chkEnabled.Properties.OnText = "مُفعّل";
@@ -74,11 +75,10 @@ namespace SewingSystem.Forms
 
             // ---------- buttons (الحفظ صار في شريط الأدوات العلوي) ----------
             btnGenCsr = NewBtn("توليد المفاتيح + CSR", BtnGenCsr_Click);
-            btnActivateTrial = NewBtn("تفعيل تجريبي (حسب البيئة المختارة)", (s, e) =>
+            btnActivateTrial = NewBtn("تفعيل المحاكاة (Simulation)", (s, e) =>
             {
-                var env = EnvKey(cboEnv.SelectedItem?.ToString());   // sandbox أو simulation
-                if (env == "production") env = "simulation";          // الزر التجريبي لا يُفعّل الإنتاج
-                Activate(env);
+                // الزر التجريبي يُفعّل المحاكاة دائماً (البيئة الوحيدة التي تُصدر شهادة باسمك للتجربة)
+                Activate("simulation");
             });
             btnActivateProd = NewBtn("تفعيل مباشر (إنتاج)", (s, e) => Activate("production"));
             btnActivateProd.ImageOptions.Image = ZatcaIcon.Get(16);
@@ -302,7 +302,8 @@ namespace SewingSystem.Forms
                 _cfg.Save();
 
                 string otp = txtOtp.Text.Trim();
-                if (string.IsNullOrEmpty(otp))
+                // يُسمح برمز فارغ فقط إن كانت هناك شهادة امتثال محفوظة (لإكمال خطوة ناقصة دون رمز جديد)
+                if (string.IsNullOrEmpty(otp) && string.IsNullOrEmpty(_cfg.ComplianceCert))
                 {
                     XtraMessageBox.Show("الصق رمز OTP من بوابة فاتورة أولاً (صالح لدقائق).");
                     return;

@@ -17,7 +17,7 @@ namespace SewingSystem.Classes.Zatca
         {
             var d = new ZatcaInvoiceData
             {
-                SellerName = cfg.OrgName, SellerVat = cfg.VatNumber,
+                SellerName = cfg.OrgName, SellerVat = cfg.VatNumber, SellerCrn = cfg.CrNumber,
                 Street = cfg.AddrStreet, Building = cfg.AddrBuilding, Plot = cfg.AddrSecondary, District = cfg.AddrDistrict,
                 City = cfg.AddrCity, Postal = cfg.AddrPostal, Country = cfg.AddrCountry,
                 Uuid = Guid.NewGuid().ToString(),

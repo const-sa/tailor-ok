@@ -41,14 +41,14 @@ namespace SewingSystem.Classes.Zatca
             var cert = ParseComplianceCert(certBase64, out certBodyB64);
             AsymmetricKeyParameter priv = ZatcaCrypto.LoadPrivateKey(cfg.PrivateKeyPem);
 
-            string certHash = Convert.ToBase64String(
-                Sha256(Encoding.UTF8.GetBytes(certBodyB64)));     // ZATCA: بصمة نص Base64 للشهادة (لا بايتات DER)
+            // ZATCA: البصمة = Base64( hex( SHA256(...) ) ) — للشهادة و SignedProperties (مطابق للباكج الرسمي الشغّال)
+            string certHash = B64Hex(Sha256(Encoding.UTF8.GetBytes(certBodyB64)));
             string issuerName = cert.IssuerDN.ToString();
             string serial = cert.SerialNumber.ToString();
 
-            // 3) SignedProperties -> digest
+            // 3) SignedProperties: قالب ثابت التنسيق بالضبط (بلا C14N)، وبصمته Base64(hex(SHA256(trim)))
             string signedProps = BuildSignedProperties(signingTimeUtc, certHash, issuerName, serial);
-            string spDigest = Convert.ToBase64String(Sha256(Encoding.UTF8.GetBytes(Canonicalize(signedProps))));
+            string spDigest = B64Hex(Sha256(Encoding.UTF8.GetBytes(signedProps)));
 
             // 4) SignedInfo -> ECDSA signature
             string signedInfo = BuildSignedInfo(invoiceHash, spDigest);
@@ -153,24 +153,44 @@ namespace SewingSystem.Classes.Zatca
             return signer.GenerateSignature();
         }
 
+        // القالب الحرفي المطابق بايت-بايت للباكج الرسمي الشغّال: مسافات ثابتة (40/44/48/52/56 والإغلاق يعكسها، الأخير 36)،
+        // أسطر LF، و<ds:DigestMethod ...> </ds:DigestMethod> بمسافة داخلية (ليس self-closing). لا يُقنّن (no C14N).
         private static string BuildSignedProperties(DateTime t, string certHashB64, string issuer, string serial)
         {
-            // xmlns:ds و xmlns:xades معلَنان على العنصر الجذر (SignedProperties) ليطابق الشكل القانوني
-            // الذي تحسبه الهيئة عند تجزئة SignedProperties (وإلا يفشل signed-properties-hashing).
+            string ts = t.ToString("yyyy-MM-ddTHH:mm:ssZ", System.Globalization.CultureInfo.InvariantCulture);
+            const string DS = "http://www.w3.org/2000/09/xmldsig#";
+            const string NL = "\n";
+            string I36 = new string(' ', 36), I40 = new string(' ', 40), I44 = new string(' ', 44),
+                   I48 = new string(' ', 48), I52 = new string(' ', 52), I56 = new string(' ', 56);
             return
-              "<xades:SignedProperties xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" xmlns:xades=\"http://uri.etsi.org/01903/v1.3.2#\" Id=\"xadesSignedProperties\">" +
-              "<xades:SignedSignatureProperties>" +
-              "<xades:SigningTime>" + t.ToString("yyyy-MM-ddTHH:mm:ssZ", System.Globalization.CultureInfo.InvariantCulture) + "</xades:SigningTime>" +
-              "<xades:SigningCertificate><xades:Cert>" +
-              "<xades:CertDigest>" +
-              "<ds:DigestMethod Algorithm=\"http://www.w3.org/2001/04/xmlenc#sha256\"/>" +
-              "<ds:DigestValue>" + certHashB64 + "</ds:DigestValue>" +
-              "</xades:CertDigest>" +
-              "<xades:IssuerSerial>" +
-              "<ds:X509IssuerName>" + System.Security.SecurityElement.Escape(issuer) + "</ds:X509IssuerName>" +
-              "<ds:X509SerialNumber>" + serial + "</ds:X509SerialNumber>" +
-              "</xades:IssuerSerial></xades:Cert></xades:SigningCertificate>" +
-              "</xades:SignedSignatureProperties></xades:SignedProperties>";
+              "<xades:SignedProperties xmlns:xades=\"http://uri.etsi.org/01903/v1.3.2#\" Id=\"xadesSignedProperties\">" + NL +
+              I40 + "<xades:SignedSignatureProperties>" + NL +
+              I44 + "<xades:SigningTime>" + ts + "</xades:SigningTime>" + NL +
+              I44 + "<xades:SigningCertificate>" + NL +
+              I48 + "<xades:Cert>" + NL +
+              I52 + "<xades:CertDigest>" + NL +
+              I56 + "<ds:DigestMethod xmlns:ds=\"" + DS + "\" Algorithm=\"http://www.w3.org/2001/04/xmlenc#sha256\"> </ds:DigestMethod>" + NL +
+              I56 + "<ds:DigestValue xmlns:ds=\"" + DS + "\">" + certHashB64 + "</ds:DigestValue>" + NL +
+              I52 + "</xades:CertDigest>" + NL +
+              I52 + "<xades:IssuerSerial>" + NL +
+              I56 + "<ds:X509IssuerName xmlns:ds=\"" + DS + "\">" + System.Security.SecurityElement.Escape(issuer) + "</ds:X509IssuerName>" + NL +
+              I56 + "<ds:X509SerialNumber xmlns:ds=\"" + DS + "\">" + serial + "</ds:X509SerialNumber>" + NL +
+              I52 + "</xades:IssuerSerial>" + NL +
+              I48 + "</xades:Cert>" + NL +
+              I44 + "</xades:SigningCertificate>" + NL +
+              I40 + "</xades:SignedSignatureProperties>" + NL +
+              I36 + "</xades:SignedProperties>";
+        }
+
+        /// <summary>SHA256 مجزّأ ثم hex ثم Base64 — صيغة بصمات ZATCA (Base64(hex(sha256))).</summary>
+        private static string B64Hex(byte[] hash)
+            => Convert.ToBase64String(Encoding.UTF8.GetBytes(ToHex(hash)));
+
+        private static string ToHex(byte[] b)
+        {
+            var sb = new StringBuilder(b.Length * 2);
+            foreach (var x in b) sb.Append(x.ToString("x2"));
+            return sb.ToString();
         }
 
         private static string BuildSignedInfo(string invoiceHashB64, string spDigestB64)

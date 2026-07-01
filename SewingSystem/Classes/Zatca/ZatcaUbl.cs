@@ -24,12 +24,13 @@ namespace SewingSystem.Classes.Zatca
         public string InvoiceNumber;
         public string Uuid;
         public DateTime IssueDateTime;
-        public bool IsCreditNote;          // 381 vs 388
+        public bool IsCreditNote;          // 381
+        public bool IsDebitNote;           // 383 (else 388)
         public int Icv;                    // invoice counter value
         public string Pih;                 // previous invoice hash (base64)
 
         // seller (from ZatcaConfig)
-        public string SellerName, SellerVat, Street, Building, Plot, District, City, Postal, Country = "SA";
+        public string SellerName, SellerVat, SellerCrn, Street, Building, Plot, District, City, Postal, Country = "SA";
 
         // credit-note reference
         public string OriginalInvoiceNumber;
@@ -58,7 +59,8 @@ namespace SewingSystem.Classes.Zatca
 
         public static string Build(ZatcaInvoiceData d)
         {
-            string typeCode = d.IsCreditNote ? "381" : "388";
+            string typeCode = d.IsCreditNote ? "381" : d.IsDebitNote ? "383" : "388";
+            bool corrective = d.IsCreditNote || d.IsDebitNote; // 381/383 يشيران للفاتورة الأصلية
             string typeName = "0200000"; // 02 = simplified
             var sb = new StringBuilder();
 
@@ -79,7 +81,7 @@ namespace SewingSystem.Classes.Zatca
             sb.Append("<cbc:DocumentCurrencyCode>SAR</cbc:DocumentCurrencyCode>");
             sb.Append("<cbc:TaxCurrencyCode>SAR</cbc:TaxCurrencyCode>");
 
-            if (d.IsCreditNote && !string.IsNullOrEmpty(d.OriginalInvoiceNumber))
+            if (corrective && !string.IsNullOrEmpty(d.OriginalInvoiceNumber))
             {
                 sb.Append("<cac:BillingReference><cac:InvoiceDocumentReference>");
                 sb.Append("<cbc:ID>").Append(E(d.OriginalInvoiceNumber)).Append("</cbc:ID>");
@@ -105,6 +107,8 @@ namespace SewingSystem.Classes.Zatca
 
             // Seller
             sb.Append("<cac:AccountingSupplierParty><cac:Party>");
+            if (!string.IsNullOrWhiteSpace(d.SellerCrn))
+                sb.Append("<cac:PartyIdentification><cbc:ID schemeID=\"CRN\">").Append(E(d.SellerCrn)).Append("</cbc:ID></cac:PartyIdentification>");
             sb.Append("<cac:PostalAddress>");
             sb.Append("<cbc:StreetName>").Append(E(d.Street)).Append("</cbc:StreetName>");
             sb.Append("<cbc:BuildingNumber>").Append(E(d.Building)).Append("</cbc:BuildingNumber>");
@@ -120,16 +124,14 @@ namespace SewingSystem.Classes.Zatca
             sb.Append("<cac:PartyLegalEntity><cbc:RegistrationName>").Append(E(d.SellerName)).Append("</cbc:RegistrationName></cac:PartyLegalEntity>");
             sb.Append("</cac:Party></cac:AccountingSupplierParty>");
 
-            // Buyer (minimal / optional for simplified)
-            sb.Append("<cac:AccountingCustomerParty><cac:Party>");
-            sb.Append("<cac:PartyLegalEntity><cbc:RegistrationName>عميل نقدي</cbc:RegistrationName></cac:PartyLegalEntity>");
-            sb.Append("</cac:Party></cac:AccountingCustomerParty>");
+            // Buyer (فارغ للفاتورة المبسّطة B2C — مطابق للمرجع)
+            sb.Append("<cac:AccountingCustomerParty> </cac:AccountingCustomerParty>");
 
             // Delivery
             sb.Append("<cac:Delivery><cbc:ActualDeliveryDate>").Append(d.IssueDateTime.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)).Append("</cbc:ActualDeliveryDate></cac:Delivery>");
             // Payment means (10 = cash); credit note carries the reason
             sb.Append("<cac:PaymentMeans><cbc:PaymentMeansCode>10</cbc:PaymentMeansCode>");
-            if (d.IsCreditNote) sb.Append("<cbc:InstructionNote>").Append(E(d.ReturnReason)).Append("</cbc:InstructionNote>");
+            if (corrective) sb.Append("<cbc:InstructionNote>").Append(E(d.ReturnReason)).Append("</cbc:InstructionNote>");
             sb.Append("</cac:PaymentMeans>");
 
             // TaxTotal (with subtotal)

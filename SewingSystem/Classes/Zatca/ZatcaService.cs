@@ -22,7 +22,15 @@ namespace SewingSystem.Classes.Zatca
             log.AppendLine("== بدء التفعيل على البيئة: " + cfg.Environment + " ==");
             log.AppendLine("الرابط: " + cfg.ApiBaseUrl);
 
-            if (!RequestComplianceCsid(cfg, otp, log)) return false;
+            // إن كانت شهادة الامتثال جاهزة وينقص فقط شهادة الإنتاج، نكمل بها مباشرةً
+            // دون طلب شهادة امتثال جديدة — حتى لو بقي رمز قديم في الخانة. هذا يمنع خطأ
+            // 409 (الرمز مُستهلك) عند إعادة المحاولة لإكمال خطوة امتثال ناقصة (الإشعار المدين).
+            bool haveCompliance = !string.IsNullOrEmpty(cfg.ComplianceCert) && !string.IsNullOrEmpty(cfg.ComplianceSecret);
+            bool needProduction = string.IsNullOrEmpty(cfg.ProductionCert);
+            if (haveCompliance && needProduction)
+                log.AppendLine("استخدام شهادة الامتثال الحالية لإكمال التفعيل (بدون رمز جديد).");
+            else if (!RequestComplianceCsid(cfg, otp, log)) return false;
+
             if (!RunComplianceChecks(cfg, log)) { log.AppendLine("تنبيه: لم تكتمل فحوصات الامتثال — راجع الأخطاء أعلاه."); return false; }
             if (!RequestProductionCsid(cfg, log)) return false;
 
@@ -35,12 +43,11 @@ namespace SewingSystem.Classes.Zatca
         public static bool RequestComplianceCsid(ZatcaConfig cfg, string otp, StringBuilder log)
         {
             if (string.IsNullOrWhiteSpace(otp)) { log.AppendLine("✘ مطلوب رمز OTP من بوابة فاتورة."); return false; }
-            if (string.IsNullOrEmpty(cfg.Csr) || string.IsNullOrEmpty(cfg.PrivateKeyPem))
-            {
-                log.AppendLine("توليد المفتاح وطلب الشهادة (CSR)...");
-                ZatcaCrypto.GenerateKeyPairAndCsr(cfg);
-                cfg.Save();
-            }
+            // نولّد CSR جديداً بقالب البيئة الحالية في كل طلب شهادة امتثال جديد، لضمان تطابق
+            // القالب مع البيئة (PREZATCA للمحاكاة، ZATCA للإنتاج) ومنع إعادة استخدام قالب بيئة سابقة.
+            log.AppendLine("توليد المفتاح وطلب الشهادة (CSR) بقالب: " + cfg.CsrTemplateName + " ...");
+            ZatcaCrypto.GenerateKeyPairAndCsr(cfg);
+            cfg.Save();
             log.AppendLine("طلب شهادة الامتثال (Compliance CSID)...");
             var api = new ZatcaApiClient(cfg.ApiBaseUrl);
             var r = api.RequestComplianceCsid(cfg.Csr, otp);
@@ -63,21 +70,31 @@ namespace SewingSystem.Classes.Zatca
             var api = new ZatcaApiClient(cfg.ApiBaseUrl);
 
             log.AppendLine("فحص: فاتورة مبسطة...");
-            if (!CheckOne(cfg, api, false, log)) return false;
+            if (!CheckOne(cfg, api, "invoice", log)) return false;
             log.AppendLine("فحص: إشعار دائن مبسط...");
-            if (!CheckOne(cfg, api, true, log)) return false;
+            if (!CheckOne(cfg, api, "credit", log)) return false;
+            log.AppendLine("فحص: إشعار مدين مبسط...");
+            if (!CheckOne(cfg, api, "debit", log)) return false;
 
             log.AppendLine("✔ اجتازت فحوصات الامتثال.");
             return true;
         }
 
-        private static bool CheckOne(ZatcaConfig cfg, ZatcaApiClient api, bool creditNote, StringBuilder log)
+        private static bool CheckOne(ZatcaConfig cfg, ZatcaApiClient api, string kind, StringBuilder log)
         {
-            var data = BuildSample(cfg, creditNote);
+            var data = BuildSample(cfg, kind);
             // وقت التوقيع = وقت إصدار الفاتورة نفسه، ليطابق الـQR وقت الإصدار (KSA-25)
             var signed = ZatcaSigner.Sign(ZatcaUbl.Build(data), cfg, cfg.ComplianceCert, data.IssueDateTime);
             var r = api.ComplianceCheckInvoice(cfg.ComplianceCert, cfg.ComplianceSecret,
                 signed.InvoiceHash, data.Uuid, signed.SignedXmlBase64);
+            // خطوة امتثال أُنجزت سابقاً لهذا النوع بنفس الشهادة → نعدّها ناجحة ونكمل للناقص
+            string body = (r.RawBody ?? "") + " " + (r.Errors ?? "");
+            if (body.IndexOf("already completed", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                body.IndexOf("Submitted before", StringComparison.OrdinalIgnoreCase) >= 0)
+            {
+                log.AppendLine("  ✔ (خطوة مكتملة سابقاً — تم التخطي)");
+                return true;
+            }
             bool ok = r.Ok && !"ERROR".Equals(r.ReportingStatus, StringComparison.OrdinalIgnoreCase);
             log.AppendLine((ok ? "  ✔ " : "  ✘ ") + "HTTP " + r.HttpStatus + " " +
                            (r.ReportingStatus ?? r.DispositionMessage) + " " + (r.Errors ?? ""));
@@ -165,20 +182,26 @@ namespace SewingSystem.Classes.Zatca
             return r;
         }
 
-        private static ZatcaInvoiceData BuildSample(ZatcaConfig cfg, bool creditNote)
+        private static ZatcaInvoiceData BuildSample(ZatcaConfig cfg, string kind)
         {
+            bool credit = kind == "credit";
+            bool debit = kind == "debit";
+            bool corrective = credit || debit;
+            string prefix = credit ? "CN-SAMPLE-" : debit ? "DN-SAMPLE-" : "INV-SAMPLE-";
             var d = new ZatcaInvoiceData
             {
-                InvoiceNumber = (creditNote ? "CN-SAMPLE-" : "INV-SAMPLE-") + (cfg.LastICV + 1),
+                InvoiceNumber = prefix + (cfg.LastICV + 1),
                 Uuid = Guid.NewGuid().ToString(),
                 IssueDateTime = DateTime.Now,
-                IsCreditNote = creditNote,
+                IsCreditNote = credit,
+                IsDebitNote = debit,
+                ReturnReason = debit ? "Additional charge / رسوم إضافية" : "Return / مرتجع",
                 Icv = cfg.LastICV + 1,
                 Pih = string.IsNullOrEmpty(cfg.LastPIH) ? ZatcaConfig.GenesisPih : cfg.LastPIH,
-                SellerName = cfg.OrgName, SellerVat = cfg.VatNumber,
+                SellerName = cfg.OrgName, SellerVat = cfg.VatNumber, SellerCrn = cfg.CrNumber,
                 Street = cfg.AddrStreet, Building = cfg.AddrBuilding, Plot = cfg.AddrSecondary, District = cfg.AddrDistrict,
                 City = cfg.AddrCity, Postal = cfg.AddrPostal, Country = cfg.AddrCountry,
-                OriginalInvoiceNumber = creditNote ? "INV-SAMPLE-1" : null
+                OriginalInvoiceNumber = corrective ? "INV-SAMPLE-1" : null
             };
             d.Lines.Add(new ZatcaLine { Name = "Sample item", Quantity = 1, UnitPrice = 100m, VatRate = 15m });
             return d;

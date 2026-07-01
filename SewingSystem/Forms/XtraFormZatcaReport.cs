@@ -22,6 +22,8 @@ namespace SewingSystem.Forms
         private GridControl grid;
         private GridView view;
         private ComboBoxEdit cboFilter;
+        private TextEdit txtInvoNo;
+        private SimpleButton btnReport;
         private MemoEdit txtDetail;
         private DataTable _table;
 
@@ -40,7 +42,7 @@ namespace SewingSystem.Forms
 
             // top filter bar (التحديث صار في شريط الأدوات العلوي)
             // الإحداثيات تُعكَس آلياً بسبب RightToLeftLayout=true فتظهر العناصر على اليمين
-            var grpTop = Grp("تصفية", new Point(10, 8), new Size(880, 56));
+            var grpTop = Grp("تصفية وإبلاغ", new Point(10, 8), new Size(880, 56));
             cboFilter = new ComboBoxEdit { Location = new Point(70, 22), Size = new Size(180, 24) };
             cboFilter.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             cboFilter.Properties.Items.AddRange(new object[] { "الكل", "أخطاء فقط", "تنبيهات", "مبلّغة بنجاح", "غير مبلّغة" });
@@ -48,6 +50,18 @@ namespace SewingSystem.Forms
             cboFilter.SelectedIndexChanged += (s, e) => ApplyFilter();
             grpTop.Controls.Add(new LabelControl { Text = "العرض:", Location = new Point(12, 25), AutoSizeMode = LabelAutoSizeMode.None, Size = new Size(50, 18), Appearance = { Font = Bold, TextOptions = { HAlignment = DevExpress.Utils.HorzAlignment.Near } } });
             grpTop.Controls.Add(cboFilter);
+
+            // إبلاغ فاتورة برقمها — مباشرةً هنا (بدل النافذة المنبثقة)
+            btnReport = new SimpleButton { Text = "إبلاغ للزكاة", Location = new Point(270, 19), Size = new Size(120, 28) };
+            btnReport.ImageOptions.Image = Classes.Zatca.ZatcaIcon.Get(16);
+            btnReport.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            btnReport.Click += (s, e) => ReportByNumber();
+            txtInvoNo = new TextEdit { Location = new Point(400, 22), Size = new Size(110, 24) };
+            txtInvoNo.Properties.NullValuePrompt = "رقم الفاتورة";
+            txtInvoNo.KeyDown += (s, e) => { if (e.KeyCode == Keys.Enter) { e.Handled = true; ReportByNumber(); } };
+            grpTop.Controls.Add(new LabelControl { Text = "إبلاغ فاتورة رقم:", Location = new Point(520, 25), AutoSizeMode = LabelAutoSizeMode.None, Size = new Size(115, 18), Appearance = { Font = Bold, TextOptions = { HAlignment = DevExpress.Utils.HorzAlignment.Near } } });
+            grpTop.Controls.Add(txtInvoNo);
+            grpTop.Controls.Add(btnReport);
 
             // grid
             var grpGrid = Grp("الفواتير وحالة الإبلاغ", new Point(10, 70), new Size(880, 350));
@@ -78,6 +92,40 @@ namespace SewingSystem.Forms
             ContentPanel.Controls.Add(content);
             ContentPanel.Controls.Add(Classes.Zatca.ZatcaUi.Header("تقارير الزكاة",
                                                       "حالة الإبلاغ — الأخطاء والتنبيهات"));
+        }
+
+        /// <summary>يبلّغ فاتورة موجودة (برقمها InvoNumber) للهيئة مباشرةً، ثم يحدّث الجدول.</summary>
+        private void ReportByNumber()
+        {
+            string s = (txtInvoNo.Text ?? "").Trim();
+            if (string.IsNullOrWhiteSpace(s)) { XtraMessageBox.Show("أدخل رقم الفاتورة أولاً."); return; }
+            if (!int.TryParse(s, out int invoNo)) { XtraMessageBox.Show("رقم غير صحيح."); return; }
+
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+                int id = -1;
+                using (var con = new SqlConnection(Program.ConnectionString))
+                {
+                    con.Open();
+                    using (var cmd = new SqlCommand(
+                        "SELECT TOP 1 ID FROM dbo.tblSellInvoice WHERE InvoNumber=@n ORDER BY ID DESC", con))
+                    {
+                        cmd.Parameters.AddWithValue("@n", invoNo);
+                        var o = cmd.ExecuteScalar();
+                        if (o == null || o == DBNull.Value) { XtraMessageBox.Show("لم يتم العثور على الفاتورة رقم " + invoNo + "."); return; }
+                        id = Convert.ToInt32(o);
+                    }
+                }
+                var log = new StringBuilder();
+                var r = Classes.Zatca.ZatcaService.ReportExistingInvoice(id, log);
+                LoadData();                       // تحديث الجدول ليظهر الحالة الجديدة
+                txtDetail.Text = log.ToString();  // تفاصيل الرد في مربع الأسفل
+                XtraMessageBox.Show(r != null && r.Ok ? "تم إبلاغ الفاتورة بنجاح." : "لم يكتمل الإبلاغ — راجع التفاصيل بالأسفل.",
+                    "نتيجة الإبلاغ", MessageBoxButtons.OK, r != null && r.Ok ? MessageBoxIcon.Information : MessageBoxIcon.Warning);
+            }
+            catch (Exception ex) { XtraMessageBox.Show("تعذّر الإبلاغ: " + ex.Message); }
+            finally { Cursor = Cursors.Default; }
         }
 
         protected override void OnRefreshClick() => LoadData();
@@ -131,6 +179,13 @@ namespace SewingSystem.Forms
                 if (view.Columns["_raw"] != null) view.Columns["_raw"].Visible = false;
                 if (view.Columns["_level"] != null) view.Columns["_level"].Visible = false;
                 if (view.Columns["السبب"] != null) view.Columns["السبب"].Width = 380;
+
+                // إظهار الفواتير التي بها خطأ من الزكاة تلقائياً عند وجودها (وإلا عرض الكل)
+                bool hasErrors = false;
+                foreach (DataRow row in _table.Rows)
+                    if (Convert.ToString(row["_level"]) == "ERROR") { hasErrors = true; break; }
+                cboFilter.SelectedIndex = hasErrors ? 1 : 0;   // 1 = «أخطاء فقط»
+
                 ApplyFilter();
             }
             catch (Exception ex) { XtraMessageBox.Show("تعذّر تحميل التقرير: " + ex.Message); }
