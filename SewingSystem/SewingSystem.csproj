@@ -262,6 +262,7 @@
     <Compile Include="Classes\MyAppearance.cs" />
     <Compile Include="Classes\PasswordHasher.cs" />
     <Compile Include="Classes\MyFunaction.cs" />
+    <Compile Include="Classes\OrderSlip.cs" />
     <Compile Include="Classes\Session.cs" />
     <Compile Include="Classes\SizeImageStore.cs" />
     <Compile Include="Classes\TLVCls.cs" />

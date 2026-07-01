@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace SewingSystem.Classes
 {
@@ -40,6 +41,68 @@ namespace SewingSystem.Classes
         private static readonly Dictionary<string, string> _resByKey = new Dictionary<string, string>();
         private static readonly Dictionary<string, int> _idxByKey = new Dictionary<string, int>();
         private static readonly Dictionary<string, string> _defCaptionByKey = new Dictionary<string, string>();
+
+        // تخزين مؤقت في الذاكرة + كاش محلي دائم على القرص لصور المقاسات المخصّصة.
+        // الهدف: فتح شاشة التفصيل بلا انتظار جلب الصور من القاعدة الأونلاين البعيدة.
+        private static Dictionary<string, byte[]> _overridesCache;
+        private static bool _tableEnsured;
+        private static bool _diskRefreshed;   // مزامنة خلفية مع الأونلاين مرة واحدة لكل تشغيل
+
+        // مجلّد الكاش المحلي بجوار ملف البرنامج (داخل مجلد التشغيل)، حتى تنتقل الصور
+        // مع النسخة عند نقلها لجهاز العميل (نسخ المجلد ينسخ الصور معه).
+        private static string CacheDir =>
+            Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SizeImages");
+
+        /// <summary>يُبطل التخزين المؤقت (ذاكرة + قرص) فيُعاد الجلب من القاعدة لاحقاً.</summary>
+        public static void InvalidateCache()
+        {
+            _overridesCache = null;
+            try { if (Directory.Exists(CacheDir)) foreach (var f in Directory.GetFiles(CacheDir, "*.img")) File.Delete(f); }
+            catch { }
+        }
+
+        // جلب الصور المخصّصة من القاعدة الأونلاين (الاستعلام الفعلي).
+        private static Dictionary<string, byte[]> FetchOverridesFromDb()
+        {
+            var d = new Dictionary<string, byte[]>();
+            using (var con = new SqlConnection(Program.ConnectionString))
+            using (var cmd = new SqlCommand("SELECT ImageKey, ImageData FROM dbo.tblSizeImages WHERE ImageData IS NOT NULL", con))
+            {
+                con.Open();
+                using (var r = cmd.ExecuteReader())
+                    while (r.Read())
+                        d[r.GetString(0)] = (byte[])r[1];
+            }
+            return d;
+        }
+
+        // قراءة الكاش من القرص (يعيد null إن لم يوجد كاش).
+        private static Dictionary<string, byte[]> LoadFromDisk()
+        {
+            try
+            {
+                if (!Directory.Exists(CacheDir)) return null;
+                var files = Directory.GetFiles(CacheDir, "*.img");
+                if (files.Length == 0) return null;
+                var d = new Dictionary<string, byte[]>();
+                foreach (var f in files) d[Path.GetFileNameWithoutExtension(f)] = File.ReadAllBytes(f);
+                return d;
+            }
+            catch { return null; }
+        }
+
+        // كتابة الكاش على القرص (يستبدل القديم).
+        private static void SaveToDisk(Dictionary<string, byte[]> d)
+        {
+            try
+            {
+                Directory.CreateDirectory(CacheDir);
+                foreach (var f in Directory.GetFiles(CacheDir, "*.img")) File.Delete(f);
+                foreach (var kv in d)
+                    if (kv.Value != null) File.WriteAllBytes(Path.Combine(CacheDir, kv.Key + ".img"), kv.Value);
+            }
+            catch { }
+        }
         static SizeImageStore()
         {
             for (int i = 0; i < Catalog.Length; i++)
@@ -52,6 +115,7 @@ namespace SewingSystem.Classes
 
         public static void EnsureTable()
         {
+            if (_tableEnsured) return;   // فحص المخطط مرة واحدة فقط لكل تشغيل (يوفّر ذهاباً للخادم البعيد)
             try
             {
                 using (var con = new SqlConnection(Program.ConnectionString))
@@ -69,6 +133,7 @@ IF COL_LENGTH('dbo.tblSizeImages','SortOrder') IS NULL ALTER TABLE dbo.tblSizeIm
                     con.Open();
                     cmd.ExecuteNonQuery();
                 }
+                _tableEnsured = true;
             }
             catch { /* لا نوقف التشغيل إن تعذّر */ }
         }
@@ -123,20 +188,36 @@ IF COL_LENGTH('dbo.tblSizeImages','SortOrder') IS NULL ALTER TABLE dbo.tblSizeIm
 
         public static Dictionary<string, byte[]> GetAllOverrides()
         {
-            var d = new Dictionary<string, byte[]>();
+            // 1) متوفّرة في ذاكرة هذا التشغيل → فوراً
+            if (_overridesCache != null) return _overridesCache;
+
+            // 2) كاش محلي على القرص → فوري (بلا أونلاين)، مع مزامنة خلفية واحدة مع الأونلاين
+            var disk = LoadFromDisk();
+            if (disk != null)
+            {
+                _overridesCache = disk;
+                if (!_diskRefreshed)
+                {
+                    _diskRefreshed = true;
+                    Task.Run(() =>
+                    {
+                        try { var fresh = FetchOverridesFromDb(); _overridesCache = fresh; SaveToDisk(fresh); }
+                        catch { }
+                    });
+                }
+                return disk;
+            }
+
+            // 3) لا كاش محلي (أول مرة) → جلب من الأونلاين ثم حفظه محلياً للمرات القادمة
             try
             {
-                using (var con = new SqlConnection(Program.ConnectionString))
-                using (var cmd = new SqlCommand("SELECT ImageKey, ImageData FROM dbo.tblSizeImages WHERE ImageData IS NOT NULL", con))
-                {
-                    con.Open();
-                    using (var r = cmd.ExecuteReader())
-                        while (r.Read())
-                            d[r.GetString(0)] = (byte[])r[1];
-                }
+                var d = FetchOverridesFromDb();
+                _overridesCache = d;
+                _diskRefreshed = true;
+                SaveToDisk(d);
+                return d;
             }
-            catch { }
-            return d;
+            catch { return new Dictionary<string, byte[]>(); }
         }
 
         /// <summary>الصورة الحالية: من القاعدة إن وُجدت، وإلا الصورة المضمّنة.</summary>
@@ -218,7 +299,10 @@ IF COL_LENGTH('dbo.tblSizeImages','SortOrder') IS NULL ALTER TABLE dbo.tblSizeIm
         }
 
         public static void SaveImage(string key, byte[] data)
-            => Upsert(key, "ImageData", p => p.AddWithValue("@v", (object)data ?? DBNull.Value));
+        {
+            Upsert(key, "ImageData", p => p.AddWithValue("@v", (object)data ?? DBNull.Value));
+            _overridesCache = null;   // إبطال حتى تظهر الصورة الجديدة
+        }
 
         public static void SaveCaption(string key, string caption)
             => Upsert(key, "Caption", p => p.AddWithValue("@v", (object)caption ?? DBNull.Value));
@@ -275,6 +359,7 @@ WHEN NOT MATCHED THEN INSERT(ImageKey, SortOrder, UpdatedAt) VALUES(@k, @o, GETD
                     con.Open();
                     cmd.ExecuteNonQuery();
                 }
+                _overridesCache = null;   // إبطال حتى تعود الصورة الأصلية
             }
             catch { }
         }

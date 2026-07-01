@@ -208,70 +208,34 @@ namespace SewingSystem
             ConnectionString = myfunaction.ConnectionString_DB();
             try
             {
+                // البرنامج مثبّت على القاعدة الخارجية (الأونلاين). لا يوجد أي تبديل تلقائي
+                // لقاعدة محلية: عند تعذّر الاتصال تُفتح شاشة إعدادات الاتصال بدل استبدال
+                // الإعدادات بقاعدة محلية (الذي كان يسبب «فقدان» بيانات/صور المقاسات).
                 if (String.IsNullOrWhiteSpace(ConnectionString) || !Database.Exists(ConnectionString))
                 {
-                    // ATTACH //
-
-                    Program.DBName = Program.DBName_static;
-                    Program.ServerName = ".\\SQLEXPR14PLANETS";
-                    Program.Mode = "Windows";
-
-                    string connectionString = string.Format(@"Server={0};Integrated Security=true;", Program.ServerName);
-
-                    string mdfFilePath = Path.Combine(executablePath, "Data", Program.DBName + ".mdf");
-                    string ldfFilePath = Path.Combine(executablePath, "Data", Program.DBName + "_log.ldf");
-
-                    Properties.Settings.Default.PathLocalDB = false;
-                    Properties.Settings.Default.Mode = Classes.MyFunaction.Encryption("Windows");
-                    Properties.Settings.Default.ServerName = Classes.MyFunaction.Encryption(Program.ServerName);
-                    Properties.Settings.Default.DBName = Classes.MyFunaction.Encryption(Program.DBName);
-                    Properties.Settings.Default.ConnType = Classes.MyFunaction.Encryption(Classes.ConnectionStatus.Internal);
-                    Properties.Settings.Default.Save();
-
-                    MyFunaction.DecryptionSetting();
-
-                    FileFolderHelper.SetFilePermissions(mdfFilePath);
-                    FileFolderHelper.SetFilePermissions(ldfFilePath);
-                    FileFolderHelper.SetDirectoryPermissions(Path.Combine(executablePath, "Data"));
-
-                    DatabaseHelper helper = new DatabaseHelper();
-                    helper.AttachDatabase(Program.DBName, mdfFilePath, ldfFilePath, connectionString);
-                    //helper.RestoreDatabase(Program.DBName, backupFilePath, connectionString);
-
-
-                    //لا داعب لتغييرها لأنها ثابتة نفسها
-                    //string newConnectionString = ConnectionStringHelper.GetConnectionString(
-                    //           Classes.MyFunaction.Decryption(Properties.Settings.Default.DBName),
-                    //           Classes.MyFunaction.Decryption(Properties.Settings.Default.ServerName),
-                    //           Classes.MyFunaction.Decryption(Properties.Settings.Default.SqlUserName),
-                    //           Classes.MyFunaction.Decryption(Properties.Settings.Default.SqlPassword),
-                    //            Classes.MyFunaction.Decryption(Properties.Settings.Default.Mode) == "Windows"
-                    //            );
-                    //ConnectionStringHelper.UpdateConnectionString("SewingMilitary3Entities", newConnectionString);
-
-
-                    ConnectionString = myfunaction.ConnectionString_DB();
-
-
-                    Application.Restart();
+                    MessageBox.Show("تعذّر الاتصال بقاعدة البيانات الخارجية.\nتأكد من الاتصال بالإنترنت ثم أعد فتح البرنامج، أو راجع إعدادات الاتصال.",
+                        "خطأ اتصال", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Application.Run(new Forms.XtraFormConnectionDB("تعذّر الاتصال بقاعدة البيانات الخارجية."));
                     return;
                 }
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
                 Application.Run(new Forms.XtraFormConnectionDB(ex.Message));
+                return;
             }
 
 
             try
             {
-                if (Database.Exists(ConnectionString))
-                {
-                    Session.GetDataBranche();
-                    Session.GetDataUserAndGroup();
-                    Session.GetDataPermission();
-                }
+                // الاتصال تم التحقق منه بالأعلى (لا حاجة لفحص Database.Exists مرة أخرى = ذهاب إضافي للخادم).
+                // تحميل بيانات الإقلاع (الفروع/المستخدمين/الصلاحيات) بالتوازي بدل التسلسل
+                // لتقليل زمن الانتظار على القاعدة الأونلاين البعيدة (الزمن ≈ الأبطأ بدل المجموع).
+                System.Threading.Tasks.Task.WaitAll(
+                    System.Threading.Tasks.Task.Run(() => Session.GetDataBranche()),
+                    System.Threading.Tasks.Task.Run(() => Session.GetDataUserAndGroup()),
+                    System.Threading.Tasks.Task.Run(() => Session.GetDataPermission()));
+
                 UserLookAndFeel.Default.SkinName = Settings.Default.SkinName.ToString();
                 UserLookAndFeel.Default.SetSkinStyle(Settings.Default.SkinName.ToString(), Settings.Default.PaletteName.ToString());
 

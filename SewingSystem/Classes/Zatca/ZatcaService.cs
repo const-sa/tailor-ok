@@ -74,7 +74,8 @@ namespace SewingSystem.Classes.Zatca
         private static bool CheckOne(ZatcaConfig cfg, ZatcaApiClient api, bool creditNote, StringBuilder log)
         {
             var data = BuildSample(cfg, creditNote);
-            var signed = ZatcaSigner.Sign(ZatcaUbl.Build(data), cfg, cfg.ComplianceCert, DateTime.UtcNow);
+            // وقت التوقيع = وقت إصدار الفاتورة نفسه، ليطابق الـQR وقت الإصدار (KSA-25)
+            var signed = ZatcaSigner.Sign(ZatcaUbl.Build(data), cfg, cfg.ComplianceCert, data.IssueDateTime);
             var r = api.ComplianceCheckInvoice(cfg.ComplianceCert, cfg.ComplianceSecret,
                 signed.InvoiceHash, data.Uuid, signed.SignedXmlBase64);
             bool ok = r.Ok && !"ERROR".Equals(r.ReportingStatus, StringComparison.OrdinalIgnoreCase);
@@ -109,7 +110,7 @@ namespace SewingSystem.Classes.Zatca
 
             data.Icv = cfg.LastICV + 1;
             data.Pih = string.IsNullOrEmpty(cfg.LastPIH) ? ZatcaConfig.GenesisPih : cfg.LastPIH;
-            signed = ZatcaSigner.Sign(ZatcaUbl.Build(data), cfg, cfg.ProductionCert, DateTime.UtcNow);
+            signed = ZatcaSigner.Sign(ZatcaUbl.Build(data), cfg, cfg.ProductionCert, data.IssueDateTime);
 
             var api = new ZatcaApiClient(cfg.ApiBaseUrl);
             var r = api.ReportSingle(cfg.ProductionCert, cfg.ProductionSecret,

@@ -73,8 +73,8 @@ namespace SewingSystem.Classes.Zatca
             sb.Append("<cbc:ProfileID>reporting:1.0</cbc:ProfileID>");
             sb.Append("<cbc:ID>").Append(E(d.InvoiceNumber)).Append("</cbc:ID>");
             sb.Append("<cbc:UUID>").Append(E(d.Uuid)).Append("</cbc:UUID>");
-            sb.Append("<cbc:IssueDate>").Append(d.IssueDateTime.ToString("yyyy-MM-dd")).Append("</cbc:IssueDate>");
-            sb.Append("<cbc:IssueTime>").Append(d.IssueDateTime.ToString("HH:mm:ss")).Append("</cbc:IssueTime>");
+            sb.Append("<cbc:IssueDate>").Append(d.IssueDateTime.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)).Append("</cbc:IssueDate>");
+            sb.Append("<cbc:IssueTime>").Append(d.IssueDateTime.ToString("HH:mm:ss", CultureInfo.InvariantCulture)).Append("</cbc:IssueTime>");
             sb.Append("<cbc:InvoiceTypeCode name=\"").Append(typeName).Append("\">").Append(typeCode).Append("</cbc:InvoiceTypeCode>");
             sb.Append("<cbc:DocumentCurrencyCode>SAR</cbc:DocumentCurrencyCode>");
             sb.Append("<cbc:TaxCurrencyCode>SAR</cbc:TaxCurrencyCode>");
@@ -126,7 +126,7 @@ namespace SewingSystem.Classes.Zatca
             sb.Append("</cac:Party></cac:AccountingCustomerParty>");
 
             // Delivery
-            sb.Append("<cac:Delivery><cbc:ActualDeliveryDate>").Append(d.IssueDateTime.ToString("yyyy-MM-dd")).Append("</cbc:ActualDeliveryDate></cac:Delivery>");
+            sb.Append("<cac:Delivery><cbc:ActualDeliveryDate>").Append(d.IssueDateTime.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)).Append("</cbc:ActualDeliveryDate></cac:Delivery>");
             // Payment means (10 = cash); credit note carries the reason
             sb.Append("<cac:PaymentMeans><cbc:PaymentMeansCode>10</cbc:PaymentMeansCode>");
             if (d.IsCreditNote) sb.Append("<cbc:InstructionNote>").Append(E(d.ReturnReason)).Append("</cbc:InstructionNote>");

@@ -16,6 +16,22 @@ namespace SewingSystem.Forms
         public XtraFormReport()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;   // فتح المعاينة بملء الشاشة ليظهر كامل المحتوى
+        }
+
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+            this.WindowState = FormWindowState.Maximized;
+            // الزووم يُضبط بعد اكتمال بناء المستند (وإلا يُعاد تعيينه)، فتظهر الصفحة كاملة
+            // داخل نافذة المعاينة ولا يختفي أسفلها (الملاحظات/اسم القماش...).
+            var t = new System.Windows.Forms.Timer { Interval = 800 };
+            t.Tick += (s, a) =>
+            {
+                t.Stop(); t.Dispose();
+                try { documentViewer1.Zoom = 0.6f; } catch { }
+            };
+            t.Start();
         }
     }
 }

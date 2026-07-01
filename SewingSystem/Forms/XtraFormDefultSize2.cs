@@ -30,37 +30,128 @@ namespace SewingSystem.Forms
         tblPermission Permission;
         List<tblPermission> tblPermissionWashType = new List<tblPermission>();
         bool IsNew = true;
+
         public XtraFormDefultSize2(tblSellInvoice cus, bool isnew = true)
         {
+            // لودر «جاري فتح الصفحة» أثناء الإنشاء الثقيل، يُغلق عند ظهور الشاشة فعلاً.
+            try
+            {
+                DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(typeof(WaitForm1));
+                DevExpress.XtraSplashScreen.SplashScreenManager.Default.SetWaitFormCaption("جاري فتح الصفحة");
+                DevExpress.XtraSplashScreen.SplashScreenManager.Default.SetWaitFormDescription("يرجى الانتظار...");
+            }
+            catch { }
+            this.Shown += (s, e) => { try { DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm(); } catch { } };
+
             InitializeComponent();
             ApplySizeImages();
+            SetupImageEditing();
             IsNew = isnew;
             tblSellInvoiceBindingSource.DataSource = cus;
             Permission = Session.tblPermission.FirstOrDefault(p => p.ObjectName == "العملاء" & p.UserGroupID == Program.User.UserGroupID);
             tblPermissionWashType.Clear();
             tblPermissionWashType = Session.tblPermission.Where(p => p.ParentID == Permission.ID).ToList();
-            //AddNew.Visible = tblPermissionWashType.FirstOrDefault(p => p.PermissionName == Program.Add)?.TheValues??false;
             PrintDirect.Visible = tblPermissionWashType.FirstOrDefault(p => p.PermissionName == Program.Print)?.TheValues??false;
             PrintInvoice.Visible = tblPermissionWashType.FirstOrDefault(p => p.PermissionName == Program.Print)?.TheValues??false;
             UpdateRecord.Enabled = tblPermissionWashType.FirstOrDefault(p => p.PermissionName == Program.Update)?.TheValues??false;
 
-            // ★ علامة تمييز: تؤكد أن هذه الشاشة (DefultSize2) هي المعدّلة ★
-            this.Text = "فاتورة التفصيل ★ نسخة معدّلة (DefultSize2) ★";
-            var _mark = new DevExpress.XtraEditors.LabelControl
-            {
-                Name = "_lblEditMark",
-                Text = "★ نسخة معدّلة ★",
-                AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None,
-                Size = new System.Drawing.Size(220, 26),
-                Location = new System.Drawing.Point(12, 30)
-            };
-            _mark.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            _mark.Appearance.ForeColor = System.Drawing.Color.Red;
-            _mark.Appearance.Options.UseFont = true;
-            _mark.Appearance.Options.UseForeColor = true;
-            this.Controls.Add(_mark);
-            _mark.BringToFront();
+            this.Text = "فاتورة التفصيل";
+
+            BuildOrderSlipPanel();
         }
+
+        // ===== نموذج التفصيل: حقلان (Brufa + اسم القماش) أسفل الشاشة تحت صور المقاسات =====
+        private DevExpress.XtraEditors.TextEdit _slipBrufa;
+        private DevExpress.XtraEditors.TextEdit _slipFabric;
+
+        private void BuildOrderSlipPanel()
+        {
+            try
+            {
+                // شريط نظيف بعرض الشاشة في الأسفل، بارتفاع مريح وتباعد حول الحقول
+                var panel = new DevExpress.XtraEditors.PanelControl
+                {
+                    Name = "_orderSlipPanel",
+                    Dock = DockStyle.Bottom,
+                    Height = 72,
+                    RightToLeft = RightToLeft.Yes
+                };
+
+                var flow = new FlowLayoutPanel
+                {
+                    Dock = DockStyle.Fill,
+                    RightToLeft = RightToLeft.Yes,
+                    FlowDirection = FlowDirection.LeftToRight, // مع RTL يتدفّق من اليمين لليسار
+                    WrapContents = false,
+                    Padding = new Padding(18, 22, 18, 18)      // تباعد واضح: يمين/أعلى/يسار/أسفل
+                };
+
+                var lblBrufa = new LabelControl { Text = "Brufa", AutoSizeMode = LabelAutoSizeMode.Default, Margin = new Padding(6, 8, 4, 8) };
+                _slipBrufa = new TextEdit { Name = "_slipBrufa", Size = new Size(160, 28), Margin = new Padding(4, 4, 28, 8), RightToLeft = RightToLeft.Yes };
+
+                var lblFabric = new LabelControl { Text = "اسم القماش", AutoSizeMode = LabelAutoSizeMode.Default, Margin = new Padding(6, 8, 4, 8) };
+                _slipFabric = new TextEdit { Name = "_slipFabric", Size = new Size(240, 28), Margin = new Padding(4, 4, 28, 8), RightToLeft = RightToLeft.Yes };
+
+                flow.Controls.Add(lblBrufa);
+                flow.Controls.Add(_slipBrufa);
+                flow.Controls.Add(lblFabric);
+                flow.Controls.Add(_slipFabric);
+
+                panel.Controls.Add(flow);
+                this.Controls.Add(panel);
+                panel.BringToFront();
+
+                // هامش سفلي بسيط ليظهر الصف الأخير (Brufa/اسم القماش) بمسافة مريحة بعيداً عن حافة النافذة
+                this.Padding = new Padding(this.Padding.Left, this.Padding.Top, this.Padding.Right, 10);
+
+                // تحميل القيم عند فتح فاتورة قائمة
+                if (!IsNew && CurrentInvoice != null)
+                {
+                    var d = Classes.OrderSlip.Load(CurrentInvoice.ID);
+                    _slipBrufa.Text = d.Brufa ?? "";
+                    _slipFabric.Text = d.FabricName ?? "";
+                }
+            }
+            catch (Exception ex) { Classes.Logger.Log(ex); }
+        }
+
+        /// <summary>
+        /// يُضيف حقلي نموذج التفصيل (Brufa + اسم القماش) إلى ورقة طباعة المقاسات: يوسّع ذيل
+        /// التقرير قليلاً ويضع النص في المساحة الجديدة أسفل المحتوى فلا يتداخل مع غيره.
+        /// </summary>
+        private void AddSlipToReport(XtraReportSize2 report)
+        {
+            try
+            {
+                if (report == null) return;
+                string brufa = _slipBrufa?.Text?.Trim() ?? "";
+                string fabric = _slipFabric?.Text?.Trim() ?? "";
+                if (brufa.Length == 0 && fabric.Length == 0) return;
+
+                var band = report.Bands[DevExpress.XtraReports.UI.BandKind.ReportFooter];
+                if (band == null) return;
+
+                string text = (fabric.Length > 0 ? "اسم القماش: " + fabric : "")
+                            + (brufa.Length > 0 ? "      Brufa: " + brufa : "");
+
+                float y = band.HeightF;       // أعلى المساحة الجديدة
+                band.HeightF += 60;           // توسعة بسيطة لإفساح مكان مستقل
+
+                var lbl = new DevExpress.XtraReports.UI.XRLabel
+                {
+                    Name = "_xrSlipInfo",
+                    Text = text,
+                    LocationFloat = new DevExpress.Utils.PointFloat(20, y + 6),
+                    WidthF = band.WidthF - 40,
+                    HeightF = 46,
+                    Font = new DevExpress.Drawing.DXFont("Tahoma", 12F, DevExpress.Drawing.DXFontStyle.Bold),
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+                };
+                band.Controls.Add(lbl);
+            }
+            catch (Exception ex) { Classes.Logger.Log(ex); }
+        }
+
         ComponentFlyoutDialog flyDialog = new ComponentFlyoutDialog();
         // تحميل صور المقاسات المُستبدلة من قاعدة البيانات (تُبقي الصور المضمّنة لما لم يُستبدل).
         private void ApplySizeImages()
@@ -84,8 +175,185 @@ namespace SewingSystem.Forms
             catch { /* الصور تجميلية — لا توقف الشاشة */ }
         }
 
+        // ===== تعديل صور المقاسات مباشرة على الشاشة =====
+        private bool _editImages;
+        private bool _suppressToggle;
+        private System.Windows.Forms.ToolStripButton _btnEditImages;
+        private readonly List<DevExpress.XtraEditors.CheckEdit> _styleChecks = new List<DevExpress.XtraEditors.CheckEdit>();
+
+        private void SetupImageEditing()
+        {
+            try
+            {
+                CollectStyleChecks(this);
+                foreach (var chk in _styleChecks)
+                {
+                    chk.CheckedChanged += StyleCheck_CheckedChanged; // يلغي تبديل العلامة في وضع التعديل
+                    chk.Click += StyleCheck_Click;                   // يفتح الاستبدال في وضع التعديل
+                }
+
+                // يُضاف كعنصر في شريط الأدوات العلوي (نفس شريط «خروج/حفظ») فيظهر في الفراغ يسار.
+                _btnEditImages = new System.Windows.Forms.ToolStripButton("تعديل الصور")
+                {
+                    Name = "_btnEditImages",
+                    DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text,
+                    BackColor = System.Drawing.Color.FromArgb(255, 152, 0),
+                    ForeColor = System.Drawing.Color.White,
+                    Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold),
+                    AutoToolTip = false
+                };
+                _btnEditImages.Click += (s, e) => ToggleEditImages();
+                bindingNavigator9.Items.Add(_btnEditImages);
+            }
+            catch { /* لا توقف الشاشة */ }
+        }
+
+        private void CollectStyleChecks(Control root)
+        {
+            foreach (Control c in root.Controls)
+            {
+                if (c is DevExpress.XtraEditors.CheckEdit chk && IsStyleCheck(chk))
+                    _styleChecks.Add(chk);
+                if (c.Controls.Count > 0) CollectStyleChecks(c);
+            }
+        }
+
+        // نفعّل كل مربعات CheckEdit (بما فيها الفاضية) حتى يقبل أي مربع صورة جديدة.
+        private static bool IsStyleCheck(DevExpress.XtraEditors.CheckEdit chk) => true;
+
+        private void ToggleEditImages()
+        {
+            _editImages = !_editImages;
+            _btnEditImages.Text = _editImages ? "إنهاء التعديل" : "تعديل الصور";
+            _btnEditImages.BackColor = _editImages
+                ? System.Drawing.Color.FromArgb(244, 67, 54)   // أحمر عند التفعيل
+                : System.Drawing.Color.FromArgb(255, 152, 0);
+            foreach (var chk in _styleChecks)
+                chk.Cursor = _editImages ? Cursors.Hand : Cursors.Default;
+            if (_editImages)
+            {
+                DumpStyleChecks();
+                XtraMessageBox.Show("اضغط على أي صورة لاستبدالها. عند الانتهاء اضغط «إنهاء التعديل».",
+                    "تعديل الصور", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        // تشخيص مؤقت: يكتب كل مربعات CheckEdit (الاسم/المكان على الشاشة/مرئي/صورة/الأب).
+        private void DumpStyleChecks()
+        {
+            try
+            {
+                var sb = new System.Text.StringBuilder();
+                DumpChecksRec(this, sb);
+                System.IO.File.WriteAllText(
+                    @"C:\Users\hp\AppData\Local\Temp\claude\e--C---tailr-mdinah\02adc57f-3278-43a3-9f3b-02f75f89ebe9\scratchpad\size_dump.txt",
+                    sb.ToString());
+            }
+            catch { }
+        }
+
+        private static void DumpChecksRec(Control node, System.Text.StringBuilder sb)
+        {
+            foreach (Control c in node.Controls)
+            {
+                if (c is DevExpress.XtraEditors.CheckEdit chk)
+                {
+                    var r = chk.Parent != null ? chk.Parent.RectangleToScreen(chk.Bounds) : chk.Bounds;
+                    sb.AppendLine($"{chk.Name}\tscreen={r}\tvis={chk.Visible}\tenab={chk.Enabled}\tbg={(chk.BackgroundImage != null)}\tparent={chk.Parent?.GetType().Name}:{chk.Parent?.Name}");
+                }
+                if (c.Controls.Count > 0) DumpChecksRec(c, sb);
+            }
+        }
+
+        private void StyleCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!_editImages || _suppressToggle) return;
+            // في وضع التعديل لا نريد تغيير الاختيار — نرجّع العلامة كما كانت
+            _suppressToggle = true;
+            var chk = (DevExpress.XtraEditors.CheckEdit)sender;
+            chk.Checked = !chk.Checked;
+            _suppressToggle = false;
+        }
+
+        private void StyleCheck_Click(object sender, EventArgs e)
+        {
+            if (!_editImages) return;
+            ReplaceStyleImage((DevExpress.XtraEditors.CheckEdit)sender);
+        }
+
+        private void ReplaceStyleImage(DevExpress.XtraEditors.CheckEdit clicked)
+        {
+            using (var ofd = new OpenFileDialog
+            {
+                Title = "اختر صورة جديدة لـ " + clicked.Name,
+                Filter = "ملفات الصور|*.jpg;*.jpeg;*.png;*.bmp;*.gif|كل الملفات|*.*"
+            })
+            {
+                if (ofd.ShowDialog(this) != DialogResult.OK) return;
+                try
+                {
+                    var bytes = System.IO.File.ReadAllBytes(ofd.FileName);
+
+                    DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(this, typeof(WaitForm1));
+                    try
+                    {
+                        DevExpress.XtraSplashScreen.SplashScreenManager.Default.SetWaitFormCaption("جاري الحفظ");
+                        DevExpress.XtraSplashScreen.SplashScreenManager.Default.SetWaitFormDescription("يتم حفظ الصورة في قاعدة البيانات...");
+                        // كل صورة لوحدها: نستبدل فقط المربع المضغوط (بدون تجميع).
+                        Classes.SizeImageStore.SaveImage(clicked.Name, bytes);
+                        clicked.BackgroundImage = Classes.SizeImageStore.ImageFromBytes(bytes);
+                    }
+                    finally
+                    {
+                        DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm();
+                    }
+                    XtraMessageBox.Show("تم حفظ الصورة ✅", "تعديل الصور", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("تعذّر حفظ الصورة: " + ex.Message, "تعديل الصور", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        // يلفّ المحتوى الرئيسي داخل لوحة قابلة للتمرير، فإن كان أطول من الشاشة يظهر شريط تمرير
+        // بدل اقتصاص الأسفل (صور المقاسات/الملاحظات/Brufa). يُنفّذ مرة واحدة.
+        private bool _wrappedScroll;
+        private void EnsureScrollable()
+        {
+            if (_wrappedScroll) return;
+            _wrappedScroll = true;
+            try
+            {
+                var dl = dataLayoutControl_Branch;
+                const int designH = 720; // ارتفاع كافٍ لكل المحتوى بدون اقتصاص
+                this.SuspendLayout();
+                this.Controls.Remove(dl);
+                dl.Dock = DockStyle.None;
+                dl.Location = new Point(0, 0);
+                dl.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+                dl.Height = designH;
+
+                var scroller = new Panel { Name = "_contentScroller", Dock = DockStyle.Fill, AutoScroll = true };
+                scroller.Controls.Add(dl);
+                dl.Width = scroller.ClientSize.Width;
+                this.Controls.Add(scroller);
+
+                // ترتيب الإرساء: لوحة التمرير للخلف (Fill) ، الشريط العلوي ولوحة Brufa للأمام
+                scroller.SendToBack();
+                bindingNavigator9.BringToFront();
+                var brufa = this.Controls["_orderSlipPanel"];
+                if (brufa != null) brufa.BringToFront();
+                this.ResumeLayout();
+            }
+            catch { /* لو فشل اللف لا نوقف الشاشة */ }
+        }
+
         private void XtraFormDefultSize2_Load(object sender, EventArgs e)
         {
+            // الشاشة كثيفة المحتوى — نفتحها مكبّرة + نجعلها قابلة للتمرير حتى لا يختفي أسفلها
+            this.WindowState = FormWindowState.Maximized;
+            EnsureScrollable();
             if (Program.Branch.UseTax ?? false)
                 ItemForTheTax.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             else
@@ -632,6 +900,19 @@ namespace SewingSystem.Forms
                     db.tblSellInvoiceDetailes.InsertAllOnSubmit(GetInvoiceDetailes);
                     db.SubmitChanges();
                 }
+                // حفظ حقول نموذج التفصيل (Brufa + اسم القماش) على صف الفاتورة بعد توليد المعرّف
+                Classes.OrderSlip.Save(CurrentInvoice.ID, _slipBrufa?.Text, _slipFabric?.Text);
+
+                // إبلاغ الفاتورة للهيئة (الزكاة) تلقائياً عند تفعيل الخيار — في الخلفية حتى لا يعطّل الحفظ/البيع.
+                if (Properties.Settings.Default.ZatcaAutoReport)
+                {
+                    int _zid = CurrentInvoice.ID;
+                    System.Threading.Tasks.Task.Run(() =>
+                    {
+                        try { Classes.Zatca.ZatcaService.ReportExistingInvoice(_zid, new System.Text.StringBuilder()); }
+                        catch (Exception zex) { Classes.Logger.Log(zex); }
+                    });
+                }
                 if (IsNew && Program.Branch.SendMessOnSave)
                 {
                     try
@@ -868,7 +1149,28 @@ namespace SewingSystem.Forms
                            }).ToList();
 
             ReportSize = new XtraReportSize2();
+            // تمرير صور الأنماط الحالية من الشاشة إلى التقرير، فتُطبع نفس صور الشاشة دائماً
+            // (وأي تغيير لصور الشاشة لاحقاً يظهر في الطباعة تلقائياً).
+            ReportSize.SetStyleImages(new System.Collections.Generic.Dictionary<string, System.Drawing.Image>
+            {
+                {"J1", checkEditJ1.BackgroundImage},  {"J2", checkEditJ2.BackgroundImage},
+                {"J3", checkEditJ3.BackgroundImage},  {"J4", checkEditJ4.BackgroundImage},
+                {"J5", checkEditJ24.BackgroundImage}, {"J6", checkEditJ45.BackgroundImage},
+                {"J7", checkEditJ44.BackgroundImage},
+                {"K1", checkEditK1.BackgroundImage},  {"K2", checkEditK2.BackgroundImage},
+                {"K3", checkEditK3.BackgroundImage},  {"K4", checkEditK4.BackgroundImage},
+                {"K5", checkEditK44.BackgroundImage},
+                {"S1", checkEditS1.BackgroundImage},  {"S2", checkEditS2.BackgroundImage},
+                {"S3", checkEditS3.BackgroundImage},
+                {"Q1", checkEditQ1.BackgroundImage},  {"Q2", checkEditQ10.BackgroundImage},
+                {"Q3", checkEditQ9.BackgroundImage},  {"Q4", checkEditQ8.BackgroundImage},
+                {"Q5", checkEditQ7.BackgroundImage},  {"Q6", checkEditQ6.BackgroundImage},
+                {"Q7", checkEditQ5.BackgroundImage},  {"Q8", checkEditQ4.BackgroundImage},
+                {"Q9", checkEditQ3.BackgroundImage},  {"Q10", checkEditQ2.BackgroundImage},
+            });
             ReportSize.DataSource = invoice;
+            // إظهار حقلي نموذج التفصيل (Brufa + اسم القماش) في ورقة طباعة المقاسات
+            AddSlipToReport(ReportSize);
             ReportSize.DetailReport.DataSource = (from inv in Session.tblSellInvoiceDetaile
                                                   where inv.InvoNumber == CurrentInvoice.InvoNumber & inv.BranchID == CurrentInvoice.BranchID
                                                   select new

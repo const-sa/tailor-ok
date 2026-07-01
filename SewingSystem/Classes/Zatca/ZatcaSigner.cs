@@ -36,12 +36,13 @@ namespace SewingSystem.Classes.Zatca
             // 1) invoice hash: canonical form with UBLExtensions / Signature / QR removed
             string invoiceHash = ComputeInvoiceHash(ublXml);
 
-            // 2) parse certificate + private key
-            var cert = new X509CertificateParser().ReadCertificate(Convert.FromBase64String(certBase64));
+            // 2) parse certificate (رمز الهيئة قد يكون base64(DER) أو base64(نص base64/PEM)) + private key
+            string certBodyB64;
+            var cert = ParseComplianceCert(certBase64, out certBodyB64);
             AsymmetricKeyParameter priv = ZatcaCrypto.LoadPrivateKey(cfg.PrivateKeyPem);
 
             string certHash = Convert.ToBase64String(
-                Sha256(cert.GetEncoded()));                       // digest of the cert (for SignedProperties)
+                Sha256(Encoding.UTF8.GetBytes(certBodyB64)));     // ZATCA: بصمة نص Base64 للشهادة (لا بايتات DER)
             string issuerName = cert.IssuerDN.ToString();
             string serial = cert.SerialNumber.ToString();
 
@@ -61,7 +62,7 @@ namespace SewingSystem.Classes.Zatca
             string qrBase64 = qr;
 
             // 6) assemble UBLExtensions (XAdES) and inject QR + signature
-            string ext = BuildUblExtensions(signedInfo, signatureValue, certBase64, signedProps);
+            string ext = BuildUblExtensions(signedInfo, signatureValue, certBodyB64, signedProps);
             string finalXml = ublXml
                 .Replace(ZatcaUbl.SignaturePlaceholder, ext)
                 .Replace(ZatcaUbl.QrPlaceholder, qrBase64);
@@ -73,6 +74,41 @@ namespace SewingSystem.Classes.Zatca
                 InvoiceHash = invoiceHash,
                 QrBase64 = qrBase64
             };
+        }
+
+        /// <summary>
+        /// يقرأ شهادة الامتثال/الإنتاج القادمة من الهيئة بصيغة مرنة: قد تكون base64 للـDER مباشرة،
+        /// أو base64 لنصٍّ base64/PEM (الشائع في ZATCA). يُعيد الشهادة مع جسمها base64 (DER) للتضمين.
+        /// يرمي رسالة واضحة بدل NullReference إن تعذّرت القراءة.
+        /// </summary>
+        private static Org.BouncyCastle.X509.X509Certificate ParseComplianceCert(string token, out string certBodyBase64)
+        {
+            var parser = new X509CertificateParser();
+            string t = (token ?? "").Trim();
+
+            // محاولة 1: الرمز نفسه = base64(DER) مباشرة
+            try
+            {
+                var der = Convert.FromBase64String(t);
+                var c = parser.ReadCertificate(der);
+                if (c != null) { certBodyBase64 = t; return c; }
+            }
+            catch { }
+
+            // محاولة 2: الرمز = base64( نص base64/PEM للشهادة ) — فكّ مرتين
+            try
+            {
+                string inner = Encoding.UTF8.GetString(Convert.FromBase64String(t)).Trim();
+                if (inner.IndexOf("CERTIFICATE", StringComparison.OrdinalIgnoreCase) >= 0)
+                    inner = inner.Replace("-----BEGIN CERTIFICATE-----", "").Replace("-----END CERTIFICATE-----", "")
+                                 .Replace("\r", "").Replace("\n", "").Replace(" ", "").Trim();
+                var der = Convert.FromBase64String(inner);
+                var c = parser.ReadCertificate(der);
+                if (c != null) { certBodyBase64 = inner; return c; }
+            }
+            catch { }
+
+            throw new Exception("تعذّر قراءة شهادة الامتثال من الهيئة (صيغة الرمز غير متوقّعة).");
         }
 
         private static string ComputeInvoiceHash(string ublXml)
@@ -119,18 +155,20 @@ namespace SewingSystem.Classes.Zatca
 
         private static string BuildSignedProperties(DateTime t, string certHashB64, string issuer, string serial)
         {
+            // xmlns:ds و xmlns:xades معلَنان على العنصر الجذر (SignedProperties) ليطابق الشكل القانوني
+            // الذي تحسبه الهيئة عند تجزئة SignedProperties (وإلا يفشل signed-properties-hashing).
             return
-              "<xades:SignedProperties xmlns:xades=\"http://uri.etsi.org/01903/v1.3.2#\" Id=\"xadesSignedProperties\">" +
+              "<xades:SignedProperties xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" xmlns:xades=\"http://uri.etsi.org/01903/v1.3.2#\" Id=\"xadesSignedProperties\">" +
               "<xades:SignedSignatureProperties>" +
-              "<xades:SigningTime>" + t.ToString("yyyy-MM-ddTHH:mm:ssZ") + "</xades:SigningTime>" +
+              "<xades:SigningTime>" + t.ToString("yyyy-MM-ddTHH:mm:ssZ", System.Globalization.CultureInfo.InvariantCulture) + "</xades:SigningTime>" +
               "<xades:SigningCertificate><xades:Cert>" +
               "<xades:CertDigest>" +
-              "<ds:DigestMethod xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" Algorithm=\"http://www.w3.org/2001/04/xmlenc#sha256\"/>" +
-              "<ds:DigestValue xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\">" + certHashB64 + "</ds:DigestValue>" +
+              "<ds:DigestMethod Algorithm=\"http://www.w3.org/2001/04/xmlenc#sha256\"/>" +
+              "<ds:DigestValue>" + certHashB64 + "</ds:DigestValue>" +
               "</xades:CertDigest>" +
               "<xades:IssuerSerial>" +
-              "<ds:X509IssuerName xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\">" + System.Security.SecurityElement.Escape(issuer) + "</ds:X509IssuerName>" +
-              "<ds:X509SerialNumber xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\">" + serial + "</ds:X509SerialNumber>" +
+              "<ds:X509IssuerName>" + System.Security.SecurityElement.Escape(issuer) + "</ds:X509IssuerName>" +
+              "<ds:X509SerialNumber>" + serial + "</ds:X509SerialNumber>" +
               "</xades:IssuerSerial></xades:Cert></xades:SigningCertificate>" +
               "</xades:SignedSignatureProperties></xades:SignedProperties>";
         }

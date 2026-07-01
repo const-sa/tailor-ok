@@ -267,8 +267,20 @@ namespace SewingSystem.Forms
                     .OrderBy(a => a.Num).ThenBy(a => a.Idx)
                     .Select(a => a.Key)
                     .ToList();
-                SizeImageStore.SaveOrder(keys);
-                Reload();
+
+                DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(this, typeof(WaitForm1));
+                try
+                {
+                    DevExpress.XtraSplashScreen.SplashScreenManager.Default.SetWaitFormCaption("جاري الحفظ");
+                    DevExpress.XtraSplashScreen.SplashScreenManager.Default.SetWaitFormDescription("يتم حفظ الترتيب في قاعدة البيانات...");
+                    SizeImageStore.SaveOrder(keys);
+                    Reload();
+                }
+                finally
+                {
+                    DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm();
+                }
+
                 XtraMessageBox.Show("تم حفظ الترتيب ✅", "صور المقاسات", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)

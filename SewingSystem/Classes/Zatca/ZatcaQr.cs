@@ -40,14 +40,14 @@ namespace SewingSystem.Classes.Zatca
             var buf = new List<byte>();
             AddTag(buf, 1, U(SellerName));
             AddTag(buf, 2, U(VatNumber));
-            AddTag(buf, 3, U(Timestamp.ToString("yyyy-MM-ddTHH:mm:ss") + "Z"));
-            AddTag(buf, 4, U(InvoiceTotal.ToString("0.00")));
-            AddTag(buf, 5, U(VatTotal.ToString("0.00")));
+            AddTag(buf, 3, U(Timestamp.ToString("yyyy-MM-ddTHH:mm:ss", System.Globalization.CultureInfo.InvariantCulture) + "Z"));
+            AddTag(buf, 4, U(InvoiceTotal.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture)));
+            AddTag(buf, 5, U(VatTotal.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture)));
 
             if (!string.IsNullOrEmpty(InvoiceHashBase64))
                 AddTag(buf, 6, U(InvoiceHashBase64));
             if (Signature != null && Signature.Length > 0)
-                AddTag(buf, 7, Signature);
+                AddTag(buf, 7, U(Convert.ToBase64String(Signature)));  // نص Base64 ليطابق ds:SignatureValue في الـXML
             if (PublicKey != null && PublicKey.Length > 0)
                 AddTag(buf, 8, PublicKey);
             if (CertSignature != null && CertSignature.Length > 0)

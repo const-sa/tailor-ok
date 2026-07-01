@@ -17,6 +17,7 @@ namespace SewingSystem.Forms
     {
         private ComboBoxEdit cboEnv;
         private ToggleSwitch chkEnabled;
+        private ToggleSwitch chkAutoReport;
         private TextEdit txtOrg, txtVat, txtCr, txtEgs, txtShort, txtStreet, txtBuilding, txtSecondary, txtDistrict, txtCity, txtPostal, txtOtp;
         private MemoEdit txtStatus;
         private SimpleButton btnGenCsr, btnActivateTrial, btnActivateProd, btnReportInvoice;
@@ -33,7 +34,9 @@ namespace SewingSystem.Forms
         {
             Text = "إعدادات ربط الزكاة (المرحلة الثانية)";
             RightToLeft = RightToLeft.Yes;
-            RightToLeftLayout = true;
+            // نعتمد اتجاه الـLayoutControl/العناصر نفسها (RightToLeft=Yes) ونوقف انعكاس الفورم
+            // لتفادي الانعكاس المزدوج الذي يرجع المحتوى LTR.
+            RightToLeftLayout = false;
             StartPosition = FormStartPosition.CenterScreen;
             ClientSize = new Size(840, 744);
             MinimumSize = new Size(720, 640);
@@ -43,11 +46,16 @@ namespace SewingSystem.Forms
             // ---------- editors ----------
             cboEnv = new ComboBoxEdit();
             cboEnv.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            cboEnv.Properties.Items.AddRange(new object[] { "sandbox", "simulation", "production" });
+            cboEnv.Properties.Items.AddRange(new object[] { EnvDisplay("sandbox"), EnvDisplay("simulation"), EnvDisplay("production") });
 
             chkEnabled = new ToggleSwitch();
             chkEnabled.Properties.OnText = "مُفعّل";
             chkEnabled.Properties.OffText = "موقوف";
+
+            // مفتاح الإبلاغ التلقائي: عند الحفظ تُبلَّغ الفاتورة للهيئة تلقائياً (أو يدوياً إن أُطفئ)
+            chkAutoReport = new ToggleSwitch();
+            chkAutoReport.Properties.OnText = "تلقائي";
+            chkAutoReport.Properties.OffText = "يدوي";
 
             txtOrg = NewBox(); txtVat = NewBox(); txtCr = NewBox(); txtEgs = NewBox();
             txtShort = NewBox(); txtStreet = NewBox(); txtBuilding = NewBox(); txtSecondary = NewBox();
@@ -66,7 +74,12 @@ namespace SewingSystem.Forms
 
             // ---------- buttons (الحفظ صار في شريط الأدوات العلوي) ----------
             btnGenCsr = NewBtn("توليد المفاتيح + CSR", BtnGenCsr_Click);
-            btnActivateTrial = NewBtn("تفعيل تجريبي (محاكاة)", (s, e) => Activate("simulation"));
+            btnActivateTrial = NewBtn("تفعيل تجريبي (حسب البيئة المختارة)", (s, e) =>
+            {
+                var env = EnvKey(cboEnv.SelectedItem?.ToString());   // sandbox أو simulation
+                if (env == "production") env = "simulation";          // الزر التجريبي لا يُفعّل الإنتاج
+                Activate(env);
+            });
             btnActivateProd = NewBtn("تفعيل مباشر (إنتاج)", (s, e) => Activate("production"));
             btnActivateProd.ImageOptions.Image = ZatcaIcon.Get(16);
             btnActivateProd.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
@@ -81,7 +94,8 @@ namespace SewingSystem.Forms
             // environment + status toggle (side by side)
             var gEnv = root.AddGroup("البيئة والحالة");
             var itEnv = gEnv.AddItem("البيئة", cboEnv);
-            gEnv.AddItem("تفعيل الإرسال للهيئة", chkEnabled, itEnv, InsertType.Right);
+            var itEnabled = gEnv.AddItem("تفعيل الإرسال للهيئة", chkEnabled, itEnv, InsertType.Right);
+            gEnv.AddItem("إبلاغ الفواتير", chkAutoReport, itEnabled, InsertType.Right);
 
             // org data | national address (two columns)
             var gOrg = root.AddGroup("بيانات المنشأة");
@@ -112,8 +126,12 @@ namespace SewingSystem.Forms
             var gStatus = root.AddGroup("الحالة الحالية");
             var itStatus = gStatus.AddItem(string.Empty, txtStatus);
             itStatus.TextVisible = false;
+            itStatus.FillControlToClientArea = true;
+            // العرض يملأ المتاح (0 = غير مقيّد) ، ارتفاع ثابت أكبر ليتّسع النص بدل تكسّره
             itStatus.SizeConstraintsType = SizeConstraintsType.Custom;
-            itStatus.MinSize = new Size(100, 140);
+            itStatus.MinSize = new Size(0, 180);
+            itStatus.MaxSize = new Size(0, 180);
+            txtStatus.Properties.WordWrap = true;
 
             var header = ZatcaUi.Header("الفوترة الإلكترونية — المرحلة الثانية",
                                         "هيئة الزكاة والضريبة والجمارك (فاتورة)");
@@ -126,6 +144,25 @@ namespace SewingSystem.Forms
         protected override void OnRefreshClick() => LoadConfig();
 
         private TextEdit NewBox() => new TextEdit();
+
+        // اسم البيئة المعروض بالعربي، مع إبقاء المفتاح الإنجليزي داخلياً (يعتمد عليه الكود لروابط الهيئة).
+        private static string EnvDisplay(string key)
+        {
+            switch ((key ?? "").Trim().ToLowerInvariant())
+            {
+                case "sandbox": return "تجريبية للمطوّرين (Sandbox)";
+                case "production": return "الإنتاج المباشر (Production)";
+                default: return "المحاكاة (Simulation)";
+            }
+        }
+
+        private static string EnvKey(string display)
+        {
+            if (string.IsNullOrEmpty(display)) return "simulation";
+            if (display.Contains("Sandbox")) return "sandbox";
+            if (display.Contains("Production")) return "production";
+            return "simulation";
+        }
 
         private SimpleButton NewBtn(string text, EventHandler onClick)
         {
@@ -149,9 +186,10 @@ namespace SewingSystem.Forms
             try
             {
                 _cfg = ZatcaConfig.Load();
-                cboEnv.SelectedItem = _cfg.Environment ?? "simulation";
-                if (cboEnv.SelectedIndex < 0) cboEnv.SelectedItem = "simulation";
+                cboEnv.SelectedItem = EnvDisplay(_cfg.Environment ?? "simulation");
+                if (cboEnv.SelectedIndex < 0) cboEnv.SelectedItem = EnvDisplay("simulation");
                 chkEnabled.IsOn = _cfg.Enabled;
+                chkAutoReport.IsOn = Properties.Settings.Default.ZatcaAutoReport;
                 txtOrg.Text = _cfg.OrgName; txtVat.Text = _cfg.VatNumber; txtCr.Text = _cfg.CrNumber;
                 txtEgs.Text = _cfg.EgsSerialNumber; txtShort.Text = _cfg.AddrShort;
                 txtStreet.Text = _cfg.AddrStreet; txtBuilding.Text = _cfg.AddrBuilding;
@@ -164,7 +202,7 @@ namespace SewingSystem.Forms
 
         private void ReadInto(ZatcaConfig c)
         {
-            c.Environment = cboEnv.SelectedItem?.ToString() ?? "simulation";
+            c.Environment = EnvKey(cboEnv.SelectedItem?.ToString());
             c.Enabled = chkEnabled.IsOn;
             c.OrgName = txtOrg.Text.Trim(); c.VatNumber = txtVat.Text.Trim(); c.CrNumber = txtCr.Text.Trim();
             c.EgsSerialNumber = txtEgs.Text.Trim(); c.AddrShort = txtShort.Text.Trim();
@@ -190,7 +228,7 @@ namespace SewingSystem.Forms
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            try { ReadInto(_cfg); _cfg.Save(); RefreshStatus(); XtraMessageBox.Show("تم حفظ الإعدادات بنجاح."); }
+            try { ReadInto(_cfg); _cfg.Save(); Properties.Settings.Default.ZatcaAutoReport = chkAutoReport.IsOn; Properties.Settings.Default.Save(); RefreshStatus(); XtraMessageBox.Show("تم حفظ الإعدادات بنجاح."); }
             catch (Exception ex) { XtraMessageBox.Show("فشل الحفظ: " + ex.Message); }
         }
 
@@ -260,7 +298,7 @@ namespace SewingSystem.Forms
             {
                 ReadInto(_cfg);
                 _cfg.Environment = environment;
-                cboEnv.SelectedItem = environment;
+                cboEnv.SelectedItem = EnvDisplay(environment);
                 _cfg.Save();
 
                 string otp = txtOtp.Text.Trim();
@@ -279,7 +317,10 @@ namespace SewingSystem.Forms
                 var log = new StringBuilder();
                 bool ok;
                 try { ok = Classes.Zatca.ZatcaService.Activate(_cfg, otp, log); }
-                catch (Exception ex) { log.AppendLine("✘ استثناء: " + ex.Message); ok = false; }
+                catch (Exception ex) { log.AppendLine("✘ استثناء: " + ex.Message); log.AppendLine("STACK: " + ex); ok = false; }
+
+                // كتابة السجل الكامل في ملف للتشخيص الدقيق (بدل الاعتماد على لقطات مقصوصة)
+                try { System.IO.File.WriteAllText(System.IO.Path.Combine(System.IO.Path.GetTempPath(), "zatca_activation.log"), log.ToString()); } catch { }
 
                 txtStatus.Text = log.ToString() + Environment.NewLine + "----------------" + Environment.NewLine;
                 LoadConfig(); // refresh status fields from saved config

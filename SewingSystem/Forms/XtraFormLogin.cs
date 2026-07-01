@@ -23,6 +23,69 @@ namespace SewingSystem.Forms
             if (Keyboard.IsKeyDown(Key.LeftShift)) new XtraFormConnectionDB().ShowDialog();
             InitializeComponent();
             this.Load += XtraFormLogin_Load;
+            BuildConnectionUi();
+        }
+
+        // ===== زر إعدادات الاتصال + مؤشّر حالة الاتصال على شاشة الدخول =====
+        private DevExpress.XtraEditors.SimpleButton _btnConn;
+        private DevExpress.XtraEditors.LabelControl _lblConnStatus;
+
+        private void BuildConnectionUi()
+        {
+            try
+            {
+                _btnConn = new DevExpress.XtraEditors.SimpleButton
+                {
+                    Name = "_btnConnSettings",
+                    Text = "إعدادات / فحص الاتصال",
+                    Size = new System.Drawing.Size(165, 30),
+                    Location = new System.Drawing.Point(12, 8)   // أعلى-اليسار
+                };
+                _btnConn.Click += (s, e) => { new XtraFormConnectionDB().ShowDialog(); RefreshConnStatus(); };
+                this.Controls.Add(_btnConn);
+                _btnConn.BringToFront();
+
+                _lblConnStatus = new DevExpress.XtraEditors.LabelControl
+                {
+                    Name = "_lblConnStatus",
+                    Text = "● جاري فحص الاتصال...",
+                    AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None,
+                    Size = new System.Drawing.Size(165, 18),
+                    Location = new System.Drawing.Point(12, 40)   // تحت الزر مباشرة (أعلى-اليسار)
+                };
+                this.Controls.Add(_lblConnStatus);
+                _lblConnStatus.BringToFront();
+
+                RefreshConnStatus();
+            }
+            catch { }
+        }
+
+        private void RefreshConnStatus()
+        {
+            if (_lblConnStatus == null) return;
+            SetConnLabel("● جاري فحص الاتصال...", System.Drawing.Color.Gray);
+            System.Threading.Tasks.Task.Run(() =>
+            {
+                bool ok = false;
+                try { ok = !string.IsNullOrWhiteSpace(Program.ConnectionString) && System.Data.Entity.Database.Exists(Program.ConnectionString); }
+                catch { ok = false; }
+                try
+                {
+                    if (_lblConnStatus == null || _lblConnStatus.IsDisposed) return;
+                    _lblConnStatus.BeginInvoke(new Action(() =>
+                        SetConnLabel(ok ? "● متصل بالخادم" : "● غير متصل — راجع الإعدادات",
+                                     ok ? System.Drawing.Color.Green : System.Drawing.Color.Red)));
+                }
+                catch { }
+            });
+        }
+
+        private void SetConnLabel(string text, System.Drawing.Color color)
+        {
+            _lblConnStatus.Text = text;
+            _lblConnStatus.Appearance.ForeColor = color;
+            _lblConnStatus.Appearance.Options.UseForeColor = true;
         }
 
         private void XtraFormLogin_Load(object sender, EventArgs e)
@@ -51,6 +114,9 @@ namespace SewingSystem.Forms
                     Properties.Settings.Default.RememberUserName = UserNameTextEdit.Text.ToString();
                     Properties.Settings.Default.RememberLang = comboBoxEditLang.EditValue.ToString();
                     Properties.Settings.Default.RememberBranch = (BranchIDTextEdit.EditValue as short?) ?? 0;
+                    // حفظ كلمة المرور مشفّرة (لا تُخزَّن كنص صريح)
+                    Properties.Settings.Default.RememberPassword =
+                        string.IsNullOrEmpty(UserPasswordTextEdit.Text) ? "" : clsEncrp.EncryptString(UserPasswordTextEdit.Text);
                     Properties.Settings.Default.Remember_me = true;
                     Properties.Settings.Default.Save();
                 }
@@ -58,6 +124,7 @@ namespace SewingSystem.Forms
                 {
                     Properties.Settings.Default.RememberUserName = "";
                     Properties.Settings.Default.RememberLang = "";
+                    Properties.Settings.Default.RememberPassword = "";
                     Properties.Settings.Default.Remember_me = false;
                     Properties.Settings.Default.Save();
                 }
@@ -148,6 +215,13 @@ namespace SewingSystem.Forms
             UserNameTextEdit.EditValue = Properties.Settings.Default.RememberUserName;
             comboBoxEditLang.EditValue = Properties.Settings.Default.RememberLang;
             BranchIDTextEdit.EditValue = Properties.Settings.Default.RememberBranch;
+            // استرجاع كلمة المرور المحفوظة (المشفّرة) عند تفعيل «تذكرني»
+            if (Properties.Settings.Default.Remember_me &&
+                !string.IsNullOrEmpty(Properties.Settings.Default.RememberPassword))
+            {
+                try { UserPasswordTextEdit.EditValue = clsEncrp.DecryptString(Properties.Settings.Default.RememberPassword); }
+                catch { UserPasswordTextEdit.EditValue = ""; }
+            }
             UserPasswordTextEdit.Focus();
         }
         private bool ValidateInstallation()
