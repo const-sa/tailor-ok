@@ -316,44 +316,38 @@ namespace SewingSystem.Forms
             }
         }
 
-        // يلفّ المحتوى الرئيسي داخل لوحة قابلة للتمرير، فإن كان أطول من الشاشة يظهر شريط تمرير
-        // بدل اقتصاص الأسفل (صور المقاسات/الملاحظات/Brufa). يُنفّذ مرة واحدة.
-        private bool _wrappedScroll;
-        private void EnsureScrollable()
+        // يحدّ عرض حقول الرأس فلا تتمدد لملء العمود كاملاً، فتبدو أضيق ومناسبة.
+        // العرض الأقصى موحّد هنا بمتغيّر واحد يسهُل تعديله لاحقاً حسب الرغبة.
+        private void AdjustFieldWidths()
         {
-            if (_wrappedScroll) return;
-            _wrappedScroll = true;
-            try
+            const int W = 170; // العرض الأقصى لحقل الرأس بالبكسل
+            var fields = new DevExpress.XtraEditors.BaseEdit[]
             {
-                var dl = dataLayoutControl_Branch;
-                const int designH = 720; // ارتفاع كافٍ لكل المحتوى بدون اقتصاص
-                this.SuspendLayout();
-                this.Controls.Remove(dl);
-                dl.Dock = DockStyle.None;
-                dl.Location = new Point(0, 0);
-                dl.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-                dl.Height = designH;
-
-                var scroller = new Panel { Name = "_contentScroller", Dock = DockStyle.Fill, AutoScroll = true };
-                scroller.Controls.Add(dl);
-                dl.Width = scroller.ClientSize.Width;
-                this.Controls.Add(scroller);
-
-                // ترتيب الإرساء: لوحة التمرير للخلف (Fill) ، الشريط العلوي ولوحة Brufa للأمام
-                scroller.SendToBack();
-                bindingNavigator9.BringToFront();
-                var brufa = this.Controls["_orderSlipPanel"];
-                if (brufa != null) brufa.BringToFront();
-                this.ResumeLayout();
+                IDTextEdit1, spn_BeforTax, TheQuantityTextEdit, TheQuantityTextEdit1,
+                SellDateDateEdit, SellDateDateEdit1, spn_Net, TotalFattInvoiceTextEdit,
+                MonyReminTextEdit, Spn_PaidCash, textEditPaidCreditCard, spn_Paid
+            };
+            foreach (var f in fields)
+            {
+                if (f == null) continue;
+                // MaxSize يمنع التمدّد؛ MinSize يضمن ثبات العرض. الارتفاع 0 = بلا قيد.
+                f.MaximumSize = new Size(W, 0);
+                f.MinimumSize = new Size(W, 0);
             }
-            catch { /* لو فشل اللف لا نوقف الشاشة */ }
         }
 
         private void XtraFormDefultSize2_Load(object sender, EventArgs e)
         {
-            // الشاشة كثيفة المحتوى — نفتحها مكبّرة + نجعلها قابلة للتمرير حتى لا يختفي أسفلها
-            this.WindowState = FormWindowState.Maximized;
-            EnsureScrollable();
+            // نُبقي المحتوى على تخطيطه الأصلي (dataLayoutControl_Branch = Dock:Fill) ليملأ الشاشة
+            // بلا فراغات ولا اقتصاص. نزيد ارتفاع النافذة بمقدار شريط Brufa السفلي حتى لا يقتطع
+            // أسفل المقاسات، فيبقى المحتوى بحجمه المُصمّم والشريط أسفله مباشرة بلا فراغ.
+            var _slip = this.Controls["_orderSlipPanel"];
+            if (_slip != null && this.WindowState == FormWindowState.Normal)
+            {
+                int screenH = Screen.FromControl(this).WorkingArea.Height;
+                this.Height = Math.Min(screenH, this.Height + _slip.Height);
+            }
+            AdjustFieldWidths();
             if (Program.Branch.UseTax ?? false)
                 ItemForTheTax.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             else
